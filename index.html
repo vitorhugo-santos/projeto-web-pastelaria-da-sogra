@@ -1,13 +1,282 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <meta name="description"
+        content="Conheça a Pastelaria da Sogra em Sorocaba. Confira nosso cardápio, sabores, localização e faça seu pedido pelo iFood.">
+
+    <title>Pastelaria da Sogra | Pastel com recheio de verdade</title>
+
+    <!-- Arquivo principal de estilos -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
+    <!-- ==================================================
+         CABEÇALHO
+    =================================================== -->
+    <header class="cabecalho">
+        <div class="container cabecalho-container">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo" aria-label="Ir para a página inicial">
+                <img src="assets/img/logo/logo-pastelaria-da-sogra.jpg" alt="Logo da Pastelaria da Sogra">
+            </a>
+
+
+            <!-- Botão do menu mobile -->
+            <button class="botao-menu" id="botao-menu" type="button" aria-label="Abrir menu de navegação"
+                aria-expanded="false" aria-controls="menu-principal">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+            <!-- Navegação principal -->
+            <nav class="menu-principal" id="menu-principal" aria-label="Navegação principal">
+
+                <ul>
+                    <li>
+                        <a href="index.html" class="ativo">Início</a>
+                    </li>
+
+                    <li>
+                        <a href="cardapio.html">Cardápio</a>
+                    </li>
+
+                    <li>
+                        <a href="historia.html">Nossa História</a>
+                    </li>
+
+                    <li>
+                        <a href="galeria.html">Galeria</a>
+                    </li>
+
+                    <li>
+                        <a href="contato.html">Contato</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+
+            <!-- Ações do cabeçalho -->
+            <div class="cabecalho-acoes">
+
+                <a href="carrinho.html" class="link-carrinho" aria-label="Abrir carrinho">
+
+                    Carrinho
+
+                    <span class="contador-carrinho" id="contador-carrinho">
+                        0
+                    </span>
+
+                </a>
+
+
+                <a href="https://www.ifood.com.br/delivery/sorocaba-sp/pastelaria-da-sogra-vila-progresso/46e19840-b53e-4f28-bc24-64780df1d78f"
+                    class="botao-ifood" target="_blank" rel="noopener noreferrer">
+
+                    Pedir pelo iFood
+
+                </a>
+
+            </div>
+
+        </div>
+    </header>
+
+
+
+    <!-- ==================================================
+         CONTEÚDO PRINCIPAL
+    =================================================== -->
+    <main>
+
+        <!-- Hero -->
+        <!-- Hero -->
+        <section id="inicio" class="hero">
+
+            <div class="container hero-container">
+
+                <!-- Conteúdo textual do Hero -->
+                <div class="hero-conteudo">
+
+                    <span class="hero-destaque">
+                        TRADIÇÃO E SABOR EM SOROCABA
+                    </span>
+
+                    <h1>
+                        Pastel com recheio de verdade.
+                    </h1>
+
+                    <p class="hero-descricao">
+                        Crocante por fora, generoso por dentro.
+                        Conheça os sabores da Pastelaria da Sogra
+                        e descubra por que recheio aqui é coisa séria.
+                    </p>
+
+
+                    <!-- Botões principais -->
+                    <div class="hero-acoes">
+
+                        <a href="cardapio.html" class="botao botao-primario">
+                            Ver cardápio
+                        </a>
+
+                        <a href="https://www.ifood.com.br/delivery/sorocaba-sp/pastelaria-da-sogra-vila-progresso/46e19840-b53e-4f28-bc24-64780df1d78f"
+                            class="botao botao-secundario" target="_blank" rel="noopener noreferrer">
+                            Pedir pelo iFood
+                        </a>
+
+                    </div>
+
+
+                    <!-- Horário de funcionamento -->
+                    <div class="hero-horario">
+
+                        <span class="hero-horario-titulo">
+                            Horário de funcionamento
+                        </span>
+
+                        <span class="hero-horario-texto">
+                            Terça a domingo • 18h às 23h
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Imagem principal -->
+                <div class="hero-imagem">
+
+                    <img src="assets/img/home/hero-carne-seca-catupiry.jpg"
+                        alt="Pastel de carne seca com Catupiry da Pastelaria da Sogra">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Faixa de confiança -->
+        <!-- Faixa de confiança -->
+        <section id="informacoes" class="faixa-confianca">
+
+            <div class="container faixa-confianca-container">
+
+                <div class="informacao-item">
+                    <span class="informacao-titulo">
+                        Google
+                    </span>
+
+                    <span class="informacao-texto">
+                        Milhares de avaliações
+                    </span>
+                </div>
+
+
+                <div class="informacao-item">
+                    <span class="informacao-titulo">
+                        Sorocaba - SP
+                    </span>
+
+                    <span class="informacao-texto">
+                        Vila Progresso
+                    </span>
+                </div>
+
+
+                <div class="informacao-item">
+                    <span class="informacao-titulo">
+                        Terça a domingo
+                    </span>
+
+                    <span class="informacao-texto">
+                        18h às 23h
+                    </span>
+                </div>
+
+
+                <div class="informacao-item">
+                    <span class="informacao-titulo">
+                        Pastelaria da Sogra
+                    </span>
+
+                    <span class="informacao-texto">
+                        Pastel com recheio de verdade
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Categorias -->
+        <section id="categorias">
+
+        </section>
+
+
+        <!-- Destaques do cardápio -->
+        <section id="destaques">
+
+        </section>
+
+
+        <!-- Seção institucional -->
+        <section id="historia">
+
+        </section>
+
+
+        <!-- Avaliações -->
+        <section id="avaliacoes">
+
+        </section>
+
+
+        <!-- Galeria -->
+        <section id="galeria">
+
+        </section>
+
+
+        <!-- Localização -->
+        <section id="localizacao">
+
+        </section>
+
+
+        <!-- Chamada final -->
+        <section id="cta-final">
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================================================
+         RODAPÉ
+    =================================================== -->
+    <footer>
+
+    </footer>
+
+
+    <!-- Arquivo principal de JavaScript -->
+    <script src="js/script.js"></script>
 
 </body>
 
