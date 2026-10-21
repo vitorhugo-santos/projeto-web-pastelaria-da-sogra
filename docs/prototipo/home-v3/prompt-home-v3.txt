@@ -1,0 +1,797 @@
+==================================================
+PASTELARIA DA SOGRA — HOME V3
+REGISTRO COMPLETO DE REFINAMENTO DO PROTÓTIPO
+==================================================
+
+OBJETIVO GERAL
+
+Refinar a Home V2 da Pastelaria da Sogra até chegar a uma versão visualmente profissional, coerente com a identidade real do estabelecimento e adequada para implementação em HTML, CSS e JavaScript.
+
+A Home V3 deve preservar a identidade visual da Pastelaria da Sogra, utilizando principalmente vermelho, amarelo/dourado, tons creme e cores neutras.
+
+O resultado deve transmitir:
+- tradição;
+- proximidade;
+- fartura;
+- confiança;
+- presença local em Sorocaba;
+- qualidade dos produtos.
+
+O projeto é acadêmico e não deve apresentar o website como site oficial da Pastelaria da Sogra.
+
+Não recriar desnecessariamente partes já aprovadas.
+
+Cada etapa abaixo representa um refinamento realizado sobre a Home existente.
+
+
+==================================================
+ETAPA 1 — REFINAMENTO DO TOPO E HERO
+==================================================
+
+MODIFIQUE SOMENTE O TOPO/HERO DA HOME ATUAL.
+
+Não recrie toda a página.
+Não altere as demais seções.
+
+OBJETIVO
+
+Criar uma abertura visual forte e profissional para a Pastelaria da Sogra, utilizando uma imagem padronizada de pastel como principal elemento visual.
+
+HEADER
+
+Manter:
+
+- logo da Pastelaria da Sogra;
+- Início;
+- Cardápio;
+- Nossa História;
+- Galeria;
+- Contato;
+- acesso ao carrinho;
+- botão “Pedir pelo iFood”.
+
+Manter estrutura limpa, compacta e profissional.
+
+HERO
+
+Manter o pequeno destaque:
+
+“TRADIÇÃO E SABOR EM SOROCABA”
+
+Título principal:
+
+“Pastel com recheio de verdade.”
+
+Texto de apoio:
+
+“Crocante por fora, generoso por dentro. Conheça os sabores da Pastelaria da Sogra e descubra por que recheio aqui é coisa séria.”
+
+CTAs:
+
+“Ver cardápio”
+
+“Pedir pelo iFood”
+
+Manter também a informação:
+
+“Terça a domingo • 18h às 23h”
+
+IMAGEM PRINCIPAL
+
+Utilizar a nova fotografia profissional fornecida do pastel de carne seca com Catupiry.
+
+A imagem deve:
+
+- ocupar o lado direito do Hero;
+- ter enquadramento horizontal;
+- destacar claramente o pastel e seu recheio;
+- não apresentar mãos;
+- não apresentar pessoas;
+- não apresentar objetos desnecessários;
+- manter aparência gastronômica profissional;
+- não ser distorcida.
+
+Não misturar essa fotografia com outras imagens.
+
+FAIXA DE CONFIANÇA
+
+Manter abaixo do Hero indicadores como:
+
+GOOGLE
+“Milhares de avaliações no Google”
+
+LOCALIZAÇÃO
+“Sorocaba - SP”
+
+FUNCIONAMENTO
+“Terça a domingo • 18h às 23h”
+
+COMPROMISSO
+“Pastel com recheio de verdade”
+
+Preservar a identidade visual já estabelecida.
+
+
+==================================================
+ETAPA 2 — CATEGORIAS
+==================================================
+
+MANTER a seção:
+
+“Tem um pastel para cada vontade”
+
+Texto de apoio:
+
+“Explore nossas categorias e encontre o seu próximo favorito com a fartura tradicional da casa.”
+
+Manter quatro categorias:
+
+SALGADOS
+DOCES
+VEGANOS
+BEBIDAS
+
+Cada categoria deve possuir:
+
+- ícone próprio;
+- título;
+- pequena descrição;
+- ação “Explorar categoria”.
+
+As categorias representarão futuramente filtros e atalhos para cardapio.html.
+
+Manter todos os cards com:
+
+- mesma altura;
+- mesmo padrão visual;
+- espaçamento consistente;
+- estilo integrado ao restante da Home.
+
+Não sobrecarregar essa seção com imagens grandes.
+
+
+==================================================
+ETAPA 3 — DESTAQUES DO CARDÁPIO
+==================================================
+
+MODIFIQUE SOMENTE A SEÇÃO “DESTAQUES DO CARDÁPIO”.
+
+OBJETIVO
+
+Padronizar os cards dos produtos e utilizar fotografias gastronômicas com o mesmo padrão visual.
+
+MANTER:
+
+“MAIS PEDIDOS”
+
+Título:
+
+“Destaques do cardápio”
+
+Texto de apoio:
+
+“Alguns sabores para começar a sua melhor escolha gastronômica.”
+
+Manter também o acesso:
+
+“Ver cardápio completo (+40 sabores)”
+
+UTILIZAR EXATAMENTE QUATRO PRODUTOS NA HOME:
+
+1. COSTELA E MUSSARELA
+
+Descrição:
+“Costela e mussarela.”
+
+Preço:
+R$ 25,90
+
+2. CARNE SECA COM CATUPIRY
+
+Descrição:
+“Carne seca com Catupiry.”
+
+Preço:
+R$ 25,90
+
+3. LOMBO CANADENSE
+
+Descrição:
+“Lombo canadense, Catupiry e milho.”
+
+Preço:
+R$ 20,50
+
+4. BACALHAU
+
+Descrição:
+“Bacalhau, alho-poró, azeitonas pretas, purê de batata e azeite extra virgem.”
+
+Preço:
+R$ 28,90
+
+IMAGENS
+
+Utilizar as quatro fotografias profissionais criadas especificamente para os destaques:
+
+- produto-costela.jpg;
+- produto-carne-seca-catupiry.jpg;
+- produto-lombo-canadense.jpg;
+- produto-bacalhau.jpg.
+
+Todas devem seguir o mesmo padrão:
+
+- pastel inteiro;
+- pequena abertura frontal mostrando o recheio;
+- fundo semelhante;
+- iluminação semelhante;
+- mesmo enquadramento;
+- mesma proporção;
+- aparência gastronômica profissional.
+
+Não utilizar a versão antiga da fotografia da costela que mostrava o pastel completamente partido ao meio.
+
+CARDS
+
+Cada card deve apresentar:
+
+- fotografia;
+- nome do produto;
+- breve descrição;
+- preço;
+- botão “Adicionar”.
+
+Os quatro cards devem possuir:
+
+- mesma largura;
+- mesma altura;
+- mesmo raio de borda;
+- imagens com a mesma proporção;
+- botão no mesmo alinhamento.
+
+Não utilizar Kit Kat nesta versão da Home.
+
+O botão “Adicionar” representará futuramente a funcionalidade de adicionar produtos ao carrinho.
+
+
+==================================================
+ETAPA 4 — SEÇÃO INSTITUCIONAL
+==================================================
+
+MANTER a seção institucional com o título:
+
+“Uma presença que já faz parte de Sorocaba”
+
+Utilizar uma fotografia real da fachada da Pastelaria da Sogra.
+
+A seção deve apresentar brevemente a presença da empresa em Sorocaba sem inventar datas, fundadores ou acontecimentos históricos não confirmados.
+
+Manter botão:
+
+“Conheça nossa história”
+
+Esse botão representará futuramente a navegação para:
+
+historia.html
+
+Evitar criar histórias fictícias sobre:
+- origem do nome;
+- fundadores;
+- início das atividades;
+- acontecimentos não documentados.
+
+A seção deve ser institucional, simples e confiável.
+
+
+==================================================
+ETAPA 5 — REFINAMENTO DAS AVALIAÇÕES
+==================================================
+
+MODIFIQUE SOMENTE A SEÇÃO:
+
+“QUEM PROVA, CONTA”
+
+Não alterar a seção institucional acima.
+
+OBJETIVO
+
+Transformar a seção de avaliações em uma área de prova social realista utilizando avaliações reais do perfil da Pastelaria da Sogra no Google.
+
+TÍTULO
+
+“Quem prova, conta”
+
+SUBTÍTULO
+
+“Veja o que os clientes dizem sobre a Pastelaria da Sogra no Google.”
+
+RESUMO DA REPUTAÇÃO
+
+Adicionar:
+
+“4,7 no Google • 3 mil+ avaliações”
+
+Utilizar estrelas como apoio visual.
+
+Não utilizar o número exato de avaliações, pois ele pode variar com o tempo.
+
+AVALIAÇÕES
+
+Criar exatamente três cards.
+
+CARD 1
+
+Nome:
+Evandro
+
+Nota:
+5 estrelas
+
+Trecho:
+
+“Melhor pastel da cidade sem dúvidas... realmente cumpre o que promete... recheio do começo ao fim, ambiente muito agradável... super recomendo!!!”
+
+Identificação:
+
+“Avaliação no Google”
+
+
+CARD 2
+
+Nome:
+Natália Góis
+
+Nota:
+5 estrelas
+
+Trecho:
+
+“Primeira vez que fui e me surpreendeu a quantidade de recheio no pastel. Pastéis saborosos e massa sequinha. Também gostei do atendimento e do ambiente.”
+
+Identificação:
+
+“Avaliação no Google”
+
+
+CARD 3
+
+Nome:
+Daiane Magalhães
+
+Nota:
+5 estrelas
+
+Trecho:
+
+“Pastel maravilhoso, com muito recheio, sempre tem fila para pedir aos fins de semana, porém, é muito rápido.”
+
+Identificação:
+
+“Avaliação no Google”
+
+IMPORTANTE
+
+Não inventar:
+
+- avaliações;
+- nomes;
+- datas;
+- fotos de perfil;
+- notas;
+- cargos.
+
+Manter os três cards com a mesma altura e padrão visual.
+
+CTAs
+
+Adicionar abaixo das avaliações:
+
+“Ver avaliações no Google”
+
+“Avalie-nos no Google”
+
+O primeiro botão representará futuramente o acesso ao perfil da empresa no Google.
+
+O segundo botão representará o acesso para o cliente publicar uma avaliação.
+
+Não inventar URLs durante a prototipação.
+
+
+==================================================
+ETAPA 6 — REFINAMENTO DA GALERIA
+==================================================
+
+MODIFIQUE SOMENTE A SEÇÃO:
+
+“UM POUCO DA SOGRA”
+
+Não alterar outras partes da Home.
+
+MANTER:
+
+“FOTOS REAIS”
+
+Título:
+
+“Um pouco da Sogra”
+
+SUBSTITUIR O SUBTÍTULO POR:
+
+“Conheça um pouco do nosso espaço, dos nossos sabores e do dia a dia da Pastelaria da Sogra.”
+
+OBJETIVO
+
+A galeria da Home não deve mostrar apenas alimentos.
+
+Ela deve apresentar diferentes aspectos da experiência da Pastelaria da Sogra.
+
+UTILIZAR EXATAMENTE QUATRO FOTOGRAFIAS REAIS:
+
+1. Fotografia das embalagens personalizadas da Pastelaria da Sogra.
+
+2. Fotografia ampla do salão interno, mostrando as mesas e cadeiras amarelas.
+
+3. Fotografia da fachada durante a noite, com o estabelecimento aberto e iluminado.
+
+4. Fotografia da área externa durante a noite, mostrando mesas e o espaço disponível para os clientes.
+
+Cada fotografia deve ser usada somente uma vez.
+
+Não gerar imagens novas.
+
+Não misturar fotografias.
+
+Não adicionar objetos ou elementos inexistentes.
+
+REMOVER completamente qualquer placeholder como:
+
+“Espaço reservado”
+
+“Nova fotografia da casa / bastidores”
+
+LAYOUT
+
+As quatro fotografias devem aparecer em uma única linha no desktop.
+
+Todas devem possuir:
+
+- mesma largura;
+- mesma altura;
+- mesma proporção;
+- mesmo raio de borda;
+- mesmo espaçamento.
+
+Utilizar crop somente para enquadramento.
+
+Não distorcer as fotografias.
+
+ORDEM:
+
+1. Embalagens
+2. Salão interno
+3. Fachada noturna
+4. Área externa
+
+BOTÃO
+
+Manter:
+
+“Ver galeria completa”
+
+Esse botão deverá futuramente direcionar para:
+
+galeria.html
+
+
+==================================================
+ETAPA 7 — REFINAMENTO DA LOCALIZAÇÃO
+==================================================
+
+MODIFIQUE SOMENTE A SEÇÃO:
+
+“VENHA CONHECER”
+
+OBJETIVO
+
+Transformar a seção de localização em uma área realmente útil para o visitante.
+
+TÍTULO:
+
+“Venha conhecer”
+
+TEXTO:
+
+“Faça uma visita ou trace sua rota até a Pastelaria da Sogra.”
+
+INFORMAÇÕES
+
+Endereço:
+
+Rua Oswaldo Cruz, 408
+Vila Progresso
+Sorocaba - SP
+
+HORÁRIO
+
+Segunda-feira:
+Fechado
+
+Terça a domingo:
+18h às 23h
+
+TELEFONE
+
+(15) 3326-4600
+
+STATUS
+
+Manter uma pequena indicação visual de:
+
+Aberto agora / Fechado
+
+Ela representará uma futura funcionalidade JavaScript que calculará automaticamente a situação do estabelecimento conforme o dia e horário.
+
+MAPA
+
+Substituir o antigo bloco cinza por uma representação convincente de mapa.
+
+Mostrar:
+
+- região da Vila Progresso/Sorocaba;
+- marcador da Pastelaria da Sogra;
+- identificação do estabelecimento;
+- endereço resumido;
+- controles visuais discretos de mapa.
+
+Não inventar localização diferente da informada.
+
+O mapa desta etapa é somente representação de protótipo.
+
+Na implementação final ele deverá ser substituído por um mapa real incorporado.
+
+CTAs
+
+Adicionar:
+
+“Traçar rota no Google Maps”
+
+e, de forma secundária:
+
+“Ver no Google Maps”
+
+Na implementação final, esses botões deverão utilizar a localização real da Pastelaria da Sogra.
+
+
+==================================================
+ETAPA 8 — CTA FINAL
+==================================================
+
+MANTER o bloco vermelho de chamada final.
+
+Pequeno destaque:
+
+“FOME DE PASTEL?”
+
+Título:
+
+“Já escolheu o seu pastel de hoje?”
+
+Texto:
+
+“Confira o cardápio e encontre o recheio que combina com a sua fome.”
+
+CTAs:
+
+“Ver cardápio”
+
+“Pedir pelo iFood”
+
+O botão “Ver cardápio” deverá futuramente direcionar para:
+
+cardapio.html
+
+O botão “Pedir pelo iFood” deverá utilizar o canal oficial da Pastelaria da Sogra no iFood.
+
+Manter forte contraste e identidade visual em vermelho.
+
+
+==================================================
+ETAPA 9 — REFINAMENTO FINAL DO FOOTER
+==================================================
+
+MODIFIQUE SOMENTE O RODAPÉ.
+
+Não alterar o CTA vermelho acima.
+
+OBJETIVO
+
+Finalizar o rodapé com informações úteis, navegação consistente e identificação clara de que o website é um projeto acadêmico.
+
+IDENTIDADE
+
+Manter a logo da Pastelaria da Sogra.
+
+Manter:
+
+“PASTEL COM RECHEIO DE VERDADE.”
+
+Descrição institucional:
+
+“Tradição familiar, massas artesanais, ingredientes selecionados e recheios generosos: características que fazem parte da experiência da Pastelaria da Sogra.”
+
+Manter o texto curto e legível.
+
+NAVEGAÇÃO
+
+Utilizar exatamente:
+
+Início
+Cardápio
+Nossa História
+Galeria
+Contato
+
+Esses itens representarão:
+
+index.html
+cardapio.html
+historia.html
+galeria.html
+contato.html
+
+LOCAL E CONTATO
+
+Exibir:
+
+Rua Oswaldo Cruz, 408
+Vila Progresso
+Sorocaba - SP
+
+Telefone:
+(15) 3326-4600
+
+CANAIS DIGITAIS
+
+Manter acessos discretos para:
+
+- Instagram;
+- Facebook;
+- iFood.
+
+Não inventar outros canais.
+
+HORÁRIO
+
+Exibir:
+
+Terça a domingo
+18h às 23h
+
+Segunda-feira
+Fechado
+
+Não utilizar:
+
+“Fechado para descanso”
+
+AVISO ACADÊMICO
+
+Exibir de forma discreta, porém legível:
+
+“Projeto acadêmico desenvolvido para a disciplina de Web Design. Sem vínculo oficial com a Pastelaria da Sogra.”
+
+RODAPÉ INFERIOR
+
+Não utilizar:
+
+“© 2024 Pastelaria da Sogra. Todos os direitos reservados.”
+
+Substituir por:
+
+“Projeto acadêmico • 2026”
+
+DESIGN
+
+Manter o Footer dividido visualmente em áreas claras:
+
+1. Marca e apresentação
+2. Navegação
+3. Local e contato
+4. Horário de atendimento
+
+Manter:
+
+- fundo creme;
+- vermelho;
+- dourado/amarelo;
+- tipografia já utilizada;
+- espaçamento consistente;
+- visual compacto e profissional.
+
+
+==================================================
+DIRETRIZES GERAIS DA HOME V3
+==================================================
+
+Não criar uma nova identidade visual.
+
+Preservar a identidade da Pastelaria da Sogra.
+
+Utilizar predominantemente:
+
+- vermelho;
+- amarelo/dourado;
+- creme;
+- branco;
+- tons escuros para textos.
+
+Evitar aparência de:
+
+- template genérico;
+- site excessivamente gourmet;
+- fast-food moderno sem relação com a marca;
+- interface carregada;
+- excesso de animações;
+- elementos desnecessários.
+
+O produto deve continuar sendo protagonista.
+
+Manter forte hierarquia visual.
+
+Manter bom espaçamento entre as seções.
+
+Manter consistência entre:
+
+- botões;
+- cards;
+- títulos;
+- bordas;
+- ícones;
+- imagens.
+
+As imagens de produtos devem seguir padrão consistente.
+
+As fotografias reais devem ser utilizadas principalmente nas seções institucional e galeria.
+
+A implementação final deverá ser responsiva para:
+
+- desktop;
+- tablet;
+- smartphone.
+
+A Home deverá utilizar navegação funcional e posteriormente ser integrada às demais páginas do projeto.
+
+
+==================================================
+ESTADO FINAL APROVADO — HOME V3
+==================================================
+
+A Home V3 final contém:
+
+1. Header
+2. Hero
+3. Faixa de confiança
+4. Categorias
+5. Destaques do cardápio
+6. Seção institucional
+7. Avaliações reais do Google
+8. Galeria com fotografias reais
+9. Localização e rota
+10. CTA final
+11. Footer institucional/acadêmico
+
+A Home V3 foi considerada aprovada para servir como referência visual para a implementação do arquivo:
+
+index.html
+
+junto com:
+
+css/style.css
+
+e:
+
+js/script.js
+
+As funcionalidades visuais apresentadas no protótipo deverão ser implementadas posteriormente com HTML, CSS e JavaScript.
+
+FIM DO REGISTRO DA HOME V3.
