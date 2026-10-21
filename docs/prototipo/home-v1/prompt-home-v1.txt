@@ -1,0 +1,415 @@
+Crie o protótipo de alta fidelidade da página inicial (Home) em DESKTOP para um website acadêmico da empresa real “Pastelaria da Sogra”, localizada em Sorocaba - SP.
+
+O objetivo é criar uma Home moderna, profissional, responsiva e visualmente atrativa, preservando a identidade tradicional da empresa.
+
+CONCEITO VISUAL
+
+A direção visual deve combinar:
+
+TRADIÇÃO + MODERNIDADE
+
+A Pastelaria da Sogra já possui uma identidade forte baseada principalmente nas cores vermelho e amarelo. Não queremos realizar um rebranding, mas modernizar essa identidade para o ambiente digital.
+
+PALETA DE CORES SUGERIDA:
+
+Vermelho principal: #B5241C
+Amarelo/dourado: #F4B41A
+Creme/off-white: #FFF7E8
+Grafite: #28231F
+Branco: #FFFFFF
+
+Utilizar vermelho como cor principal e amarelo/dourado em elementos de destaque.
+
+Evitar aparência excessivamente antiga, poluída ou semelhante a panfleto promocional.
+
+O resultado deve parecer o site profissional de uma pastelaria tradicional e reconhecida na cidade.
+
+TIPOGRAFIA
+
+Utilizar uma combinação semelhante a:
+
+Títulos:
+Roboto Slab ou fonte serifada moderna equivalente.
+
+Textos e interface:
+Inter ou fonte sans-serif moderna equivalente.
+
+A hierarquia tipográfica deve ser clara e profissional.
+
+ESTRUTURA DA HOME
+
+A página deverá possuir as seguintes seções, nesta ordem:
+
+1. Header
+2. Hero
+3. Faixa de confiança/informações rápidas
+4. Categorias do cardápio
+5. Destaques do cardápio
+6. Seção institucional
+7. Avaliações
+8. Galeria
+9. Localização
+10. CTA final
+11. Footer
+
+--------------------------------------------------
+1. HEADER
+--------------------------------------------------
+
+Criar um header moderno, limpo e de fácil navegação.
+
+Incluir:
+
+- logotipo da Pastelaria da Sogra;
+- Início;
+- Cardápio;
+- Nossa História;
+- Galeria;
+- Contato;
+- ícone de carrinho com contador;
+- botão destacado “Pedir pelo iFood”.
+
+O logotipo anexado deve ser preservado e utilizado como identidade da marca.
+
+Não redesenhar o logotipo.
+
+O header deverá futuramente possuir comportamento responsivo e menu mobile.
+
+--------------------------------------------------
+2. HERO
+--------------------------------------------------
+
+Criar um Hero de forte impacto visual.
+
+Layout sugerido:
+
+texto à esquerda;
+fotografia grande de pastel à direita.
+
+Utilizar como imagem principal a fotografia de pastel fornecida entre os anexos.
+
+Texto de apoio superior:
+
+“TRADIÇÃO E SABOR EM SOROCABA”
+
+Título principal:
+
+“Pastel com recheio de verdade.”
+
+Texto:
+
+“Crocante por fora, generoso por dentro. Conheça os sabores da Pastelaria da Sogra e descubra por que recheio aqui é coisa séria.”
+
+Adicionar dois CTAs:
+
+“Ver cardápio”
+
+“Pedir pelo iFood”
+
+Adicionar discretamente a informação:
+
+“Terça a domingo • 18h às 23h”
+
+O Hero deve transmitir principalmente:
+
+produto;
+fartura;
+tradição;
+qualidade;
+identidade da marca.
+
+A fotografia do pastel deve ser um dos elementos visuais predominantes da página.
+
+--------------------------------------------------
+3. FAIXA DE CONFIANÇA
+--------------------------------------------------
+
+Criar uma pequena faixa horizontal abaixo do Hero com informações rápidas.
+
+Utilizar elementos como:
+
+“Milhares de avaliações no Google”
+
+“Sorocaba - SP”
+
+“Terça a domingo • 18h às 23h”
+
+“Pastel com recheio de verdade”
+
+Utilizar pequenos ícones.
+
+O design deve permanecer discreto e elegante.
+
+--------------------------------------------------
+4. CATEGORIAS
+--------------------------------------------------
+
+Título:
+
+“Tem um pastel para cada vontade”
+
+Subtítulo curto convidando o usuário a explorar o cardápio.
+
+Criar quatro cards:
+
+Salgados
+Doces
+Veganos
+Bebidas
+
+Cada card deverá possuir:
+
+ícone;
+nome;
+pequena descrição;
+link ou CTA “Explorar categoria”.
+
+Os cards futuramente serão utilizados para levar o usuário ao Cardápio já filtrado pela categoria correspondente.
+
+--------------------------------------------------
+5. DESTAQUES DO CARDÁPIO
+--------------------------------------------------
+
+Título:
+
+“Destaques do cardápio”
+
+Criar cards de produtos visualmente atraentes.
+
+Utilizar somente as imagens de produtos fornecidas.
+
+Produtos previstos:
+
+Costela
+Carne seca com Catupiry
+Lombo Canadense
+Bacalhau
+Kit Kat
+
+Valores utilizados inicialmente no protótipo:
+
+Costela — R$ 14,90
+Carne seca com Catupiry — R$ 14,90
+Lombo Canadense — R$ 13,90
+Bacalhau — R$ 15,90
+Kit Kat — R$ 12,90
+
+Esses valores são provisórios para o protótipo e poderão ser substituídos posteriormente.
+
+Para Lombo Canadense utilizar:
+
+lombo canadense, milho e Catupiry.
+
+Não é necessário criar descrições muito extensas.
+
+Cada card deverá conter:
+
+foto;
+nome;
+descrição curta;
+preço;
+botão “Adicionar”.
+
+Adicionar também um link:
+
+“Ver cardápio completo”
+
+A seção deve futuramente se integrar ao carrinho do site.
+
+--------------------------------------------------
+6. SEÇÃO INSTITUCIONAL
+--------------------------------------------------
+
+Criar uma seção com fotografia da fachada da Pastelaria da Sogra.
+
+Layout sugerido:
+
+imagem de um lado;
+texto institucional do outro.
+
+Título:
+
+“Uma presença que já faz parte de Sorocaba”
+
+Criar um pequeno texto institucional destacando a presença da Pastelaria da Sogra na cidade e sua proposta de servir pastéis generosamente recheados.
+
+Não criar uma história extensa.
+
+Adicionar botão:
+
+“Conheça nossa história”
+
+Essa seção futuramente levará para a página Nossa História.
+
+--------------------------------------------------
+7. AVALIAÇÕES
+--------------------------------------------------
+
+Título:
+
+“Quem prova, conta”
+
+Criar uma seção visual para avaliações de clientes.
+
+Utilizar três cards de avaliações como referência visual.
+
+Mostrar estrelas e estrutura semelhante a avaliações do Google.
+
+Essa seção poderá posteriormente ser transformada em um carrossel utilizando JavaScript.
+
+O design deve transmitir prova social e confiança.
+
+--------------------------------------------------
+8. GALERIA
+--------------------------------------------------
+
+Título:
+
+“Um pouco da Sogra”
+
+Criar uma pequena prévia da futura página Galeria.
+
+Utilizar aproximadamente cinco ou seis imagens relacionadas a:
+
+pastéis;
+fachada;
+ambiente;
+produtos.
+
+Organizar as imagens de maneira moderna.
+
+Adicionar botão:
+
+“Ver galeria completa”
+
+A futura implementação deverá permitir abrir as imagens em tamanho maior utilizando lightbox.
+
+--------------------------------------------------
+9. LOCALIZAÇÃO
+--------------------------------------------------
+
+Título:
+
+“Venha conhecer”
+
+Mostrar as informações:
+
+Pastelaria da Sogra
+
+Rua Oswaldo Cruz, 408
+Vila Progresso
+Sorocaba - SP
+
+Horário:
+
+Segunda-feira: fechado
+Terça a domingo: 18h às 23h
+
+Telefone:
+
+(15) 3326-4600
+
+Criar também espaço para um mapa incorporado.
+
+Adicionar botão relacionado à localização/mapa.
+
+Essa área poderá futuramente possuir uma funcionalidade em JavaScript indicando se a pastelaria está aberta ou fechada de acordo com o horário.
+
+--------------------------------------------------
+10. CTA FINAL
+--------------------------------------------------
+
+Criar uma seção visualmente forte próxima ao final da página.
+
+Título sugerido:
+
+“Já escolheu o seu pastel de hoje?”
+
+Texto curto incentivando o usuário a acessar o cardápio ou realizar o pedido pelo iFood.
+
+Adicionar:
+
+“Ver cardápio”
+
+“Pedir pelo iFood”
+
+Utilizar vermelho como cor predominante nessa área, mantendo boa legibilidade.
+
+--------------------------------------------------
+11. FOOTER
+--------------------------------------------------
+
+Criar footer completo contendo:
+
+logotipo;
+descrição curta da Pastelaria da Sogra;
+links de navegação;
+endereço;
+telefone;
+horários;
+Instagram;
+Facebook;
+acesso ao iFood.
+
+Incluir também discretamente uma observação indicando que o website faz parte de um projeto acadêmico e não representa um canal oficial da empresa.
+
+--------------------------------------------------
+EXPERIÊNCIA E INTERFACE
+--------------------------------------------------
+
+O design deve prever futuramente:
+
+- menu responsivo;
+- efeitos hover;
+- transições suaves;
+- carrinho;
+- contador do carrinho;
+- filtros de produtos;
+- busca;
+- lightbox;
+- carrossel;
+- status aberto/fechado;
+- integração com iFood.
+
+Não exagerar em animações.
+
+Utilizar bastante espaço em branco e manter boa hierarquia entre as informações.
+
+O alimento deve ser o protagonista visual.
+
+Evitar aparência genérica de template.
+
+O resultado deve transmitir profissionalismo suficiente para que o projeto acadêmico possa futuramente ser apresentado à própria Pastelaria da Sogra.
+
+--------------------------------------------------
+RESPONSIVIDADE
+--------------------------------------------------
+
+Embora esta primeira proposta seja para DESKTOP, todo o layout deve ser concebido de maneira que possa posteriormente ser adaptado para:
+
+tablet;
+mobile.
+
+Utilizar grids e componentes que permitam essa adaptação.
+
+--------------------------------------------------
+IMPORTANTE
+--------------------------------------------------
+
+Utilizar as imagens fornecidas como referências reais da empresa.
+
+Manter a identidade visual da Pastelaria da Sogra.
+
+Não transformar a marca em uma pastelaria gourmet minimalista.
+
+Também não criar uma aparência antiga ou excessivamente carregada.
+
+Buscar equilíbrio entre:
+
+tradição;
+modernidade;
+credibilidade;
+produto;
+facilidade de navegação.
+
+Crie SOMENTE a página Home desktop nesta primeira versão.
