@@ -44,6 +44,14 @@ function renderizarCardapio() {
         // Card do produto
         const card = document.createElement("article");
         card.className = "produto-card";
+        // Informações utilizadas nos filtros e na pesquisa
+        card.dataset.categoria = produto.categoria;
+
+        card.dataset.busca = [
+            produto.nome,
+            produto.descricao,
+            produto.observacao || ""
+        ].join(" ");
 
         // Área da imagem
         const areaImagem = document.createElement("div");
@@ -345,3 +353,104 @@ function atualizarAtalhoCarrinho() {
         `Ver carrinho com ${quantidadeTotal} itens. Total: ${formatarMoeda(valorTotal)}`
     );
 }
+/* ==================================================
+   PESQUISA E FILTROS DO CARDÁPIO
+================================================== */
+
+// Permite pesquisar com ou sem acentos
+function normalizarTexto(texto) {
+    return String(texto || "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase();
+}
+
+function configurarFiltrosCardapio() {
+    const grade = document.getElementById("grade-cardapio");
+    const campoBusca = document.getElementById("busca-produtos");
+    const contador = document.getElementById("contagem-produtos");
+    const mensagemVazia = document.getElementById(
+        "mensagem-sem-resultados"
+    );
+
+    // Executa somente na página do cardápio
+    if (!grade || !campoBusca || !contador || !mensagemVazia) {
+        return;
+    }
+
+    const botoes = document.querySelectorAll(
+        ".cardapio-filtros button"
+    );
+
+    const cards = grade.querySelectorAll(".produto-card");
+
+    let categoriaSelecionada = "todos";
+
+    // Aplica pesquisa e categoria ao mesmo tempo
+    function aplicarFiltros() {
+        const pesquisa = normalizarTexto(campoBusca.value.trim());
+
+        let produtosEncontrados = 0;
+
+        cards.forEach((card) => {
+            const categoriaCorreta =
+                categoriaSelecionada === "todos" ||
+                card.dataset.categoria === categoriaSelecionada;
+
+            const textoProduto = normalizarTexto(
+                card.dataset.busca
+            );
+
+            const correspondePesquisa =
+                textoProduto.includes(pesquisa);
+
+            const exibir = categoriaCorreta && correspondePesquisa;
+
+            card.hidden = !exibir;
+
+            if (exibir) {
+                produtosEncontrados++;
+            }
+        });
+
+        contador.textContent =
+            `${produtosEncontrados} ` +
+            (produtosEncontrados === 1
+                ? "produto encontrado"
+                : "produtos encontrados");
+
+        mensagemVazia.hidden = produtosEncontrados > 0;
+    }
+
+    // Pesquisa enquanto o usuário digita
+    campoBusca.addEventListener("input", aplicarFiltros);
+
+    // Seleção das categorias
+    botoes.forEach((botao) => {
+        botao.addEventListener("click", () => {
+            categoriaSelecionada = botao.dataset.categoria;
+
+            botoes.forEach((outroBotao) => {
+                const selecionado = outroBotao === botao;
+
+                outroBotao.classList.toggle(
+                    "filtro-ativo",
+                    selecionado
+                );
+
+                outroBotao.setAttribute(
+                    "aria-pressed",
+                    String(selecionado)
+                );
+            });
+
+            aplicarFiltros();
+        });
+    });
+
+    // Exibe o resultado inicial
+    aplicarFiltros();
+}
+
+// Inicializa os filtros
+configurarFiltrosCardapio();
