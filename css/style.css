@@ -1837,3 +1837,216 @@ button:focus-visible {
         padding: 13px 18px;
     }
 }
+
+/* ==================================================
+   PÁGINA DO CARDÁPIO
+================================================== */
+
+.pagina-cardapio {
+    background-color: var(--cor-fundo-claro);
+}
+
+/* Apresentação */
+.cardapio-apresentacao {
+    padding: 64px 0 46px;
+    text-align: center;
+    background-color: var(--cor-creme);
+}
+
+.cardapio-apresentacao h1 {
+    margin: 12px 0 18px;
+}
+
+.cardapio-apresentacao p {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Área principal */
+.cardapio-catalogo {
+    padding: 52px 0 90px;
+}
+
+/* Pesquisa */
+.cardapio-pesquisa {
+    max-width: 720px;
+    margin: 0 auto 30px;
+}
+
+.cardapio-pesquisa label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.cardapio-pesquisa input {
+    width: 100%;
+    padding: 16px 20px;
+
+    background-color: var(--cor-branco);
+    color: var(--cor-texto);
+
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-medio);
+
+    font-size: 1rem;
+    box-shadow: var(--sombra-leve);
+
+    transition: border-color var(--transicao);
+}
+
+.cardapio-pesquisa input:focus {
+    border-color: var(--cor-vermelho);
+    outline: 2px solid rgba(181, 36, 28, 0.12);
+}
+
+/* Filtros */
+.cardapio-filtros {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-bottom: 52px;
+}
+
+.cardapio-filtros button {
+    padding: 11px 20px;
+
+    color: var(--cor-texto);
+    background-color: var(--cor-branco);
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 50px;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    transition:
+        background-color var(--transicao),
+        color var(--transicao),
+        border-color var(--transicao);
+}
+
+.cardapio-filtros button:hover {
+    border-color: var(--cor-vermelho);
+    color: var(--cor-vermelho);
+}
+
+.cardapio-filtros button.filtro-ativo {
+    background-color: var(--cor-vermelho);
+    border-color: var(--cor-vermelho);
+    color: var(--cor-branco);
+}
+
+.cardapio-filtros button:focus-visible {
+    outline: 3px solid var(--cor-amarelo);
+    outline-offset: 3px;
+}
+
+/* Cabeçalho da listagem */
+.cardapio-listagem-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    margin-bottom: 28px;
+}
+
+.cardapio-listagem-topo h2 {
+    font-size: 1.65rem;
+}
+
+#contagem-produtos {
+    font-size: 0.9rem;
+    color: var(--cor-texto-secundario);
+}
+
+/* Grade: reutiliza os cards da Home */
+.cardapio-grade {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.cardapio-sem-resultados {
+    padding: 45px 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Aviso acadêmico */
+.cardapio-observacao {
+    margin-top: 45px;
+    padding-top: 22px;
+
+    border-top: 1px solid var(--cor-borda);
+
+    text-align: center;
+    font-size: 0.82rem;
+    line-height: 1.7;
+}
+
+/* Responsividade específica do cardápio */
+@media (max-width: 1050px) {
+    .cardapio-grade {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .cardapio-apresentacao {
+        padding: 45px 0;
+    }
+
+    .cardapio-grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cardapio-listagem-topo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cardapio-filtros {
+        gap: 9px;
+        margin-bottom: 35px;
+    }
+
+    .cardapio-filtros button {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .cardapio-grade {
+        grid-template-columns: 1fr;
+    }
+
+    .cardapio-apresentacao p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Produtos sem fotografia */
+
+.produto-sem-foto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    background: linear-gradient(135deg, #fff0d8, #f6dfbd);
+    color: var(--cor-texto-secundario);
+
+    text-align: center;
+}
+
+.produto-sem-foto span {
+    font-size: 0.88rem;
+    font-weight: 600;
+}

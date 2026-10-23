@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Explore o cardápio da Pastelaria da Sogra em Sorocaba. Conheça nossos pastéis tradicionais, especiais, doces, salgados e bebidas.">
+    <title>Cardápio | Pastelaria da Sogra</title>
+    <!-- Arquivo principal de estilos -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ==================================================
+         CABEÇALHO
+    =================================================== -->
+    <header class="cabecalho">
+        <div class="container cabecalho-container">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo" aria-label="Ir para a página inicial">
+                <img src="assets/img/logo/logo-pastelaria-da-sogra.jpg" alt="Logo da Pastelaria da Sogra">
+            </a>
+
+
+            <!-- Botão do menu mobile -->
+            <button class="botao-menu" id="botao-menu" type="button" aria-label="Abrir menu de navegação"
+                aria-expanded="false" aria-controls="menu-principal">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+            <!-- Navegação principal -->
+            <nav class="menu-principal" id="menu-principal" aria-label="Navegação principal">
+
+                <ul>
+                    <li>
+                        <a href="index.html">Início</a>
+                    </li>
+
+                    <li>
+                        <a href="cardapio.html">Cardápio</a>
+                    </li>
+
+                    <li>
+                        <a href="historia.html">Nossa História</a>
+                    </li>
+
+                    <li>
+                        <a href="galeria.html">Galeria</a>
+                    </li>
+
+                    <li>
+                        <a href="contato.html">Contato</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+
+            <!-- Ações do cabeçalho -->
+            <div class="cabecalho-acoes">
+
+                <a href="carrinho.html" class="link-carrinho" aria-label="Abrir carrinho"></a>
+
+                Carrinho
+
+                <span class="contador-carrinho" id="contador-carrinho">
+                    0
+                </span>
+
+                </a>
+
+
+                <a href="https://www.ifood.com.br/delivery/sorocaba-sp/pastelaria-da-sogra-vila-progresso/46e19840-b53e-4f28-bc24-64780df1d78f"
+                    class="botao-ifood" target="_blank" rel="noopener noreferrer">
+
+                    Pedir pelo iFood
+
+                </a>
+
+            </div>
+
+        </div>
+    </header>
+
+
+
+    <!-- ==================================================
+         CONTEÚDO PRINCIPAL
+    =================================================== -->
+    <main class="pagina-cardapio">
+
+        <!-- Apresentação do cardápio -->
+        <section class="cardapio-apresentacao">
+
+            <div class="container">
+
+                <span class="secao-destaque">
+                    SABORES PARA TODOS OS GOSTOS
+                </span>
+
+                <h1>Nosso cardápio</h1>
+
+                <p>
+                    Explore nossa seleção de pastéis tradicionais,
+                    especiais, doces, salgados e bebidas.
+                    Encontre seus sabores favoritos.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Catálogo de produtos -->
+        <section class="cardapio-catalogo">
+
+            <div class="container">
+
+                <!-- Pesquisa -->
+                <div class="cardapio-pesquisa">
+
+                    <label for="busca-produtos">
+                        Qual sabor você procura?
+                    </label>
+
+                    <input type="search" id="busca-produtos" placeholder="Busque por sabor ou ingrediente..."
+                        autocomplete="off">
+
+                </div>
+
+
+                <!-- Filtros por categoria -->
+                <div class="cardapio-filtros" role="group" aria-label="Filtrar produtos por categoria">
+
+                    <button type="button" class="filtro-ativo" data-categoria="todos" aria-pressed="true">
+                        Todos
+                    </button>
+
+                    <button type="button" data-categoria="tradicionais" aria-pressed="false">
+                        Tradicionais
+                    </button>
+
+                    <button type="button" data-categoria="especiais" aria-pressed="false">
+                        Especiais
+                    </button>
+
+                    <button type="button" data-categoria="doces" aria-pressed="false">
+                        Doces
+                    </button>
+
+                    <button type="button" data-categoria="salgados" aria-pressed="false">
+                        Salgados
+                    </button>
+
+                    <button type="button" data-categoria="bebidas" aria-pressed="false">
+                        Bebidas
+                    </button>
+
+                </div>
+
+
+                <!-- Contagem de produtos -->
+                <div class="cardapio-listagem-topo">
+
+                    <h2>Explore nossos produtos</h2>
+
+                    <p id="contagem-produtos" role="status" aria-live="polite">
+                        Carregando produtos...
+                    </p>
+
+                </div>
+
+
+                <!-- Produtos gerados pelo JavaScript -->
+                <div id="grade-cardapio" class="produtos-grid cardapio-grade">
+                </div>
+
+
+                <!-- Mensagem para pesquisas sem resultados -->
+                <p id="mensagem-sem-resultados" class="cardapio-sem-resultados" hidden>
+                    Nenhum produto encontrado.
+                    Tente outro termo ou categoria.
+                </p>
+
+
+                <!-- Informação importante -->
+                <p class="cardapio-observacao">
+                    Cardápio demonstrativo para projeto acadêmico.
+                    Imagens ilustrativas e preços sujeitos à confirmação.
+                    Pedidos reais são realizados pelos canais oficiais
+                    da pastelaria.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================================================
+     RODAPÉ
+=================================================== -->
+    <footer class="rodape">
+
+        <div class="container rodape-container">
+
+            <!-- Marca -->
+            <div class="rodape-marca">
+
+                <img src="assets/img/logo/logo-pastelaria-da-sogra.jpg" alt="Logo da Pastelaria da Sogra">
+
+                <p class="rodape-slogan">
+                    Pastel com recheio de verdade.
+                </p>
+
+                <p>
+                    Tradição familiar, massas artesanais,
+                    ingredientes selecionados e recheios generosos:
+                    características que fazem parte da experiência
+                    da Pastelaria da Sogra.
+                </p>
+
+            </div>
+
+
+            <!-- Navegação -->
+            <div class="rodape-coluna">
+
+                <h3>Navegação</h3>
+
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="cardapio.html" class="ativo" aria-current="page">
+                            Cardápio
+                        </a></li>
+                    <li><a href="historia.html">Nossa História</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+
+            </div>
+
+
+            <!-- Contato -->
+            <div class="rodape-coluna">
+
+                <h3>Contato</h3>
+
+                <address>
+                    Rua Oswaldo Cruz, 408<br>
+                    Vila Progresso<br>
+                    Sorocaba - SP
+                </address>
+
+                <a href="tel:+551533264600">
+                    (15) 3326-4600
+                </a>
+
+            </div>
+
+
+            <!-- Horários e redes -->
+            <div class="rodape-coluna">
+
+                <h3>Funcionamento</h3>
+
+                <p>
+                    Terça a domingo<br>
+                    18h às 23h
+                </p>
+
+                <p>
+                    Segunda-feira: fechado
+                </p>
+
+
+                <div class="rodape-redes">
+
+                    <a href="https://www.instagram.com/pastelariadasogra/" target="_blank" rel="noopener noreferrer">
+                        Instagram
+                    </a>
+
+                    <a href="https://www.facebook.com/PastelariaDaSogra" target="_blank" rel="noopener noreferrer">
+                        Facebook
+                    </a>
+
+                    <a href="https://www.ifood.com.br/delivery/sorocaba-sp/pastelaria-da-sogra-vila-progresso/46e19840-b53e-4f28-bc24-64780df1d78f"
+                        target="_blank" rel="noopener noreferrer">
+                        iFood
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Rodapé inferior -->
+        <div class="rodape-inferior">
+
+            <div class="container">
+
+                <p>
+                    Projeto acadêmico • 2026
+                </p>
+
+                <p>
+                    Projeto acadêmico desenvolvido para a disciplina
+                    de Web Design. Sem vínculo oficial com a
+                    Pastelaria da Sogra.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Arquivo principal de JavaScript -->
+    <!-- Dados dos produtos -->
+    <script src="js/produtos.js"></script>
+
+    <!-- Funcionalidades do site -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

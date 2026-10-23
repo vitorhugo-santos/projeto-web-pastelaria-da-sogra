@@ -27,7 +27,96 @@ function atualizarContadorCarrinho() {
     contador.textContent = quantidadeTotal;
     atualizarAtalhoCarrinho();
 }
+/* ==================================================
+   EXIBIÇÃO DINÂMICA DO CARDÁPIO
+================================================== */
 
+function renderizarCardapio() {
+    const grade = document.getElementById("grade-cardapio");
+
+    // Executa somente na página do cardápio
+    if (!grade) return;
+
+    grade.replaceChildren();
+
+    PRODUTOS_CARDAPIO.forEach((produto) => {
+
+        // Card do produto
+        const card = document.createElement("article");
+        card.className = "produto-card";
+
+        // Área da imagem
+        const areaImagem = document.createElement("div");
+        areaImagem.className = "produto-imagem";
+
+        if (produto.imagem) {
+            const imagem = document.createElement("img");
+
+            imagem.src = produto.imagem;
+            imagem.alt = produto.nome;
+            imagem.loading = "lazy";
+
+            areaImagem.appendChild(imagem);
+        } else {
+            areaImagem.classList.add("produto-sem-foto");
+
+            const mensagem = document.createElement("span");
+            mensagem.textContent = "Produto sem foto";
+
+            areaImagem.appendChild(mensagem);
+        }
+
+        // Informações
+        const conteudo = document.createElement("div");
+        conteudo.className = "produto-conteudo";
+
+        const titulo = document.createElement("h3");
+        titulo.textContent = produto.nome;
+
+        const descricao = document.createElement("p");
+        descricao.textContent = produto.observacao
+            ? `${produto.descricao} ${produto.observacao}`
+            : produto.descricao;
+
+        // Rodapé do card
+        const rodape = document.createElement("div");
+        rodape.className = "produto-rodape";
+
+        const preco = document.createElement("span");
+        preco.className = "produto-preco";
+        preco.textContent = formatarMoeda(produto.preco);
+
+        const botao = document.createElement("button");
+        botao.type = "button";
+        botao.className = "botao-adicionar";
+        botao.textContent = "Adicionar";
+
+        botao.dataset.produto = produto.nome;
+        botao.dataset.preco = produto.preco;
+
+        botao.setAttribute(
+            "aria-label",
+            `Adicionar ${produto.nome} ao carrinho`
+        );
+
+        rodape.append(preco, botao);
+        conteudo.append(titulo, descricao, rodape);
+        card.append(areaImagem, conteudo);
+
+        grade.appendChild(card);
+    });
+
+    // Atualiza a quantidade de produtos exibidos
+    const contador = document.getElementById("contagem-produtos");
+
+    if (contador) {
+        contador.textContent =
+            `${PRODUTOS_CARDAPIO.length} produtos encontrados`;
+    }
+}
+
+// Gera os cards antes de registrar os eventos dos botões
+renderizarCardapio();
 // Identifica os botões Adicionar
 document.querySelectorAll(".botao-adicionar").forEach((botao) => {
 
