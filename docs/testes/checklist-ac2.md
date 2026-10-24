@@ -47,6 +47,16 @@
 
 **Limite da avaliação:** esses resultados são apenas da página inicial. Não significam que as demais cinco páginas atingiram as mesmas pontuações. As capturas de tela foram enviadas na conversa e os valores foram transcritos aqui; os PNGs ainda não estão anexados ao repositório.
 
+## Nova execução Lighthouse desktop após otimização de imagens (24/10/2026)
+
+**Capturas enviadas pela equipe:** Performance **89**, Acessibilidade **96**, Boas práticas **96**, SEO **100**; FCP **0,3 s**, LCP **2,3 s**, TBT **0 ms**, Speed Index **0,3 s**, CLS **0**. Diagnósticos mostrados: minificação de CSS (economia potencial de 3 KiB), uma razão de falha do bfcache, payload total de **3.842 KiB** e uma tarefa longa de main thread. O motivo específico da falha do bfcache e de boas práticas não foi exposto no print.
+
+**Comparação registrada:** na medição anterior, desktop marcou 97/96/100/100. Na Home mobile antes da otimização, Performance era 76, LCP 5,4 s e payload 5.028 KiB. A execução atual mostra redução do payload para 3.842 KiB, mas não é uma comparação experimental controlada de desempenho desktop. A pontuação isolada 89 não prova regressão causada pelo código, dada a variabilidade documentada do Lighthouse.
+
+**Auditoria de alteração:** commit `723893887e806dbb999faa3a6dd1b4b6cf615afe` alterou exclusivamente atributos HTML nas imagens da Home (`width`, `height`, `loading="lazy"`, `decoding="async"` e prioridade alta na imagem principal). Nenhum CSS, JS ou outra página foi alterado nesse commit. Não há handlers `unload` ou `beforeunload` nos arquivos `index.html` e `js/script.js` inspecionados.
+
+**Ação:** preservar a versão aprovada do mobile. Antes de editar código, repetir a auditoria **desktop 3 vezes nas mesmas condições** (janela anônima, sem extensões ativas, sem outras tarefas pesadas) e anotar notas e LCP; considerar a mediana. Expandir a razão da auditoria bfcache e o item específico de boas práticas de 96; não inferir a causa.
+
 ## Responsividade — confirmação da equipe
 
 - **375 px:** navegação pela Home, Cardápio, Galeria e Carrinho sem problemas relatados.
