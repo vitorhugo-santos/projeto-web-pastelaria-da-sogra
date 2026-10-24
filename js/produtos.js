@@ -111,7 +111,7 @@ const PRODUTOS_CARDAPIO = [
         categoria: "especiais",
         descricao: "Pastel de carne em tamanho especial de 30 cm.",
         preco: 39.90,
-        imagem: null
+        imagem: "assets/img/produtos/cardapio/pastel-big-carne.webp"
     },
     {
         id: "brocolis-tomate",
@@ -120,7 +120,7 @@ const PRODUTOS_CARDAPIO = [
         opcaoVegetal: true,
         descricao: "Opção vegana com brócolis e tomate.",
         preco: 20.50,
-        imagem: null,
+        imagem: "assets/img/produtos/cardapio/pastel-brocolis-tomate.webp",
         observacao: "Verificar opção de massa vegana."
     },
 
@@ -131,7 +131,7 @@ const PRODUTOS_CARDAPIO = [
         categoria: "doces",
         descricao: "Pastel recheado com chocolate ao leite.",
         preco: 19.50,
-        imagem: null
+        imagem: "assets/img/produtos/cardapio/pastel-chocolate-leite.webp"
     },
     {
         id: "romeu-julieta",
@@ -139,7 +139,7 @@ const PRODUTOS_CARDAPIO = [
         categoria: "doces",
         descricao: "Combinação de queijo e goiabada.",
         preco: 20.50,
-        imagem: null
+        imagem: "assets/img/produtos/cardapio/pastel-romeu-julieta.webp"
     },
     {
         id: "chocolate-banana",
@@ -155,7 +155,7 @@ const PRODUTOS_CARDAPIO = [
         categoria: "doces",
         descricao: "Creme de avelã Nutella com banana.",
         preco: 26.90,
-        imagem: null
+        imagem: "assets/img/produtos/cardapio/pastel-nutella-banana.webp"
     },
     {
         id: "kit-kat",
@@ -182,7 +182,7 @@ const PRODUTOS_CARDAPIO = [
         categoria: "salgados",
         descricao: "Porção com 10 unidades.",
         preco: 16.90,
-        imagem: null,
+        imagem: "assets/img/produtos/cardapio/mini-bolinhas-queijo.webp",
         observacao: "Consulte disponibilidade."
     },
 
@@ -193,7 +193,7 @@ const PRODUTOS_CARDAPIO = [
         categoria: "bebidas",
         descricao: "Refrigerante Coca-Cola lata.",
         preco: 8.00,
-        imagem: null
+        imagem: "assets/img/produtos/cardapio/coca-cola-lata.webp"
     },
     {
         id: "agua-sem-gas",
@@ -201,7 +201,7 @@ const PRODUTOS_CARDAPIO = [
         categoria: "bebidas",
         descricao: "Água mineral sem gás.",
         preco: 5.00,
-        imagem: null
+        imagem: "assets/img/produtos/cardapio/agua-sem-gas.webp"
     },
     {
         id: "suco-laranja",
@@ -209,7 +209,7 @@ const PRODUTOS_CARDAPIO = [
         categoria: "bebidas",
         descricao: "Suco natural de laranja, 300 ml.",
         preco: 9.90,
-        imagem: null
+        imagem: "assets/img/produtos/cardapio/suco-laranja.webp"
     }
 
 ];
