@@ -28,6 +28,36 @@
     let indiceAberto = 0;
     let botaoAnteriorFoco = null;
 
+    // Mantém as imagens vizinhas em um cache pequeno para reduzir a espera
+    // ao navegar pelo lightbox, sem baixar a galeria inteira de uma vez.
+    const imagensPrecarregadas = new Map();
+    const LIMITE_PRECARREGAMENTOS = 4;
+
+    function precarregarVizinhas() {
+        const quantidade = fotosFiltradas.length;
+        if (quantidade < 2) return;
+
+        for (const deslocamento of [-1, 1]) {
+            const vizinha = fotosFiltradas[(indiceAberto + deslocamento + quantidade) % quantidade];
+            if (imagensPrecarregadas.has(vizinha.arquivo)) continue;
+
+            const imagem = new Image();
+            imagem.decoding = "async";
+            imagem.src = vizinha.arquivo;
+            imagensPrecarregadas.set(vizinha.arquivo, imagem);
+
+            // Evita manter todas as fotografias ampliadas na memória.
+            if (imagensPrecarregadas.size > LIMITE_PRECARREGAMENTOS) {
+                imagensPrecarregadas.delete(imagensPrecarregadas.keys().next().value);
+            }
+        }
+    }
+
+    // Prioriza carregar a foto aberta antes de buscar as vizinhas.
+    imagemModal.addEventListener("load", () => {
+        if (modal.open) precarregarVizinhas();
+    });
+
     function atualizarModal() {
         const foto = fotosFiltradas[indiceAberto];
         if (!foto) return;
@@ -43,6 +73,8 @@
         botaoAnteriorFoco = botao;
         atualizarModal();
         modal.showModal();
+        // Também funciona quando a primeira imagem já estava em cache.
+        if (imagemModal.complete && imagemModal.naturalWidth > 0) precarregarVizinhas();
         fechar.focus();
     }
 
