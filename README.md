@@ -10,26 +10,26 @@ Website acadêmico desenvolvido para a disciplina de **Web Design**, com o objet
 | --- | --- | --- |
 | Início | `index.html` | Apresentação, produtos em destaque, categorias, avaliações, galeria e localização |
 | Cardápio | `cardapio.html` | 24 produtos demonstrativos, pesquisa, filtros por categoria e adição ao carrinho |
-| Carrinho | `carrinho.html` | Quantidades, remoção de itens, cálculo do total e armazenamento local |
+| Carrinho e checkout | `carrinho.html` | Quantidades, remoção de itens, total, armazenamento local e finalização simulada com validação de dados, modalidade, horário e pagamento fictício |
 | Nossa História | `historia.html` | Apresentação institucional, fotografia e diferenciais |
 | Galeria | `galeria.html` | 16 fotografias reais, filtros e visualização ampliada |
 | Contato | `contato.html` | Endereço, horários, telefone, redes sociais, mapa e rota |
 
 Outros recursos incluem navegação responsiva, menu mobile, indicador de funcionamento, contador e acesso rápido ao carrinho.
 
-**Imagens:** a Galeria contém fotografias reais da pastelaria. O Cardápio é demonstrativo e utiliza imagens ilustrativas em parte dos produtos; outros itens ainda estão em revisão visual.
+**Imagens:** a Galeria contém 16 fotografias reais selecionadas e otimizadas em WebP. O cardápio demonstrativo utiliza imagens ilustrativas; elas não representam necessariamente a apresentação exata dos produtos vendidos pela empresa.
 
 ## Tecnologias
 
 - **HTML5:** estrutura das páginas.
 - **CSS3:** identidade visual e layouts responsivos.
-- **JavaScript:** pesquisa, filtros, galeria, interações e carrinho.
+- **JavaScript:** pesquisa, filtros, galeria, carrinho e checkout demonstrativo com validações.
 - **localStorage:** armazenamento temporário do carrinho no navegador, sem banco de dados.
 - **Git/GitHub:** versionamento e documentação.
 - **Trello:** planejamento e acompanhamento das tarefas.
 - **Vercel:** plataforma escolhida para publicação do site estático.
 
-Não há backend, cadastro de clientes, checkout real ou integração de pagamento nesta versão.
+Não há backend, cadastro de clientes, processamento de pagamento nem envio de pedidos reais nesta versão. O checkout é apenas uma simulação local.
 
 ## Organização dos arquivos
 
@@ -44,12 +44,14 @@ projeto-web-pastelaria-da-sogra/
 ├── css/
 │   ├── style.css
 │   ├── galeria.css
+│   ├── checkout.css
 │   └── contato.css
 ├── js/
 │   ├── script.js
 │   ├── produtos.js
 │   ├── dados-galeria.js
-│   └── galeria.js
+│   ├── galeria.js
+│   └── checkout.js
 ├── assets/img/
 ├── docs/
 └── README.md
@@ -66,9 +68,13 @@ A pasta `docs/` reúne protótipos e respectivas versões, referências visuais,
 
 Não é necessário executar `npm install`, configurar banco de dados ou executar uma etapa de compilação.
 
-## Carrinho demonstrativo e pedidos
+## Carrinho e checkout demonstrativos
 
 Os produtos adicionados ficam salvos no navegador por `localStorage`. É possível aumentar ou diminuir quantidades, remover itens e visualizar o valor total. **Esses dados não são enviados à pastelaria** e não representam uma compra efetivada.
+
+Na própria página `carrinho.html`, o formulário de finalização simula entrega ou retirada, escolha de horário e modalidade de pagamento. Campos são validados antes da confirmação fictícia. Não há recebimento de valores, agendamento ou envio de pedido. Os dados pessoais digitados no formulário não são persistidos pelo código do checkout.
+
+A opção de busca automática de endereços por CEP foi descartada; os campos de endereço são preenchidos manualmente.
 
 O acesso ao **iFood** é independente do carrinho demonstrativo; os itens escolhidos neste site não são transferidos automaticamente para o iFood.
 
@@ -90,9 +96,9 @@ O acesso ao **iFood** é independente do carrinho demonstrativo; os itens escolh
 - **AF — relatório final:** 23/11/2026.
 - **GitHub:** [repositório do projeto](https://github.com/vitorhugo-santos/projeto-web-pastelaria-da-sogra).
 - **Trello:** [quadro de desenvolvimento](https://trello.com/b/rBHFUDul/projeto-web-design).
-- **Vercel:** publicação em preparação; inserir aqui o endereço público após a implantação e validação.
+- **Vercel:** [site publicado](https://projeto-web-pastelaria-da-sogra.vercel.app/index.html), conectado ao repositório GitHub.
 
-**Situação:** seis páginas implementadas; ajustes visuais, testes integrados e publicação em andamento.
+**Situação em 24/10/2026:** seis páginas implementadas e site publicado na Vercel. A equipe está concluindo a auditoria funcional, correções finais, verificação de desempenho e preparação da AC2. Não declarar a validação final como concluída antes dos testes.
 
 ## Uso acadêmico
 
