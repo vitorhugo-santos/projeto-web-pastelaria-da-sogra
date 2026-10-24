@@ -1,0 +1,200 @@
+/* GALERIA — estilos exclusivos desta página; preserva css/style.css */
+.pg-pagina { overflow: clip; }
+.pg-hero { padding: 76px 0 86px; background: linear-gradient(115deg, var(--cor-creme), #fffaf3 65%, #fff); }
+.pg-hero-container { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.04fr); align-items: center; gap: 64px; }
+.pg-hero-texto h1 { margin: 12px 0 22px; font-size: clamp(3rem, 5vw, 4.3rem); letter-spacing: -0.035em; }
+.pg-hero-texto h1 span { color: var(--cor-vermelho); }
+.pg-hero-texto > p { max-width: 480px; font-size: 1.06rem; line-height: 1.85; margin-bottom: 28px; }
+.pg-hero-botao { gap: 12px; }
+.pg-hero-nota { display: flex; align-items: center; gap: 10px; margin-top: 26px; font-size: .82rem; font-weight: 700; color: var(--cor-texto-secundario); }
+.pg-nota-ponto { display: block; width: 9px; height: 9px; border-radius: 50%; background: #47a66e; }
+.pg-hero-imagens { position: relative; min-width: 0; padding: 13px 28px 18px 0; }
+.pg-hero-foto { width: 100%; height: 398px; object-fit: cover; border-radius: 24px; box-shadow: var(--sombra-media); }
+/* Foto secundária: maior e dentro do enquadramento, sem cobrir o letreiro */
+.pg-hero-foto-menor {
+    position: absolute;
+    right: 20px;
+    bottom: 18px;
+    width: 40%;
+    max-width: 205px;
+    padding: 6px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: var(--sombra-media);
+    transform: none;
+}
+.pg-hero-foto-menor img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center 22%;
+    border-radius: 13px;
+}
+.pg-secao { padding: 80px 0 94px; scroll-margin-top: 82px; }
+.pg-cabecalho { display: flex; justify-content: space-between; align-items: flex-end; gap: 25px; margin-bottom: 32px; }
+.pg-cabecalho h2 { margin: 7px 0 12px; }
+.pg-cabecalho p { max-width: 600px; }
+.pg-total { flex: none; padding: 8px 13px; border-radius: 999px; background: var(--cor-creme); color: var(--cor-vermelho); font-size: .85rem; font-weight: 700; }
+.pg-barra-filtros { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 30px; }
+.pg-filtro { border: 1px solid var(--cor-borda); border-radius: 999px; padding: 11px 18px; min-height: 44px; background: #fff; color: var(--cor-texto); font-size: .88rem; font-weight: 700; transition: background .2s ease, color .2s ease, border-color .2s ease; }
+.pg-filtro:hover { border-color: var(--cor-vermelho); color: var(--cor-vermelho); }
+.pg-filtro.ativo, .pg-filtro[aria-pressed="true"] { border-color: var(--cor-vermelho); color: #fff; background: var(--cor-vermelho); }
+.pg-grade { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; grid-auto-flow: row dense; }
+.pg-card { min-width: 0; margin: 0; border: 1px solid var(--cor-borda); border-radius: 17px; background: #fff; overflow: hidden; box-shadow: 0 5px 24px rgba(40,35,31,.045); transition: box-shadow .25s ease, transform .25s ease; }
+.pg-card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(40,35,31,.13); }
+.pg-card:nth-child(1), .pg-card:nth-child(10) { grid-column: span 2; }
+.pg-card-botao { display: block; width: 100%; position: relative; border: 0; padding: 0; background: #e6dbd0; overflow: hidden; }
+.pg-card-botao img { width: 100%; height: 235px; object-fit: cover; transition: transform .35s ease; }
+.pg-card:nth-child(1) .pg-card-botao img, .pg-card:nth-child(10) .pg-card-botao img { height: 235px; }
+.pg-card:hover .pg-card-botao img { transform: scale(1.045); }
+.pg-ampliar { position: absolute; right: 12px; bottom: 12px; width: 35px; height: 35px; display: grid; place-items: center; border-radius: 50%; background: rgba(255,255,255,.93); color: var(--cor-vermelho); font-size: 1.4rem; font-weight: 700; line-height: 1; }
+.pg-card-legenda { padding: 14px 15px 16px; }
+.pg-card-categoria { display: block; margin-bottom: 7px; font-size: .68rem; font-weight: 800; letter-spacing: .075em; text-transform: uppercase; color: var(--cor-vermelho); }
+.pg-card-legenda p { margin: 0; font-size: .87rem; line-height: 1.45; color: var(--cor-texto); }
+.pg-sem-script { padding: 30px; border-radius: 12px; background: var(--cor-creme); }
+.pg-cta { padding: 60px 0; background: var(--cor-fundo-cinza); }
+.pg-cta-conteudo { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+.pg-cta h2 { max-width: 590px; margin: 5px 0 12px; }
+.pg-cta .botao { flex-shrink: 0; gap: 14px; }
+/* Caixa modal nativa */
+.pg-modal { position: fixed; inset: 0; margin: auto; width: min(900px, 95vw); max-height: min(92dvh, 950px); padding: 0; color: var(--cor-texto); border: 0; border-radius: 17px; background: #fff; box-shadow: 0 30px 80px rgba(0,0,0,.36); overflow: auto; }
+.pg-modal:not([open]) { display: none; }
+.pg-modal::backdrop { background: rgba(17,15,14,.86); }
+.pg-modal-shell { width: 100%; }
+.pg-modal-barra { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; min-height: 57px; }
+.pg-modal-contador { color: var(--cor-texto-secundario); font-size: .82rem; font-weight: 700; }
+.pg-fechar { display: grid; place-items: center; width: 37px; height: 37px; border: 0; border-radius: 50%; background: var(--cor-fundo-cinza); color: var(--cor-texto); font-size: 1.8rem; line-height: 1; }
+.pg-fechar:hover { background: var(--cor-creme); }
+.pg-modal-visual { position: relative; display: flex; justify-content: center; align-items: center; min-height: 230px; background: #171514; }
+.pg-modal-visual img { display: block; max-width: 100%; max-height: 66dvh; width: auto; height: auto; object-fit: contain; }
+.pg-seta { position: absolute; z-index: 2; top: 50%; transform: translateY(-50%); display: grid; place-items: center; width: 43px; height: 48px; border: 0; border-radius: 10px; background: rgba(255,255,255,.94); color: #171514; font-size: 2.2rem; }
+.pg-seta:hover { background: #fff; }
+.pg-seta-anterior { left: 13px; }
+.pg-seta-proxima { right: 13px; }
+.pg-modal-legenda { padding: 18px 24px 22px; }
+.pg-modal-legenda h2 { margin-bottom: 5px; font-size: 1.15rem; }
+.pg-modal-legenda p { font-size: .95rem; }
+.pg-modal-legenda span { display: block; margin-top: 10px; font-size: .76rem; color: var(--cor-texto-secundario); }
+@media (max-width: 960px) {
+    .pg-hero-container { grid-template-columns: 1fr 1fr; gap: 30px; }
+    .pg-hero-foto { height: 340px; }
+    .pg-grade { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 15px; }
+    .pg-card:nth-child(1), .pg-card:nth-child(10) { grid-column: span 2; }
+}
+@media (max-width: 650px) {
+    .pg-hero { padding: 35px 0 55px; }
+    .pg-hero-container { grid-template-columns: minmax(0,1fr); gap: 25px; }
+    .pg-hero-texto h1 { font-size: clamp(2.45rem, 10vw, 3.3rem); }
+    .pg-hero-texto > p { font-size: .98rem; margin-bottom: 22px; }
+    .pg-hero-imagens { padding: 0 21px 10px 0; }
+    .pg-hero-foto { height: 250px; }
+    .pg-hero-foto-menor { width: 28%; right: 4px; transform: translate(0, 8px); }
+    .pg-secao { padding: 48px 0 56px; }
+    .pg-cabecalho { flex-direction: column; align-items: flex-start; gap: 17px; margin-bottom: 22px; }
+    .pg-barra-filtros { flex-wrap: nowrap; overflow-x: auto; padding: 0 0 11px; scrollbar-width: thin; margin-bottom: 18px; }
+    .pg-filtro { flex: none; white-space: nowrap; padding: 9px 14px; }
+    .pg-grade { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 11px; }
+    .pg-card:nth-child(1), .pg-card:nth-child(10) { grid-column: auto; }
+    .pg-card { border-radius: 12px; }
+    .pg-card-botao img, .pg-card:nth-child(1) .pg-card-botao img, .pg-card:nth-child(10) .pg-card-botao img { height: 155px; }
+    .pg-card-legenda { padding: 11px; }
+    .pg-card-legenda p { font-size: .78rem; line-height: 1.4; }
+    .pg-card-categoria { font-size: .60rem; }
+    .pg-ampliar { width: 30px; height: 30px; right: 8px; bottom: 8px; font-size: 1.2rem; }
+    .pg-cta { padding: 44px 0; }
+    .pg-cta-conteudo { align-items: flex-start; flex-direction: column; gap: 19px; }
+    .pg-cta .botao { width: 100%; }
+    .pg-modal { width: 96vw; max-height: 91dvh; border-radius: 12px; }
+    .pg-modal-visual { min-height: 150px; }
+    .pg-modal-visual img { max-height: 62dvh; }
+    .pg-seta { width: 35px; height: 44px; font-size: 1.7rem; }
+    .pg-seta-anterior { left: 5px; }
+    .pg-seta-proxima { right: 5px; }
+    .pg-modal-legenda { padding: 13px 17px 16px; }
+    .pg-modal-legenda span { display: none; }
+}
+@media (max-width: 355px) {
+    .pg-grade { grid-template-columns: minmax(0,1fr); }
+    .pg-card-botao img { height: 240px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .pg-card, .pg-card-botao img, .pg-filtro { transition: none; }
+}
+
+
+/* ==================================================
+   AJUSTE RESPONSIVO VALIDADO — GALERIA
+   Substitui apenas as regras de layout no celular.
+================================================== */
+@media (max-width: 650px) {
+    /* A apresentação ocupa toda a largura disponível. */
+    .pg-hero-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 26px;
+    }
+
+    .pg-hero-texto,
+    .pg-hero-imagens {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .pg-hero-imagens {
+        padding: 0;
+    }
+
+    .pg-hero-foto {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Retira a sobreposição estreita da segunda foto no celular. */
+    .pg-hero-foto-menor {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .pg-grade {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .pg-card-botao img,
+    .pg-card:nth-child(1) .pg-card-botao img,
+    .pg-card:nth-child(10) .pg-card-botao img {
+        height: 240px;
+    }
+
+    .pg-card-legenda {
+        padding: 16px;
+    }
+
+    .pg-card-legenda p {
+        font-size: .92rem;
+        line-height: 1.6;
+    }
+
+    .pg-barra-filtros {
+        flex-wrap: wrap;
+        overflow-x: visible;
+        gap: 8px;
+        padding-bottom: 0;
+    }
+
+    .pg-filtro {
+        white-space: normal;
+    }
+}
+
+/* Enquadramento da fotografia REAL da fachada no destaque da Galeria.
+   Mantém o letreiro inteiro no desktop e no celular, sem alterar a foto. */
+.pg-hero-foto {
+    object-position: center 18%;
+}

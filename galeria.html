@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça a Galeria da Pastelaria da Sogra, em Sorocaba. Veja fotografias reais dos pastéis, do ambiente e da fachada da casa.">
+    <title>Galeria | Pastelaria da Sogra</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/galeria.css">
+</head>
+<body>
+    <!-- Cabeçalho padronizado do projeto -->
+    <header class="cabecalho">
+        <div class="container cabecalho-container">
+            <a href="index.html" class="logo" aria-label="Ir para a página inicial">
+                <img src="assets/img/logo/logo-pastelaria-da-sogra.jpg" alt="Logo da Pastelaria da Sogra">
+            </a>
+            <button class="botao-menu" id="botao-menu" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-principal">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="menu-principal" id="menu-principal" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="cardapio.html">Cardápio</a></li>
+                    <li><a href="historia.html">Nossa História</a></li>
+                    <li><a href="galeria.html" class="ativo" aria-current="page">Galeria</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="cabecalho-acoes">
+                <a href="carrinho.html" class="link-carrinho" aria-label="Abrir carrinho">
+                    Carrinho <span class="contador-carrinho" id="contador-carrinho">0</span>
+                </a>
+                <a href="https://www.ifood.com.br/delivery/sorocaba-sp/pastelaria-da-sogra-vila-progresso/46e19840-b53e-4f28-bc24-64780df1d78f"
+                    class="botao-ifood" target="_blank" rel="noopener noreferrer">Pedir pelo iFood</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pg-pagina">
+        <!-- Apresentação com fotos reais da seleção -->
+        <section class="pg-hero" aria-labelledby="pg-titulo">
+            <div class="container pg-hero-container">
+                <div class="pg-hero-texto">
+                    <span class="secao-destaque">UM OLHAR MAIS DE PERTO</span>
+                    <h1 id="pg-titulo">Nossa <span>Galeria</span></h1>
+                    <p>Conheça a Pastelaria da Sogra pelos detalhes: pastéis, ambiente, fachada e momentos que fazem parte da experiência na casa.</p>
+                    <a class="botao botao-primario pg-hero-botao" href="#fotos">Explorar fotografias <span aria-hidden="true">↓</span></a>
+                    <div class="pg-hero-nota"><span class="pg-nota-ponto" aria-hidden="true"></span> Fotografias reais da pastelaria</div>
+                </div>
+                <div class="pg-hero-imagens">
+                    <img class="pg-hero-foto" src="assets/img/galeria/fachada-principal.webp" alt="Fachada real da Pastelaria da Sogra, com o letreiro iluminado à noite" fetchpriority="high" width="1125" height="1500">
+                    <div class="pg-hero-foto-menor">
+                        <img src="assets/img/galeria/miniaturas/pastel-recheio-generoso.webp" alt="Pastel aberto mostrando um recheio generoso" width="300" height="300">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catálogo: imagens inseridas pelo JavaScript a partir de dados-galeria.js -->
+        <section class="pg-secao" id="fotos" aria-labelledby="pg-fotos-titulo">
+            <div class="container">
+                <div class="pg-cabecalho">
+                    <div>
+                        <span class="secao-destaque">FOTOGRAFIAS DA CASA</span>
+                        <h2 id="pg-fotos-titulo">Explore cada detalhe</h2>
+                        <p>Escolha uma categoria ou veja a coleção completa. Clique em qualquer fotografia para ampliar.</p>
+                    </div>
+                    <span class="pg-total" id="pg-total" aria-live="polite">16 fotografias</span>
+                </div>
+                <div class="pg-barra-filtros" role="group" aria-label="Filtrar fotografias por categoria">
+                    <button class="pg-filtro ativo" type="button" data-categoria="todos" aria-pressed="true">Todas as fotos</button>
+                    <button class="pg-filtro" type="button" data-categoria="produtos" aria-pressed="false">Pastéis</button>
+                    <button class="pg-filtro" type="button" data-categoria="ambiente" aria-pressed="false">Ambiente</button>
+                    <button class="pg-filtro" type="button" data-categoria="fachada" aria-pressed="false">Fachada e exterior</button>
+                    <button class="pg-filtro" type="button" data-categoria="detalhes" aria-pressed="false">Detalhes</button>
+                </div>
+                <div class="pg-grade" id="pg-grade" aria-label="Fotografias da Pastelaria da Sogra"></div>
+                <noscript><p class="pg-sem-script">Ative o JavaScript para visualizar e ampliar as fotografias da galeria.</p></noscript>
+            </div>
+        </section>
+
+        <section class="pg-cta" aria-labelledby="pg-cta-titulo">
+            <div class="container pg-cta-conteudo">
+                <div>
+                    <span class="secao-destaque">DEU VONTADE DE UM PASTEL?</span>
+                    <h2 id="pg-cta-titulo">Os sabores você encontra no cardápio.</h2>
+                    <p>Confira as opções da casa e escolha seu próximo favorito.</p>
+                </div>
+                <a class="botao botao-primario" href="cardapio.html">Explorar cardápio <span aria-hidden="true">→</span></a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé com as mesmas informações das demais páginas -->
+    <footer class="rodape">
+        <div class="container rodape-container">
+            <div class="rodape-marca">
+                <img src="assets/img/logo/logo-pastelaria-da-sogra.jpg" alt="Logo da Pastelaria da Sogra">
+                <p class="rodape-slogan">Pastel com recheio de verdade.</p>
+                <p>Tradição familiar, massas artesanais, ingredientes selecionados e recheios generosos: características que fazem parte da experiência da Pastelaria da Sogra.</p>
+            </div>
+            <div class="rodape-coluna">
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="cardapio.html">Cardápio</a></li>
+                    <li><a href="historia.html">Nossa História</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="rodape-coluna">
+                <h3>Contato</h3>
+                <address>Rua Oswaldo Cruz, 408<br>Vila Progresso<br>Sorocaba - SP</address>
+                <a href="tel:+551533264600">(15) 3326-4600</a>
+            </div>
+            <div class="rodape-coluna">
+                <h3>Funcionamento</h3>
+                <p>Terça a domingo<br>18h às 23h</p>
+                <p>Segunda-feira: fechado</p>
+                <div class="rodape-redes">
+                    <a href="https://www.instagram.com/pastelariadasogra/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.facebook.com/PastelariaDaSogra" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="https://www.ifood.com.br/delivery/sorocaba-sp/pastelaria-da-sogra-vila-progresso/46e19840-b53e-4f28-bc24-64780df1d78f" target="_blank" rel="noopener noreferrer">iFood</a>
+                </div>
+            </div>
+        </div>
+        <div class="rodape-inferior">
+            <div class="container">
+                <p>Projeto acadêmico • 2026</p>
+                <p>Projeto acadêmico desenvolvido para a disciplina de Web Design. Sem vínculo oficial com a Pastelaria da Sogra.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Ampliador de fotografias: dialog mantém o foco dentro da janela -->
+    <dialog id="pg-modal" class="pg-modal" aria-labelledby="pg-modal-titulo">
+        <div class="pg-modal-shell">
+            <div class="pg-modal-barra">
+                <span id="pg-modal-contador" class="pg-modal-contador"></span>
+                <button class="pg-fechar" id="pg-fechar" type="button" aria-label="Fechar fotografia ampliada">×</button>
+            </div>
+            <div class="pg-modal-visual">
+                <button type="button" id="pg-anterior" class="pg-seta pg-seta-anterior" aria-label="Fotografia anterior">‹</button>
+                <img id="pg-modal-imagem" src="assets/img/galeria/fachada-principal.webp" alt="">
+                <button type="button" id="pg-proxima" class="pg-seta pg-seta-proxima" aria-label="Próxima fotografia">›</button>
+            </div>
+            <div class="pg-modal-legenda">
+                <h2 id="pg-modal-titulo"></h2>
+                <p id="pg-modal-descricao"></p>
+                <span>Use as setas do teclado para navegar e Esc para fechar.</span>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Ordem importante: dados da galeria, scripts do site, script desta página -->
+    <script src="js/dados-galeria.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/galeria.js"></script>
+</body>
+</html>
