@@ -143,6 +143,9 @@
                     <button type="button" class="filtro-ativo" data-categoria="todos" aria-pressed="true">
                         Todos
                     </button>
+                    <button type="button" data-categoria="pasteis" aria-pressed="false">
+                        Pastéis salgados
+                    </button>
 
                     <button type="button" data-categoria="tradicionais" aria-pressed="false">
                         Tradicionais
@@ -151,13 +154,16 @@
                     <button type="button" data-categoria="especiais" aria-pressed="false">
                         Especiais
                     </button>
+                    <button type="button" data-categoria="veganos" aria-pressed="false">
+                        Opções veganas
+                    </button>
 
                     <button type="button" data-categoria="doces" aria-pressed="false">
                         Doces
                     </button>
 
                     <button type="button" data-categoria="salgados" aria-pressed="false">
-                        Salgados
+                        Porções e Salgados
                     </button>
 
                     <button type="button" data-categoria="bebidas" aria-pressed="false">
@@ -329,6 +335,19 @@
 
     <!-- Arquivo principal de JavaScript -->
     <!-- Dados dos produtos -->
+    <a href="carrinho.html" class="atalho-carrinho" id="atalho-carrinho" aria-label="Ver carrinho de compras" hidden>
+
+        <span class="atalho-carrinho-titulo">
+            Ver meu carrinho →
+        </span>
+
+        <span class="atalho-carrinho-dados">
+            <span id="atalho-carrinho-itens">0 itens</span>
+            <span aria-hidden="true">•</span>
+            <span id="atalho-carrinho-total">R$ 0,00</span>
+        </span>
+
+    </a>
     <script src="js/produtos.js"></script>
 
     <!-- Funcionalidades do site -->

@@ -117,6 +117,7 @@ const PRODUTOS_CARDAPIO = [
         id: "brocolis-tomate",
         nome: "Brócolis e Tomate",
         categoria: "especiais",
+        opcaoVegetal: true,
         descricao: "Opção vegana com brócolis e tomate.",
         preco: 20.50,
         imagem: null,

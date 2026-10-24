@@ -46,6 +46,9 @@ function renderizarCardapio() {
         card.className = "produto-card";
         // Informações utilizadas nos filtros e na pesquisa
         card.dataset.categoria = produto.categoria;
+        card.dataset.opcaoVegetal = String(
+            Boolean(produto.opcaoVegetal)
+        );
 
         card.dataset.busca = [
             produto.nome,
@@ -395,6 +398,15 @@ function configurarFiltrosCardapio() {
         cards.forEach((card) => {
             const categoriaCorreta =
                 categoriaSelecionada === "todos" ||
+
+                (categoriaSelecionada === "pasteis" &&
+                    ["tradicionais", "especiais"].includes(
+                        card.dataset.categoria
+                    )) ||
+
+                (categoriaSelecionada === "veganos" &&
+                    card.dataset.opcaoVegetal === "true") ||
+
                 card.dataset.categoria === categoriaSelecionada;
 
             const textoProduto = normalizarTexto(
@@ -448,9 +460,97 @@ function configurarFiltrosCardapio() {
         });
     });
 
-    // Exibe o resultado inicial
-    aplicarFiltros();
+    // Identifica a categoria escolhida na Home
+    const categoriaDaHome = window.location.hash
+        .replace("#", "")
+        .toLowerCase();
+
+    // Procura o botão da categoria escolhida
+    const botaoInicial = Array.from(botoes).find(
+        (botao) => botao.dataset.categoria === categoriaDaHome
+    );
+
+    if (botaoInicial) {
+        // Ativa o filtro correspondente
+        botaoInicial.click();
+
+        // Leva o visitante até a área dos filtros
+        document.querySelector(".cardapio-filtros")
+            .scrollIntoView({ block: "start" });
+    } else {
+        // Se não houver categoria selecionada, mostra todos
+        aplicarFiltros();
+    }
 }
 
 // Inicializa os filtros
 configurarFiltrosCardapio();
+/* ==================================================
+   STATUS AUTOMÁTICO DE FUNCIONAMENTO
+================================================== */
+
+function atualizarStatusFuncionamento() {
+    const status = document.getElementById("status-funcionamento");
+
+    // Executa somente onde o indicador existe
+    if (!status) return;
+
+    // Obtém o dia e a hora de Sorocaba
+    const partes = new Intl.DateTimeFormat("en-US", {
+        timeZone: "America/Sao_Paulo",
+        weekday: "short",
+        hour: "2-digit",
+        hour12: false
+    }).formatToParts(new Date());
+
+    const dia = partes.find(parte => parte.type === "weekday").value;
+    const hora = Number(
+        partes.find(parte => parte.type === "hour").value
+    );
+
+    // Terça a domingo, das 18h às 23h
+    const aberto = dia !== "Mon" && hora >= 18 && hora < 23;
+
+    status.textContent = aberto
+        ? "Aberto agora"
+        : "Fechado no momento";
+}
+
+// Executa ao abrir a página
+atualizarStatusFuncionamento();
+
+// Atualiza automaticamente a cada minuto
+if (document.getElementById("status-funcionamento")) {
+    setInterval(atualizarStatusFuncionamento, 60000);
+}
+
+/* ==================================================
+   MENU MOBILE
+================================================== */
+
+const botaoMenu = document.getElementById("botao-menu");
+const menuPrincipal = document.getElementById("menu-principal");
+
+if (botaoMenu && menuPrincipal) {
+
+    botaoMenu.addEventListener("click", () => {
+
+        const aberto = menuPrincipal.classList.toggle("menu-aberto");
+
+        botaoMenu.setAttribute("aria-expanded", String(aberto));
+
+        botaoMenu.setAttribute(
+            "aria-label",
+            aberto ? "Fechar menu de navegação" : "Abrir menu de navegação"
+        );
+    });
+
+    // Fecha o menu ao selecionar uma página
+    menuPrincipal.querySelectorAll("a").forEach((link) => {
+
+        link.addEventListener("click", () => {
+            menuPrincipal.classList.remove("menu-aberto");
+            botaoMenu.setAttribute("aria-expanded", "false");
+        });
+    });
+}

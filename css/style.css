@@ -2050,3 +2050,581 @@ button:focus-visible {
     font-size: 0.88rem;
     font-weight: 600;
 }
+
+/* ==================================================
+   PÁGINA NOSSA HISTÓRIA
+================================================== */
+
+/* Apresentação da página */
+.pagina-historia {
+    background-color: var(--cor-branco);
+}
+
+.historia-abertura {
+    padding: 70px 0 65px;
+    text-align: center;
+    background-color: var(--cor-creme);
+}
+
+.historia-abertura h1 {
+    margin: 12px 0 20px;
+    color: var(--cor-texto);
+}
+
+.historia-abertura p {
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+
+/* Seção institucional */
+.historia-apresentacao {
+    padding: 85px 0;
+}
+
+.historia-apresentacao-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.historia-foto {
+    overflow: hidden;
+    border-radius: var(--raio-grande);
+    box-shadow: var(--sombra-media);
+}
+
+.historia-foto img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.historia-conteudo h2 {
+    margin: 10px 0 24px;
+    color: var(--cor-texto);
+}
+
+.historia-conteudo p {
+    margin-bottom: 18px;
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+.historia-conteudo p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Diferenciais */
+.historia-diferenciais {
+    padding: 80px 0 90px;
+    background-color: var(--cor-fundo-claro);
+}
+
+.historia-diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.historia-diferencial {
+    padding: 38px 30px;
+
+    background-color: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-medio);
+
+    box-shadow: var(--sombra-leve);
+
+    text-align: center;
+    transition: transform var(--transicao);
+}
+
+.historia-diferencial:hover {
+    transform: translateY(-5px);
+}
+
+.historia-diferencial-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 25px;
+
+    background-color: var(--cor-creme);
+    color: var(--cor-vermelho);
+
+    border-radius: 50%;
+
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.historia-diferencial h3 {
+    margin-bottom: 15px;
+}
+
+.historia-diferencial p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+
+/* Chamada para o cardápio */
+.historia-chamada {
+    padding: 85px 0;
+    background-color: var(--cor-creme);
+}
+
+.historia-chamada-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 760px;
+    text-align: center;
+}
+
+.historia-chamada h2 {
+    margin: 10px 0 18px;
+}
+
+.historia-chamada p {
+    max-width: 540px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   RESPONSIVIDADE - NOSSA HISTÓRIA
+================================================== */
+
+@media (max-width: 900px) {
+
+    .historia-apresentacao-grid {
+        gap: 35px;
+    }
+
+
+
+    .historia-diferencial {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .historia-abertura {
+        padding: 50px 0;
+    }
+
+    .historia-abertura p {
+        font-size: 0.95rem;
+    }
+
+    .historia-apresentacao {
+        padding: 55px 0;
+    }
+
+    .historia-apresentacao-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+
+
+    .historia-diferenciais {
+        padding: 55px 0;
+    }
+
+    .historia-diferenciais-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .historia-chamada {
+        padding: 60px 0;
+    }
+}
+
+/* ==================================================
+   CABEÇALHO RESPONSIVO
+================================================== */
+
+@media (max-width: 950px) {
+
+    .cabecalho-container {
+        gap: 14px;
+    }
+
+    .botao-menu {
+        display: block;
+        order: 3;
+        flex-shrink: 0;
+    }
+
+    .cabecalho-acoes {
+        margin-left: auto;
+        gap: 12px;
+    }
+
+    .menu-principal {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 16px 5%;
+
+        background-color: var(--cor-branco);
+        border-bottom: 1px solid var(--cor-borda);
+        box-shadow: var(--sombra-media);
+    }
+
+    .menu-principal.menu-aberto {
+        display: block;
+    }
+
+    .menu-principal ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .menu-principal a {
+        display: block;
+        padding: 13px 0;
+    }
+
+    .menu-principal a.ativo::after {
+        bottom: 7px;
+        width: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .cabecalho-container {
+        min-height: 66px;
+    }
+
+    .logo img {
+        width: 66px;
+    }
+
+    .botao-ifood {
+        display: none;
+    }
+}
+
+/* ==================================================
+   RESPONSIVIDADE GERAL - TABLETS E CELULARES
+================================================== */
+
+/* TABLETS E TELAS MENORES */
+@media (max-width: 950px) {
+
+    /* Evita que conteúdos forcem a largura das colunas */
+    .hero-container>*,
+    .institucional-container>*,
+    .localizacao-container>* {
+        min-width: 0;
+    }
+
+    /* Home: conteúdo e imagem ficam um abaixo do outro */
+    .hero-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 35px;
+    }
+
+    .hero-conteudo {
+        max-width: 100%;
+    }
+
+    .hero-imagem {
+        min-height: 0;
+        height: 360px;
+    }
+
+    .hero-imagem img {
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        object-fit: cover;
+    }
+
+    /* Faixa de informações */
+    .faixa-confianca-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Categorias */
+    .categorias-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Cards de produtos */
+    .produtos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Seção institucional */
+    .institucional-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 35px;
+    }
+
+    .institucional-conteudo {
+        max-width: 100%;
+    }
+
+    /* Avaliações */
+    .avaliacoes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Galeria */
+    .galeria-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Localização e mapa */
+    .localizacao-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+    }
+
+    .localizacao-mapa {
+        min-height: 400px;
+    }
+
+    .localizacao-mapa iframe {
+        height: 400px;
+        min-height: 400px;
+    }
+
+    /* Chamada final */
+    .cta-final-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    /* Rodapé */
+    .rodape-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px;
+    }
+}
+
+
+/* CELULARES */
+@media (max-width: 600px) {
+
+    /* Espaçamentos gerais */
+    section {
+        padding-top: 42px;
+        padding-bottom: 42px;
+    }
+
+    .secao-cabecalho {
+        margin-bottom: 28px;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 35px 0 45px;
+    }
+
+    .hero-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.2rem, 9vw, 3rem);
+        line-height: 1.15;
+    }
+
+    .hero-descricao {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .hero-acoes {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .hero-acoes .botao {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-imagem {
+        height: 280px;
+        min-height: 0;
+    }
+
+    .hero-imagem img {
+        height: 100%;
+        min-height: 0;
+    }
+
+    /* Faixa de informações */
+    .faixa-confianca-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .informacao-item {
+        padding: 15px 8px;
+        gap: 8px;
+    }
+
+    .informacao-icone {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Categorias */
+    .categorias-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
+    }
+
+    .categoria-card {
+        min-height: 0;
+        padding: 20px;
+    }
+
+    .categoria-card p {
+        margin-bottom: 12px;
+    }
+
+    /* Destaques */
+    .destaques-topo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .produtos-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .produto-imagem {
+        height: 220px;
+    }
+
+    .produto-rodape {
+        flex-wrap: wrap;
+    }
+
+    /* Institucional */
+    .institucional-imagem img {
+        width: 100%;
+        height: auto;
+        max-height: 350px;
+        object-fit: cover;
+    }
+
+    /* Avaliações */
+    .avaliacoes-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .avaliacao-card {
+        min-height: 0;
+    }
+
+    .avaliacoes-resumo {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    /* Galeria */
+    .galeria-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .galeria-item {
+        min-height: 190px;
+    }
+
+    .galeria-item img {
+        height: 190px;
+    }
+
+    .galeria-item figcaption {
+        padding: 20px 10px 10px;
+        font-size: 0.75rem;
+    }
+
+    /* Localização */
+    .localizacao-item {
+        padding: 20px;
+    }
+
+    .localizacao-mapa {
+        min-height: 340px;
+    }
+
+    .localizacao-mapa iframe {
+        height: 340px;
+        min-height: 340px;
+    }
+
+    /* CTA final */
+    .cta-final {
+        padding: 48px 0;
+    }
+
+    .cta-final-acoes {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .cta-final-acoes .botao {
+        justify-content: center;
+    }
+
+    /* Rodapé */
+    .rodape-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+        padding-top: 45px;
+        padding-bottom: 40px;
+    }
+
+    .rodape-inferior .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+/* Celulares muito estreitos */
+@media (max-width: 360px) {
+
+    .galeria-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .galeria-item,
+    .galeria-item img {
+        height: 240px;
+    }
+}
