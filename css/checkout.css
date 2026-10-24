@@ -72,7 +72,20 @@
 /* Respeita a preferência de usuários que reduzem animações. */
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
-/* Consulta opcional de CEP no checkout demonstrativo. */
-#checkout-cep-status:empty { display: none; }
-#checkout-cep-status[data-tipo="sucesso"] { color: #206d39; }
-#checkout-cep-status[data-tipo="erro"] { color: #a51f16; }
+/* Feedback de validação: mensagem persistente próxima ao campo com erro. */
+.checkout-erro-campo {
+    color: #a51f16;
+    font-size: .83rem;
+    line-height: 1.45;
+    font-weight: 600;
+    margin: 2px 0 0;
+}
+.checkout-campo input[aria-invalid="true"],
+.checkout-campo select[aria-invalid="true"] {
+    border-color: #a51f16;
+    box-shadow: 0 0 0 1px #a51f16;
+}
+.checkout-campo input[aria-invalid="true"]:focus-visible,
+.checkout-campo select[aria-invalid="true"]:focus-visible {
+    outline-offset: 3px;
+}
