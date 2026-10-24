@@ -1,0 +1,105 @@
+/* Pagina Contato — estilos isolados das demais paginas.
+   Reutiliza as variaveis e componentes de css/style.css. */
+.pc-pular-conteudo { position: fixed; left: 12px; top: -100px; z-index: 3000; padding: 12px 18px; border-radius: 8px; color:#fff; background: var(--cor-vermelho); font-weight: 700; }
+.pc-pular-conteudo:focus { top: 12px; }
+.pc-localizacao { scroll-margin-top: 78px; }
+.pc-pagina { overflow: clip; }
+.pc-pagina .secao-destaque { letter-spacing: .12em; }
+.pc-hero { padding: 68px 0 76px; background: linear-gradient(110deg,#fff7e8 0%,#fffaf2 56%,#fff 100%); }
+.pc-hero-grid { display:grid; grid-template-columns: minmax(0,1.08fr) minmax(0,.92fr); gap: min(6vw,72px); align-items:center; }
+.pc-hero-texto { min-width:0; }
+.pc-hero h1 { max-width:600px; font-size:clamp(2.6rem,4.5vw,4rem); line-height:1.12; margin:12px 0 23px; letter-spacing:-.035em; }
+.pc-hero h1 span { color:var(--cor-vermelho); }
+.pc-hero-texto > p { max-width:540px; font-size:1.04rem; line-height:1.9; }
+.pc-hero-acoes { display:flex; flex-wrap:wrap; gap:13px; margin-top:28px; }
+.pc-hero-acoes .botao { gap:11px; }
+.pc-hero-servico { display:flex; align-items:center; gap:10px; margin-top:28px; font-size:.86rem; color:#655a52; font-weight:600; }
+.pc-ponto { width:9px; height:9px; border-radius:50%; flex:none; background:#40a26c; box-shadow:0 0 0 3px rgba(64,162,108,.12); }
+.pc-hero-foto { position:relative; margin:0; min-width:0; height:420px; border-radius:24px; box-shadow:0 22px 55px rgba(66,32,21,.13); overflow:hidden; background:#6b2a27; }
+.pc-hero-foto img { width:100%; height:100%; object-fit:cover; object-position: 56% 14%; }
+.pc-hero-foto figcaption { position:absolute; bottom:18px; left:18px; right:18px; padding:12px 16px; color:#fff; font-size:.83rem; font-weight:700; background:rgba(24,20,18,.76); border-radius:10px; backdrop-filter:blur(9px); }
+.pc-secao-topo { display:flex; justify-content:space-between; align-items:flex-end; gap:18px; margin-bottom:33px; }
+.pc-secao-topo h2 { margin:5px 0 12px; font-size:clamp(1.85rem,3.2vw,2.5rem); }
+.pc-secao-topo p { max-width:630px; line-height:1.8; }
+.pc-contatos { padding:77px 0 84px; background:#fff; }
+.pc-contatos-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+.pc-canal-card { min-width:0; padding:28px 27px 30px; border:1px solid var(--cor-borda); border-radius:17px; background:#fff; box-shadow:0 7px 24px rgba(40,30,20,.045); transition:transform .2s ease,box-shadow .2s ease; }
+.pc-canal-card:hover { transform:translateY(-3px); box-shadow:var(--sombra-leve); }
+.pc-canal-icone { display:inline-flex; justify-content:center; align-items:center; width:40px; height:40px; background:#fff0df; color:var(--cor-vermelho); font-size:.87rem; font-weight:800; border-radius:12px; margin-bottom:24px; }
+.pc-canal-card h3 { font-size:1.38rem; margin:0 0 10px; }
+.pc-canal-card p { min-height:76px; font-size:.94rem; line-height:1.75; }
+.pc-canal-card a { display:inline-flex; gap:9px; color:var(--cor-vermelho); font-weight:700; margin-top:15px; padding:6px 0; overflow-wrap:anywhere; }
+.pc-canal-card a:hover,.pc-link-texto:hover,.pc-redes a:hover { text-decoration:underline; text-underline-offset:4px; }
+.pc-localizacao { padding:80px 0 91px; background:#fbf7f1; }
+.pc-local-grid { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:24px; align-items:stretch; }
+.pc-info-painel,.pc-mapa-wrapper { min-width:0; border:1px solid #eadccc; border-radius:20px; overflow:hidden; background:#fff; box-shadow:0 10px 35px rgba(44,33,24,.055); }
+.pc-info-painel { padding:36px; }
+.pc-info-etiqueta { color:var(--cor-vermelho); font-weight:800; font-size:.76rem; letter-spacing:.105em; }
+.pc-info-bloco address { font-style:normal; color:#29221d; font-size:1.11rem; font-weight:650; line-height:1.8; margin:10px 0 13px; }
+.pc-link-texto { display:inline-flex; gap:7px; color:var(--cor-vermelho); font-weight:750; padding:4px 0; }
+.pc-info-divisor { border-top:1px solid #efe4d7; margin:23px 0; }
+.pc-horario-linha { display:flex; justify-content:space-between; gap:16px; margin-top:13px; font-size:.95rem; color:#5b5148; }
+.pc-horario-linha strong { white-space:nowrap; color:#322820; }
+.pc-status { display:inline-flex; align-items:center; gap:10px; background:#f3f8ef; padding:8px 13px; font-size:.8rem; font-weight:700; border-radius:30px; margin-top:20px; }
+.pc-info-observacao { font-size:.79rem; line-height:1.6; margin-top:12px; }
+.pc-redes { display:flex; flex-wrap:wrap; gap:10px 24px; margin-top:12px; }
+.pc-redes a { color:var(--cor-vermelho); font-weight:750; }
+.pc-mapa-wrapper { display:flex; flex-direction:column; }
+.pc-mapa-wrapper iframe { display:block; width:100%; min-height:500px; flex:1; border:0; }
+.pc-mapa-rodape { display:flex; justify-content:space-between; gap:12px; padding:15px 20px; font-size:.86rem; color:#52483f; font-weight:650; }
+.pc-mapa-rodape a { color:var(--cor-vermelho); white-space:nowrap; }
+.pc-cta { padding:70px 0; background:#fff; }
+.pc-cta-interno { display:flex; justify-content:space-between; align-items:center; gap:40px; padding:38px 42px; background:#fff6e8; border-radius:20px; }
+.pc-cta h2 { margin:5px 0 12px; }
+.pc-cta p { max-width:525px; line-height:1.7; }
+.pc-cta-acoes { display:flex; flex-wrap:wrap; gap:12px; justify-content:flex-end; }
+@media(max-width:960px) {
+  .pc-hero {padding:50px 0 60px;}
+  .pc-hero-grid {gap:30px;}
+  .pc-hero-foto {height:350px;}
+  .pc-contatos-grid {gap:13px;}
+  .pc-canal-card {padding:24px 20px;}
+  .pc-canal-card h3 {font-size:1.18rem;}
+  .pc-canal-card p {min-height:102px;}
+  .pc-info-painel {padding:28px;}
+  .pc-mapa-wrapper iframe {min-height:450px;}
+  .pc-cta-interno {align-items:flex-start;flex-direction:column;}
+  .pc-cta-acoes {justify-content:flex-start;}
+}
+@media(max-width:760px) {
+  .pc-hero-grid {grid-template-columns:minmax(0,1fr);}
+  .pc-hero-texto {max-width:650px;}
+  .pc-hero-foto {width:100%;height:360px;}
+  .pc-hero-foto img {object-position:55% 14%;}
+  .pc-contatos-grid {grid-template-columns:repeat(2,minmax(0,1fr));}
+  .pc-canal-card p {min-height:0;}
+  .pc-local-grid {grid-template-columns:minmax(0,1fr);}
+  .pc-mapa-wrapper iframe {min-height:370px;}
+}
+@media(max-width:600px) {
+  .pc-pagina section {padding-top:46px;padding-bottom:51px;}
+  .pc-hero h1 {font-size:clamp(2.2rem,9vw,2.9rem);margin:8px 0 16px;}
+  .pc-hero-texto > p {font-size:.98rem;line-height:1.76;}
+  .pc-hero-acoes {align-items:stretch;flex-direction:column;gap:10px;margin-top:23px;}
+  .pc-hero-acoes .botao {width:100%;justify-content:center;}
+  .pc-hero-servico {align-items:flex-start;font-size:.78rem;margin-top:20px;}
+  .pc-hero-foto {height:285px;border-radius:16px;}
+  .pc-hero-foto figcaption {left:12px;right:12px;bottom:12px;font-size:.74rem;padding:10px 11px;}
+  .pc-contatos-grid {grid-template-columns:minmax(0,1fr);gap:13px;}
+  .pc-canal-card {padding:23px;}
+  .pc-canal-icone {margin-bottom:14px;}
+  .pc-canal-card p {min-height:0;}
+  .pc-secao-topo {margin-bottom:23px;}
+  .pc-secao-topo h2 {font-size:1.84rem;}
+  .pc-info-painel {padding:24px 20px;}
+  .pc-mapa-wrapper iframe {min-height:330px;}
+  .pc-mapa-rodape {font-size:.77rem;flex-direction:column;gap:6px;}
+  .pc-cta-interno {padding:25px 21px;gap:20px;}
+  .pc-cta-acoes {width:100%;flex-direction:column;}
+  .pc-cta-acoes .botao {width:100%;justify-content:center;}
+}
+@media(max-width:355px) {
+  .pc-horario-linha {flex-wrap:wrap;gap:2px 10px;}
+  .pc-hero-foto {height:250px;}
+}
+@media(prefers-reduced-motion:reduce) { .pc-canal-card {transition:none;} }
