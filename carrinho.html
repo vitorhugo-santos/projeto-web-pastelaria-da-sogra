@@ -1,182 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-        content="Confira os produtos adicionados ao carrinho da Pastelaria da Sogra. Simulação de pedido desenvolvida para projeto acadêmico.">
-
-    <title>Meu Carrinho | Pastelaria da Sogra</title>
-    <!-- Arquivo principal de estilos -->
+    <meta name="description" content="Confira seu carrinho e experimente a finalização demonstrativa da Pastelaria da Sogra. Projeto acadêmico sem envio de pedidos ou pagamentos reais.">
+    <!-- Carrinhos possuem conteúdo pessoal e não devem aparecer nos mecanismos de busca. -->
+    <meta name="robots" content="noindex, follow">
+    <title>Carrinho e Finalização Demonstrativa | Pastelaria da Sogra</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
 </head>
-
 <body>
-
-    <!-- ==================================================
-         CABEÇALHO
-    =================================================== -->
     <header class="cabecalho">
         <div class="container cabecalho-container">
-
-            <!-- Logo -->
             <a href="index.html" class="logo" aria-label="Ir para a página inicial">
                 <img src="assets/img/logo/logo-pastelaria-da-sogra.jpg" alt="Logo da Pastelaria da Sogra">
             </a>
-
-
-            <!-- Botão do menu mobile -->
-            <button class="botao-menu" id="botao-menu" type="button" aria-label="Abrir menu de navegação"
-                aria-expanded="false" aria-controls="menu-principal">
-
-                <span></span>
-                <span></span>
-                <span></span>
-
+            <button class="botao-menu" id="botao-menu" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-principal">
+                <span></span><span></span><span></span>
             </button>
-
-
-            <!-- Navegação principal -->
             <nav class="menu-principal" id="menu-principal" aria-label="Navegação principal">
-
-                <ul>
-                    <li>
-                        <a href="index.html">Início</a>
-                    </li>
-
-                    <li>
-                        <a href="cardapio.html">Cardápio</a>
-                    </li>
-
-                    <li>
-                        <a href="historia.html">Nossa História</a>
-                    </li>
-
-                    <li>
-                        <a href="galeria.html">Galeria</a>
-                    </li>
-
-                    <li>
-                        <a href="contato.html">Contato</a>
-                    </li>
-                </ul>
-
-            </nav>
-
-
-            <!-- Ações do cabeçalho -->
-            <div class="cabecalho-acoes">
-
-                <a href="carrinho.html" class="link-carrinho" aria-label="Abrir carrinho" aria-current="page">
-
-                    Carrinho
-
-                    <span class="contador-carrinho" id="contador-carrinho">
-                        0
-                    </span>
-
-                </a>
-
-
-                <a href="https://www.ifood.com.br/delivery/sorocaba-sp/pastelaria-da-sogra-vila-progresso/46e19840-b53e-4f28-bc24-64780df1d78f"
-                    class="botao-ifood" target="_blank" rel="noopener noreferrer">
-
-                    Pedir pelo iFood
-
-                </a>
-
-            </div>
-
-        </div>
-    </header>
-
-
-
-    <!-- ==================================================
-         CONTEÚDO PRINCIPAL
-    =================================================== -->
-    <main class="pagina-carrinho">
-
-        <section class="container carrinho-secao">
-
-            <h1>Meu carrinho</h1>
-
-            <p>Confira os produtos adicionados ao seu pedido.</p>
-
-            <div class="carrinho-layout">
-
-                <!-- Lista de produtos -->
-                <div id="lista-carrinho" aria-live="polite">
-                    <p>Os produtos do carrinho aparecerão aqui.</p>
-                </div>
-
-                <!-- Resumo do pedido -->
-                <aside class="resumo-carrinho">
-
-                    <h2>Resumo do pedido</h2>
-
-                    <p>
-                        Quantidade de itens:
-                        <span id="total-itens">0</span>
-                    </p>
-
-                    <p>
-                        Total:
-                        <strong id="total-carrinho">R$ 0,00</strong>
-                    </p>
-
-                    <p>
-                        Projeto acadêmico: este carrinho é uma simulação
-                        e não envia pedidos à pastelaria.
-                    </p>
-
-                    <a href="cardapio.html">
-                        Continuar escolhendo
-                    </a>
-
-                </aside>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- ==================================================
-     RODAPÉ
-=================================================== -->
-    <footer class="rodape">
-
-        <div class="container rodape-container">
-
-            <!-- Marca -->
-            <div class="rodape-marca">
-
-                <img src="assets/img/logo/logo-pastelaria-da-sogra.jpg" alt="Logo da Pastelaria da Sogra">
-
-                <p class="rodape-slogan">
-                    Pastel com recheio de verdade.
-                </p>
-
-                <p>
-                    Tradição familiar, massas artesanais,
-                    ingredientes selecionados e recheios generosos:
-                    características que fazem parte da experiência
-                    da Pastelaria da Sogra.
-                </p>
-
-            </div>
-
-
-            <!-- Navegação -->
-            <div class="rodape-coluna">
-
-                <h3>Navegação</h3>
-
                 <ul>
                     <li><a href="index.html">Início</a></li>
                     <li><a href="cardapio.html">Cardápio</a></li>
@@ -184,90 +27,198 @@
                     <li><a href="galeria.html">Galeria</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
-
-            </div>
-
-
-            <!-- Contato -->
-            <div class="rodape-coluna">
-
-                <h3>Contato</h3>
-
-                <address>
-                    Rua Oswaldo Cruz, 408<br>
-                    Vila Progresso<br>
-                    Sorocaba - SP
-                </address>
-
-                <a href="tel:+551533264600">
-                    (15) 3326-4600
+            </nav>
+            <div class="cabecalho-acoes">
+                <a href="carrinho.html" class="link-carrinho" aria-label="Abrir carrinho" aria-current="page">
+                    Carrinho <span class="contador-carrinho" id="contador-carrinho">0</span>
                 </a>
+                <a href="https://www.ifood.com.br/delivery/sorocaba-sp/pastelaria-da-sogra-vila-progresso/46e19840-b53e-4f28-bc24-64780df1d78f"
+                   class="botao-ifood" target="_blank" rel="noopener noreferrer">Pedir pelo iFood</a>
+            </div>
+        </div>
+    </header>
 
+    <main class="pagina-carrinho" id="conteudo-principal">
+        <section class="container carrinho-secao" aria-labelledby="titulo-carrinho">
+            <span class="checkout-etiqueta">EXPERIÊNCIA DEMONSTRATIVA</span>
+            <h1 id="titulo-carrinho">Meu carrinho</h1>
+            <p>Confira seus produtos e experimente como seria finalizar um pedido pela internet.</p>
+
+            <div class="carrinho-layout" id="bloco-carrinho">
+                <div id="lista-carrinho" aria-live="polite">
+                    <p>Os produtos do carrinho aparecerão aqui.</p>
+                </div>
+                <aside class="resumo-carrinho" aria-label="Resumo do carrinho">
+                    <h2>Resumo do pedido</h2>
+                    <p>Quantidade de itens: <span id="total-itens">0</span></p>
+                    <p>Total: <strong id="total-carrinho">R$ 0,00</strong></p>
+                    <p>Os valores são demonstrativos. Nenhum pedido ou pagamento será enviado à pastelaria.</p>
+                    <a href="cardapio.html">Continuar escolhendo</a>
+                </aside>
             </div>
 
+            <section class="checkout-vazio" id="checkout-vazio" hidden aria-live="polite">
+                <h2>Seu carrinho está vazio</h2>
+                <p>Escolha ao menos um produto para experimentar a finalização.</p>
+                <a href="cardapio.html" class="botao botao-primario">Explorar o cardápio</a>
+            </section>
 
-            <!-- Horários e redes -->
-            <div class="rodape-coluna">
-
-                <h3>Funcionamento</h3>
-
-                <p>
-                    Terça a domingo<br>
-                    18h às 23h
-                </p>
-
-                <p>
-                    Segunda-feira: fechado
-                </p>
-
-
-                <div class="rodape-redes">
-
-                    <a href="https://www.instagram.com/pastelariadasogra/" target="_blank" rel="noopener noreferrer">
-                        Instagram
-                    </a>
-
-                    <a href="https://www.facebook.com/PastelariaDaSogra" target="_blank" rel="noopener noreferrer">
-                        Facebook
-                    </a>
-
-                    <a href="https://www.ifood.com.br/delivery/sorocaba-sp/pastelaria-da-sogra-vila-progresso/46e19840-b53e-4f28-bc24-64780df1d78f"
-                        target="_blank" rel="noopener noreferrer">
-                        iFood
-                    </a>
-
+            <section class="checkout-secao" id="checkout-secao" aria-labelledby="titulo-checkout" hidden>
+                <div class="checkout-cabecalho">
+                    <div>
+                        <span class="checkout-etiqueta">ETAPA FINAL</span>
+                        <h2 id="titulo-checkout">Finalizar pedido</h2>
+                        <p>Preencha os dados fictícios para testar a experiência. Nenhum dado será enviado ou armazenado.</p>
+                    </div>
+                    <span class="checkout-passos" aria-label="Etapa final da simulação">Simulação acadêmica</span>
                 </div>
 
+                <form id="form-checkout" class="checkout-form" autocomplete="off">
+                    <fieldset class="checkout-bloco">
+                        <legend><span class="checkout-numero" aria-hidden="true">01</span> Seus dados</legend>
+                        <div class="checkout-grid">
+                            <div class="checkout-campo">
+                                <label for="checkout-nome">Nome completo <span aria-hidden="true">*</span></label>
+                                <input id="checkout-nome" name="nome" type="text" minlength="3" maxlength="80" placeholder="Ex.: Ana Souza" autocomplete="off" required>
+                            </div>
+                            <div class="checkout-campo">
+                                <label for="checkout-telefone">Telefone com DDD <span aria-hidden="true">*</span></label>
+                                <input id="checkout-telefone" name="telefone" type="tel" inputmode="tel" maxlength="20" placeholder="(15) 99999-9999" autocomplete="off" required aria-describedby="checkout-telefone-ajuda">
+                                <small id="checkout-telefone-ajuda">Use um número fictício para a demonstração.</small>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="checkout-bloco" id="checkout-bloco-modalidade">
+                        <legend><span class="checkout-numero" aria-hidden="true">02</span> Como deseja receber?</legend>
+                        <div class="checkout-escolhas">
+                            <label class="checkout-opcao"><input type="radio" name="modalidade" value="entrega" checked> <span><strong>Entrega</strong><small>Informe um endereço demonstrativo.</small></span></label>
+                            <label class="checkout-opcao"><input type="radio" name="modalidade" value="retirada"> <span><strong>Retirada no balcão</strong><small>Não é necessário informar endereço.</small></span></label>
+                        </div>
+                        <div id="checkout-endereco" class="checkout-endereco">
+                            <div class="checkout-grid">
+                                <div class="checkout-campo checkout-campo-largo">
+                                    <label for="checkout-rua">Rua / Avenida <span aria-hidden="true">*</span></label>
+                                    <input id="checkout-rua" name="rua" type="text" maxlength="100" placeholder="Ex.: Rua das Flores" autocomplete="off" required>
+                                </div>
+                                <div class="checkout-campo">
+                                    <label for="checkout-numero">Número <span aria-hidden="true">*</span></label>
+                                    <input id="checkout-numero" name="numero" type="text" maxlength="12" placeholder="Ex.: 120" autocomplete="off" required>
+                                </div>
+                                <div class="checkout-campo">
+                                    <label for="checkout-bairro">Bairro <span aria-hidden="true">*</span></label>
+                                    <input id="checkout-bairro" name="bairro" type="text" maxlength="70" placeholder="Ex.: Centro" autocomplete="off" required>
+                                </div>
+                                <div class="checkout-campo checkout-campo-largo">
+                                    <label for="checkout-complemento">Complemento (opcional)</label>
+                                    <input id="checkout-complemento" name="complemento" type="text" maxlength="80" placeholder="Ex.: Apto. 12" autocomplete="off">
+                                </div>
+                            </div>
+                            <p class="checkout-nota">Não é calculada taxa de entrega nesta simulação.</p>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="checkout-bloco">
+                        <legend><span class="checkout-numero" aria-hidden="true">03</span> Quando deseja receber?</legend>
+                        <p id="checkout-aviso-horario" class="checkout-aviso-horario" role="status" aria-live="polite">Consultando horário da pastelaria...</p>
+                        <div class="checkout-escolhas">
+                            <label class="checkout-opcao"><input type="radio" name="momento" value="agora"> <span><strong>Para agora</strong><small>Disponível durante o expediente.</small></span></label>
+                            <label class="checkout-opcao"><input type="radio" name="momento" value="agendado" checked> <span><strong>Escolher dia e horário</strong><small>Agendamento apenas demonstrativo.</small></span></label>
+                        </div>
+                        <div class="checkout-grid checkout-agendamento" id="checkout-agendamento">
+                            <div class="checkout-campo">
+                                <label for="checkout-data">Dia <span aria-hidden="true">*</span></label>
+                                <select id="checkout-data" name="data" required><option value="">Selecione um dia</option></select>
+                            </div>
+                            <div class="checkout-campo">
+                                <label for="checkout-hora">Horário <span aria-hidden="true">*</span></label>
+                                <select id="checkout-hora" name="hora" required><option value="">Selecione um horário</option></select>
+                            </div>
+                        </div>
+                        <small>Horário de referência: terça a domingo, das 18h às 23h (Sorocaba/SP). Este site não realiza agendamentos reais.</small>
+                    </fieldset>
+
+                    <fieldset class="checkout-bloco">
+                        <legend><span class="checkout-numero" aria-hidden="true">04</span> Forma de pagamento</legend>
+                        <div class="checkout-escolhas checkout-escolhas-trio">
+                            <label class="checkout-opcao"><input type="radio" name="pagamento" value="pix" checked><span><strong>Pix</strong><small>Demonstrativo</small></span></label>
+                            <label class="checkout-opcao"><input type="radio" name="pagamento" value="cartao"><span><strong>Cartão</strong><small>Sem cobrança</small></span></label>
+                            <label class="checkout-opcao"><input type="radio" name="pagamento" value="dinheiro"><span><strong>Dinheiro</strong><small>Sem cobrança</small></span></label>
+                        </div>
+                        <div id="checkout-troco" class="checkout-campo checkout-campo-troco" hidden>
+                            <label for="checkout-valor-troco">Valor para troco (opcional)</label>
+                            <input type="number" id="checkout-valor-troco" name="troco" min="0" step="0.01" inputmode="decimal" placeholder="Ex.: 100,00 (digite 100)">
+                        </div>
+                        <small>Não solicitamos dados de cartão, não geramos QR Code nem processamos pagamentos.</small>
+                    </fieldset>
+
+                    <div class="checkout-final">
+                        <div class="checkout-final-texto">
+                            <span>Total dos produtos</span>
+                            <strong id="checkout-total">R$ 0,00</strong>
+                            <small>Nenhum frete ou pagamento real será realizado.</small>
+                        </div>
+                        <button class="botao botao-primario checkout-finalizar" id="checkout-finalizar" type="submit">Finalizar pedido <span aria-hidden="true">→</span></button>
+                    </div>
+                    <p class="checkout-erro" id="checkout-erro" role="alert" aria-live="assertive" hidden></p>
+                    <p class="checkout-transparencia">Ao finalizar, será exibida uma <strong>confirmação fictícia</strong>. Esta é uma demonstração acadêmica, sem vínculo oficial com a pastelaria.</p>
+                </form>
+            </section>
+
+            <section class="checkout-sucesso" id="checkout-sucesso" aria-labelledby="checkout-sucesso-titulo" hidden>
+                <div class="checkout-sucesso-icone" aria-hidden="true">✓</div>
+                <span class="checkout-etiqueta">DEMONSTRAÇÃO CONCLUÍDA</span>
+                <h2 id="checkout-sucesso-titulo" tabindex="-1">Pedido finalizado com sucesso!</h2>
+                <p>Você concluiu a experiência demonstrativa de compra.</p>
+                <div class="checkout-comprovante">
+                    <h3>Resumo da simulação</h3>
+                    <div id="checkout-resumo-final"></div>
+                </div>
+                <div class="checkout-alerta-final" role="note">
+                    <strong>Importante: esta foi uma compra simulada.</strong>
+                    <p>Nenhum pedido foi enviado à Pastelaria da Sogra, nenhuma entrega foi agendada e nenhum pagamento foi realizado. Esta tela demonstra o funcionamento acadêmico do website.</p>
+                </div>
+                <div class="checkout-sucesso-acoes">
+                    <a class="botao botao-primario" href="cardapio.html">Fazer novo pedido simulado</a>
+                    <a class="botao botao-secundario" href="https://www.ifood.com.br/delivery/sorocaba-sp/pastelaria-da-sogra-vila-progresso/46e19840-b53e-4f28-bc24-64780df1d78f" target="_blank" rel="noopener noreferrer">Pedir de verdade pelo iFood ↗</a>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container rodape-container">
+            <div class="rodape-marca">
+                <img src="assets/img/logo/logo-pastelaria-da-sogra.jpg" alt="Logo da Pastelaria da Sogra">
+                <p class="rodape-slogan">Pastel com recheio de verdade.</p>
+                <p>Tradição familiar, massas artesanais, ingredientes selecionados e recheios generosos: características que fazem parte da experiência da Pastelaria da Sogra.</p>
             </div>
-
+            <div class="rodape-coluna">
+                <h3>Navegação</h3>
+                <ul><li><a href="index.html">Início</a></li><li><a href="cardapio.html">Cardápio</a></li><li><a href="historia.html">Nossa História</a></li><li><a href="galeria.html">Galeria</a></li><li><a href="contato.html">Contato</a></li></ul>
+            </div>
+            <div class="rodape-coluna">
+                <h3>Contato</h3>
+                <address>Rua Oswaldo Cruz, 408<br>Vila Progresso<br>Sorocaba - SP</address>
+                <a href="tel:+551533264600">(15) 3326-4600</a>
+            </div>
+            <div class="rodape-coluna">
+                <h3>Funcionamento</h3>
+                <p>Terça a domingo<br>18h às 23h</p><p>Segunda-feira: fechado</p>
+                <div class="rodape-redes">
+                    <a href="https://www.instagram.com/pastelariadasogra/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.facebook.com/PastelariaDaSogra" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="https://www.ifood.com.br/delivery/sorocaba-sp/pastelaria-da-sogra-vila-progresso/46e19840-b53e-4f28-bc24-64780df1d78f" target="_blank" rel="noopener noreferrer">iFood</a>
+                </div>
+            </div>
         </div>
-
-
-        <!-- Rodapé inferior -->
         <div class="rodape-inferior">
-
-            <div class="container">
-
-                <p>
-                    Projeto acadêmico • 2026
-                </p>
-
-                <p>
-                    Projeto acadêmico desenvolvido para a disciplina
-                    de Web Design. Sem vínculo oficial com a
-                    Pastelaria da Sogra.
-                </p>
-
-            </div>
-
+            <div class="container"><p>Projeto acadêmico • 2026</p><p>Projeto acadêmico desenvolvido para a disciplina de Web Design. Sem vínculo oficial com a Pastelaria da Sogra.</p></div>
         </div>
-
     </footer>
 
-
-    <!-- Arquivo principal de JavaScript -->
+    <!-- Preservado: a navegação e o carrinho continuam controlados por script.js. -->
     <script src="js/script.js"></script>
-
+    <script src="js/checkout.js"></script>
 </body>
-
 </html>
