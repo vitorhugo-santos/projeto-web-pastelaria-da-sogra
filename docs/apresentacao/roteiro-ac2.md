@@ -1,83 +1,95 @@
-# Roteiro de apresentação — AC2, 27/10/2026
+# Estrutura da apresentação AC2 — 12 slides
 
-**Projeto:** website acadêmico da Pastelaria da Sogra  
-**URL de demonstração:** https://projeto-web-pastelaria-da-sogra.vercel.app/index.html  
-**Código:** https://github.com/vitorhugo-santos/projeto-web-pastelaria-da-sogra  
-**Quadro:** https://trello.com/b/rBHFUDul/projeto-web-design
+**Projeto:** Pastelaria da Sogra — Web Design  
+**Data:** 27/10/2026  
+**Template obrigatório:** `AC2 - Template Apresentação.pptx`, fornecido pelo professor.  
+**Tempo oficial conforme arquivo:** **10 a 15 minutos**.  
+**Estrutura decidida:** 1 capa + 10 slides de conteúdo + 1 encerramento = **12 slides**.  
+**Duração prevista:** 11min50s de fala/demonstração + até 1min20s de transições = **13min10s**.  
+**Equipe:** cinco pessoas, cerca de dois slides de conteúdo por integrante. Atribuição individual das falas pendente de aprovação do grupo.  
+**Montagem visual:** Matheus Giachetti, conforme divisão interna comunicada pela equipe.
 
-> Documento para organizar a apresentação, não comprovação de que o ensaio foi realizado. **Participantes e falas devem ser definidos pelos cinco integrantes**, considerando o que cada pessoa realmente desenvolveu. O tempo abaixo é apenas uma sugestão, sujeito às instruções do professor.
+> **Correção importante:** este documento substitui a sugestão anterior de 15 slides, porque o professor exige 10–15 minutos, não 20.
 
-## Objetivo da apresentação
+## Como adaptar o PowerPoint do professor
 
-Demonstrar qualidade técnica, decisões e processo de desenvolvimento, gestão do backlog, histórico de versões e colaboração da equipe. Segundo a rubrica disponibilizada, são cinco critérios de peso igual (**20% cada**).
+O arquivo original contém 12 slides: capa (1), duas orientações internas (2–3), oito sugestões de conteúdo (4–11) e encerramento (12). As duas orientações internas **não são slides para apresentar**.
 
-## Proposta de sequência de slides (9 telas)
+Para montar a versão final, preservar os slides de capa e encerramento, descartar as duas orientações e duplicar dois layouts internos de conteúdo para obter 10 slides centrais. O professor autoriza adaptar conteúdo e organização, mas deve-se **preservar a identidade institucional**, sobretudo na capa e no final.
 
-| Slide | Conteúdo | Evidência a abrir |
+Não inserir prints sobre marcas, rodapés e áreas obrigatórias. Não utilizar imagens ilustrativas geradas como se fossem screenshots do projeto.
+
+## Sequência final, mensagem e evidência de cada slide
+
+| Nº final | Título sugerido | Duração | O que deve comunicar | Evidência visual recomendada |
+| --- | --- | ---: | --- | --- |
+| **1** | Capa — Pastelaria da Sogra | 0:20 | Nome do site, disciplina e cinco integrantes | **Capa oficial** do professor |
+| **2** | Contexto, problema e objetivos | 0:55 | A pastelaria já tinha presença em canais digitais, mas o projeto propõe uma experiência web institucional, com cardápio, galeria e contato em um único lugar | Foto original da fachada + 2 objetivos concisos |
+| **3** | Pesquisa e benchmarking | 1:00 | Habib’s, Madero e iFood orientaram escolhas de navegação, produto e fluxo do cardápio | **Três capturas reais** em `docs/benchmarking/` + conclusão curta |
+| **4** | Prototipação e identidade visual | 0:55 | Evolução Home V1→V2→V3, paleta e tipografia consistentes | **Três prints reais** da evolução + 3 tokens de cor |
+| **5** | Gestão do backlog no Trello | 1:00 | Product Backlog, Sprint Backlog, Doing e Done; cartões com etiquetas, prioridades, descrições e datas | Captura **real** das quatro colunas + zoom num cartão completo |
+| **6** | Organização e colaboração da equipe | 0:50 | Distribuição efetiva e colaboração entre os 5 integrantes; ferramentas de comunicação e revisão apenas se comprovadas | Quadro de tarefas reais por integrante, baseado em Trello/Git |
+| **7** | Arquitetura e tecnologias | 0:55 | HTML5, CSS3, JavaScript, localStorage, GitHub, Trello, Vercel; seis páginas de site estático; limites de segurança/checkout | Diagrama simples próprio, sem código longo |
+| **8** | O site e suas funcionalidades | 0:55 | Mostrar seis páginas e destacar filtros, cardápio, carrinho, galeria, mapa e validação | Mosaico **real** de screenshots da Home, Cardápio, Carrinho, História, Galeria e Contato |
+| **9** | Demonstração ao vivo | 2:30 | Abrir Vercel: navegar, filtrar e adicionar produtos, carrinho, mostrar erro de telefone, finalizar simulação, galeria | Uma captura/QR simples no slide + navegação real no navegador |
+| **10** | Testes, correções e desempenho | 1:10 | Testes funcionais e responsivos, correções verificadas e Lighthouse — mostrar metodologia e resultados reais, sem exagero | Capturas **finais** de Lighthouse mobile/desktop e um exemplo de erro corrigido |
+| **11** | Versionamento, entrega e evolução | 1:00 | Commits em português, evidências GitHub, publicação Vercel, principais resultados e backlog futuro. Mostrar tags apenas **se criadas** | Histórico de commits real + link da Vercel + pequenas métricas de entrega comprovadas |
+| **12** | Encerramento e perguntas | 0:20 | Conclusão breve, agradecimento e abertura a perguntas | **Slide final oficial** do professor |
+| | **Total de fala e demo** | **11:50** | Adicionar até 1:20 para trocas de apresentadores | **Total-alvo ~13:10** |
+
+## Divisão por apresentador: dois slides de conteúdo cada
+
+| Integrante (a definir) | Apresenta | Papel neste bloco |
 | --- | --- | --- |
-| 1 | Nome do projeto, proposta acadêmica, integrantes | `README.md` |
-| 2 | Problema: divulgação, cardápio, fotos, contato e navegação | Home publicada |
-| 3 | Pesquisa, benchmarking, requisitos e sitemap | `docs/benchmarking/`, `docs/` e Trello |
-| 4 | Prototipação e evolução V1 → V2 → V3 | `docs/prototipo/home-v1/`, `home-v2/`, `home-v3/` |
-| 5 | Identidade visual, arquitetura e tecnologias | `docs/identidade-visual/design-system.md`; HTML/CSS/JS |
-| 6 | Demonstração funcional: seis páginas e fluxo de compra simulado | Site na Vercel |
-| 7 | Organização ágil: Product Backlog, Sprint Backlog, Doing e Done | Quadro Trello atualizado |
-| 8 | Commits, melhoria contínua, deploy, testes e Lighthouse | Histórico GitHub e `docs/testes/` |
-| 9 | Resultados, limitações, trabalho futuro e encerramento | README, Trello, checklist |
+| A | Capa + conteúdo 1–2 (slides 1–3) | Por que o projeto existe e como foi fundamentado |
+| B | Conteúdo 3–4 (slides 4–5) | Prototipação visual e gestão das etapas |
+| C | Conteúdo 5–6 (slides 6–7) | Equipe e escolhas tecnológicas |
+| D | Conteúdo 7–8 (slides 8–9) | Produto desenvolvido + demonstração |
+| E | Conteúdo 9–10 + encerramento (slides 10–12) | Evidências de qualidade, GitHub e encerramento |
 
-**Tempo sugerido (não oficial):** 8–12 minutos, com reserva para perguntas e testes do professor. Ajustar à duração determinada pela disciplina.
+**Atenção:** os “slides de conteúdo” são números 1–10 após excluir capa e encerramento; a tabela de sequência utiliza **números finais 1–12**. A escolha dos nomes deve refletir a contribuição real e ser validada pelo grupo.
 
-## Roteiro de demonstração ao vivo (sem inserir pedidos reais)
+## Correspondência com o template (todos os assuntos obrigatórios)
 
-1. Abrir a **Home**: apresentação, categorias, produtos em destaque, avaliações e localização.
-2. Ir ao **Cardápio**: demonstrar busca, filtros e adição de dois itens.
-3. Abrir o **Carrinho**: mostrar quantidades, totais, atalho “Continuar para finalização” e atualização dos valores.
-4. Executar o **checkout demonstrativo**: mostrar validação de telefone incorreto, preenchimento fictício válido, retirada/entrega, horário e confirmação. **Não coletar dados reais de pessoas nem finalizar pagamentos reais.**
-5. Apresentar a **Galeria**: filtros, modal e navegação entre fotos.
-6. Apontar **Nossa História** e **Contato**: apresentação, informações úteis, mapa e link de rota.
-7. Abrir o **Trello** e o **GitHub**: mostrar trabalho concluído, commits em português, protótipos, decisões e evidências de testes.
+- Sobre o projeto/Introdução → slides **2 e 7**.
+- Gestão do backlog → slide **5**.
+- Desenvolvimento das funcionalidades/demonstração → slides **8 e 9**.
+- Processo/justificativas técnicas/benchmarking → slides **3, 4 e 7**.
+- Versionamento → slide **11**.
+- Organização e colaboração → slide **6**.
+- Conclusão/resultados/próximos passos → slides **11 e 12**.
 
-**Plano B de apresentação:** manter links salvos e capturas da Home, do cardápio, do checkout, da galeria, do Trello e do histórico Git para eventuais problemas de rede. Capturas precisam ser produzidas pela equipe e não devem simular resultados que não ocorreram.
+Também contemplar os cinco critérios da AC2, igualmente ponderados: qualidade técnica; processo de desenvolvimento; backlog; versionamento; trabalho em equipe.
 
-## Fatos demonstráveis e limites
+## Restrições para apresentação nota 10
 
-- São seis páginas HTML principais em site estático, com CSS e JavaScript.
-- O catálogo é demonstrativo, com 24 itens declarados em `js/produtos.js`.
-- A galeria usa 16 fotografias selecionadas e miniaturas otimizadas.
-- O carrinho usa `localStorage` para **os itens**, e o checkout valida campos para exibir uma **confirmação fictícia**. Não há backend, usuário autenticado, pedido real, agendamento real nem integração de pagamento.
-- O acesso ao iFood é externo; **os produtos escolhidos no carrinho deste site não são enviados ao iFood**.
-- A consulta de CEP foi implementada experimentalmente e **retirada por decisão do grupo**.
-- O Lighthouse foi medido na Home, mas as pontuações variam entre execuções. Valores datados e evidências estão em `docs/testes/checklist-ac2.md`; não anunciar “100 em tudo” nem alegar que a nota da Home vale para as seis páginas.
-- A colaboração dos integrantes deve ser sustentada pelos registros reais; não atribuir autoria com base somente na presença do nome no README.
+1. **Evidências verdadeiras, legíveis:** prints de Trello, commits, protótipos, site e Lighthouse, com recortes cuidadosamente selecionados.
+2. **Uma mensagem por slide**, pouco texto, sem capturas com letras impossíveis de ler.
+3. **Trello verdadeiro:** o quadro atual contém cartões planejados ou em andamento; não representar todos como concluídos. Se usar números de status, conferir **imediatamente antes** de gerar os slides.
+4. **Equipe:** Matheus monta os slides, mas isso não comprova a autoria das outras tarefas. Validar efetivamente a contribuição de cada um com o grupo.
+5. **Escopo correto:** o checkout é fictício, sem envio de pedidos/pagamentos. O iFood não recebe o carrinho local. A integração automática de CEP foi retirada.
+6. **Lighthouse:** notas de laboratório variam. Sempre especificar que se referem à **Home**, data e modo de teste. Não inventar resultados finais de mobile.
+7. **Versionamento:** mostrar exemplo de correção significativa; tags/categorias só se existirem de fato.
+8. **Duração:** ensaiar com cronômetro; a demonstração ao vivo precisa caber em 2min30s, com plano B para instabilidade de internet.
+9. **Template:** preservar a capa e o fechamento institucionais, editar/dobrar dois layouts de conteúdo e excluir as orientações da apresentação final.
+10. **Sem mudanças no site para montar os slides:** capturar a versão estável publicada; documentação e deck ficam separados do código funcional.
 
-## Relação direta com a rubrica
+## Próxima etapa de montagem com Matheus
 
-| Critério (20% cada) | O que explicar e mostrar |
-| --- | --- |
-| Qualidade técnica | Funcionamento, HTML semântico, responsividade, validação, limites honestos |
-| Processo de desenvolvimento | Benchmarking, requisitos, protótipos, decisões técnicas, refinamentos |
-| Gerenciamento do backlog | Quatro listas, cartões, etiquetas, prazos, justificativas das tarefas não concluídas |
-| Versionamento | Repositório, mensagens de commit, exemplos de correções, histórico e versão de apresentação, se criada |
-| Trabalho em equipe | Participação dos cinco integrantes, distribuição comprovada, decisões coletivas, colaboração |
+1. Inserir a estrutura de 12 slides no arquivo institucional, mantendo capa e encerramento.
+2. Para cada slide, escrever **título, mensagem central e no máximo 3 frases curtas**.
+3. Escolher/recortar a **evidência real** mais relevante; manter ênfase visual na imagem, não em listas.
+4. Elaborar uma fala de aproximadamente 50–60 segundos por slide, exceto a demonstração e os slides de abertura/fechamento.
+5. Revisar slides 5, 6, 10 e 11 com a equipe para confirmar situação do Trello, atribuições, scores e versão de deploy.
+6. Ensaiar, corrigir tempo e fazer uma última revisão técnica da legibilidade no projetor.
 
-## Conferência antes da apresentação
+## Evidências já disponíveis
 
-- [ ] Cinco integrantes revisam os nomes e papéis reais de cada um.
-- [ ] Cada cartão concluído no Trello possui evidência; cards incompletos não estão em Done.
-- [ ] Testar ligações externas, fluxo de checkout com erros, carrinho vazio e apresentação em notebook/projetor.
-- [ ] Confirmar acesso ao GitHub, Vercel e Trello sem depender de credenciais que só uma pessoa possui.
-- [ ] Exportar slides ou registrar screenshots para plano B.
-- [ ] Ensaiar a fala de cada participante e preparar respostas sobre escolhas tecnológicas e limitações.
-- [ ] Preservar uma versão estável do site antes do dia 27/10; não incluir recursos novos de última hora.
-
-## Perguntas que o professor pode fazer
-
-**Por que não há login, pedidos reais e pagamentos?** O escopo acadêmico prioriza a experiência de navegação e a simulação funcional sem exigir backend, segurança transacional e regras operacionais reais.
-
-**Por que usar localStorage?** Para manter os itens do carrinho entre páginas no navegador em um protótipo estático. Isso **não** substitui um banco de dados para vendas reais.
-
-**O que o Lighthouse comprovou?** Pontuações e métricas **de laboratório da Home em execuções específicas**; elas orientaram priorização, mas não asseguram velocidade idêntica em todos os dispositivos ou páginas.
-
-**Por que há tarefas futuras no backlog?** Porque foram registradas como evolução planejada, separadas do escopo efetivamente demonstrado na AC2.
-
-**Como a equipe utilizou GitHub/Trello/Vercel?** Responder com exemplos reais de commits, cartões, alterações e URL da publicação.
+- [Site no ar](https://projeto-web-pastelaria-da-sogra.vercel.app/index.html)
+- [Quadro Trello](https://trello.com/b/rBHFUDul/projeto-web-design)
+- [Repositório e commits](https://github.com/vitorhugo-santos/projeto-web-pastelaria-da-sogra)
+- [Benchmarking](../benchmarking/)
+- [Evolução dos protótipos V1–V3](../prototipo/)
+- [Design system](../identidade-visual/design-system.md)
+- [Checklist de testes da AC2](../testes/checklist-ac2.md)
+- [Documentação do checkout](../testes/checkout-simulado-ac2.md)
