@@ -1,7 +1,8 @@
 /* Checkout demonstrativo — complementa css/style.css sem alterar estilos globais. */
 .pagina-carrinho [hidden] { display: none !important; }
 .checkout-etiqueta { display: inline-block; color: var(--cor-vermelho); font-size: .75rem; font-weight: 800; letter-spacing: .11em; margin-bottom: 10px; }
-.checkout-secao { margin-top: 46px; }
+.carrinho-ir-checkout { grid-column: 1 / -1; justify-self: start; gap: 10px; }
+.checkout-secao { margin-top: 46px; scroll-margin-top: 105px; }
 .checkout-cabecalho { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 24px; }
 .checkout-cabecalho h2 { font-size: clamp(1.7rem, 3vw, 2.25rem); margin-bottom: 9px; }
 .checkout-cabecalho p { max-width: 600px; }
@@ -65,3 +66,8 @@
 @media (max-width: 768px) { .checkout-cabecalho { align-items: start; flex-direction: column; gap: 12px; } .checkout-bloco { padding: 22px 18px 24px; } .checkout-final { padding: 22px; flex-direction: column; align-items: stretch; gap: 15px; } .checkout-finalizar { width: 100%; } }
 @media (max-width: 540px) { .checkout-grid, .checkout-escolhas, .checkout-escolhas-trio { grid-template-columns: 1fr; } .checkout-campo-largo { grid-column: auto; } .checkout-bloco legend { font-size: 1.17rem; } .checkout-opcao { padding: 13px 15px; } .checkout-opcao span { gap: 2px; } .checkout-sucesso { padding: 23px 18px; } .checkout-comprovante { padding: 15px; } .checkout-sucesso-acoes { display: grid; } .checkout-sucesso-acoes a { width: 100%; min-width: 0; } }
 @media (prefers-reduced-motion: reduce) { .checkout-opcao, .checkout-campo input, .checkout-campo select { transition: none; } }
+
+/* O botão ocupa toda a largura disponível em telas pequenas. */
+@media (max-width: 768px) { .carrinho-ir-checkout { justify-self: stretch; } }
+/* Respeita a preferência de usuários que reduzem animações. */
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
