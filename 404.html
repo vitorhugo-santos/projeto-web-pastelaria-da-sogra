@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Página de erro: não deve aparecer nos resultados de busca -->
+    <meta name="robots" content="noindex, follow">
+
+    <title>Página não encontrada | Pastelaria da Sogra</title>
+
+    <!-- Ícone exibido na aba do navegador -->
+    <link rel="icon" href="/assets/img/logo/logo-pastelaria-da-sogra.jpg" type="image/jpeg">
+
+    <!-- Caminhos começam com "/" para funcionar em qualquer endereço digitado errado -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Ajustes só desta página: centraliza o conteúdo na tela -->
+    <style>
+        .erro-404 {
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            background-color: var(--cor-fundo-claro);
+        }
+
+        .erro-404 img {
+            margin: 0 auto 24px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+
+        .erro-404 p {
+            max-width: 520px;
+            margin: 16px auto 28px;
+            color: var(--cor-texto-secundario);
+        }
+
+        .erro-404-acoes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="erro-404">
+        <div class="container">
+
+            <img src="/assets/img/logo/logo-pastelaria-da-sogra.jpg" alt="Logo da Pastelaria da Sogra" width="120" height="120">
+
+            <span class="secao-destaque">ERRO 404</span>
+
+            <h1>Esse pastel não está no cardápio</h1>
+
+            <p>
+                A página que você procurou não existe ou foi movida.
+                Volte para o início ou confira o nosso cardápio.
+            </p>
+
+            <div class="erro-404-acoes">
+                <a href="/index.html" class="botao botao-primario">Voltar ao início</a>
+                <a href="/cardapio.html" class="botao botao-secundario">Ver cardápio</a>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>
