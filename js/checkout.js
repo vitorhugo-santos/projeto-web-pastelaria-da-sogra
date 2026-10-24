@@ -27,9 +27,13 @@
         botao: $("checkout-finalizar"),
         erro: $("checkout-erro"),
         endereco: $("checkout-endereco"),
+        cep: $("checkout-cep"),
+        cepStatus: $("checkout-cep-status"),
         rua: $("checkout-rua"),
         numero: $("checkout-numero"),
         bairro: $("checkout-bairro"),
+        cidade: $("checkout-cidade"),
+        uf: $("checkout-uf"),
         complemento: $("checkout-complemento"),
         telefone: $("checkout-telefone"),
         nome: $("checkout-nome"),
@@ -43,6 +47,112 @@
         trocoValor: $("checkout-valor-troco")
     };
     let concluida = false;
+    let controladorCep = null;
+    let cepEmConsulta = "";
+    let cepConsultado = "";
+    let cepPreenchido = "";
+    let cepInexistente = "";
+    const camposPreenchidosPorCep = new Map();
+
+    function digitosCep() {
+        return ui.cep.value.replace(/\D/g, "");
+    }
+
+    function statusCep(mensagem, tipo = "") {
+        ui.cepStatus.textContent = mensagem;
+        ui.cepStatus.dataset.tipo = tipo;
+    }
+
+    // Ao trocar o CEP, limpa somente os valores ainda idênticos aos que
+    // haviam sido preenchidos automaticamente. Edições manuais são preservadas.
+    function limparPreenchimentoPorCep() {
+        for (const [campo, valor] of camposPreenchidosPorCep) {
+            if (campo.value === valor) campo.value = "";
+        }
+        camposPreenchidosPorCep.clear();
+        cepPreenchido = "";
+    }
+
+    function preencherPeloCep(campo, valor) {
+        if (typeof valor !== "string" || !valor.trim()) return;
+        if (!campo.value.trim()) {
+            campo.value = valor.trim();
+            camposPreenchidosPorCep.set(campo, campo.value);
+        }
+    }
+
+    async function consultarCep() {
+        const cep = digitosCep();
+        if (ui.cep.disabled || cep.length !== 8 ||
+            cepEmConsulta === cep || cepConsultado === cep) return;
+
+        if (controladorCep) controladorCep.abort();
+        const controlador = new AbortController();
+        controladorCep = controlador;
+        cepEmConsulta = cep;
+        cepInexistente = "";
+        statusCep("Consultando CEP...", "");
+
+        try {
+            const resposta = await fetch(`https://viacep.com.br/ws/${cep}/json/`, {
+                signal: controlador.signal
+            });
+            if (!resposta.ok) throw new Error("Falha na consulta");
+            const dados = await resposta.json();
+            if (controlador.signal.aborted || digitosCep() !== cep || ui.cep.disabled) return;
+
+            if (dados && (dados.erro === true || dados.erro === "true")) {
+                cepInexistente = cep;
+                statusCep("CEP não encontrado. Corrija o número ou deixe o CEP em branco para preencher manualmente.", "erro");
+                return;
+            }
+            if (!dados || typeof dados.localidade !== "string" ||
+                typeof dados.uf !== "string") throw new Error("Resposta inesperada");
+
+            preencherPeloCep(ui.rua, dados.logradouro);
+            preencherPeloCep(ui.bairro, dados.bairro);
+            preencherPeloCep(ui.cidade, dados.localidade);
+            preencherPeloCep(ui.uf, dados.uf);
+            cepConsultado = cep;
+            cepPreenchido = cep;
+            statusCep("CEP localizado. Confira o endereço e informe o número do imóvel.", "sucesso");
+        } catch (erro) {
+            if (erro.name !== "AbortError" && digitosCep() === cep) {
+                statusCep("Não foi possível consultar o CEP. Você pode preencher o endereço manualmente.", "erro");
+            }
+        } finally {
+            if (controladorCep === controlador) {
+                controladorCep = null;
+                cepEmConsulta = "";
+            }
+        }
+    }
+
+    function tratarDigitacaoCep() {
+        const digitos = digitosCep().slice(0, 8);
+        ui.cep.value = digitos.length > 5
+            ? `${digitos.slice(0, 5)}-${digitos.slice(5)}`
+            : digitos;
+
+        if (controladorCep && cepEmConsulta !== digitos) {
+            controladorCep.abort();
+            controladorCep = null;
+            cepEmConsulta = "";
+        }
+        if (cepPreenchido && cepPreenchido !== digitos) limparPreenchimentoPorCep();
+        if (cepConsultado !== digitos) cepConsultado = "";
+        if (cepInexistente !== digitos) cepInexistente = "";
+        if (digitos.length === 8) consultarCep();
+        else statusCep("");
+    }
+
+    ui.cep.addEventListener("input", tratarDigitacaoCep);
+    ui.cep.addEventListener("blur", () => {
+        const cep = digitosCep();
+        if (ui.cep.disabled || !cep) return;
+        if (cep.length !== 8) statusCep("O CEP deve conter 8 números ou ficar em branco.", "erro");
+        else consultarCep();
+    });
 
     const moeda = (centavos) => new Intl.NumberFormat("pt-BR", {
         style: "currency", currency: "BRL"
@@ -152,11 +262,20 @@
     function atualizarModalidade() {
         const entrega = form.elements.modalidade.value === "entrega";
         ui.endereco.hidden = !entrega;
-        [ui.rua, ui.numero, ui.bairro].forEach((campo) => {
+        [ui.rua, ui.numero, ui.bairro, ui.cidade, ui.uf].forEach((campo) => {
             campo.required = entrega;
             campo.disabled = !entrega;
         });
+        ui.cep.disabled = !entrega;
         ui.complemento.disabled = !entrega;
+        if (!entrega) {
+            if (controladorCep) controladorCep.abort();
+            controladorCep = null;
+            cepEmConsulta = "";
+            statusCep("");
+        } else if (digitosCep().length === 8) {
+            consultarCep();
+        }
     }
 
     function atualizarPagamento() {
@@ -250,8 +369,14 @@
         }
         const entrega = form.elements.modalidade.value === "entrega";
         if (entrega) {
-            for (const campo of [ui.rua, ui.numero, ui.bairro]) {
+            const cep = digitosCep();
+            if (cep && cep.length !== 8) return falha("O CEP precisa ter 8 números ou ficar em branco.", ui.cep);
+            if (cep && cepInexistente === cep) return falha("CEP não encontrado. Corrija-o ou deixe-o em branco e preencha o endereço manualmente.", ui.cep);
+            for (const campo of [ui.rua, ui.numero, ui.bairro, ui.cidade]) {
                 if (campo.value.trim().length < 2) return falha("Preencha corretamente o endereço de entrega.", campo);
+            }
+            if (!/^[A-Za-z]{2}$/.test(ui.uf.value.trim())) {
+                return falha("Informe a sigla do estado com duas letras.", ui.uf);
             }
         }
 
@@ -280,8 +405,10 @@
             }
         }
 
-        const endereco = [ui.rua.value.trim(), ui.numero.value.trim(), ui.bairro.value.trim(), ui.complemento.value.trim()]
-            .filter(Boolean).join(", ");
+        const endereco = [ui.rua.value.trim(), ui.numero.value.trim(),
+            ui.bairro.value.trim(), ui.cidade.value.trim(), ui.uf.value.trim().toUpperCase(),
+            digitosCep() ? `CEP ${ui.cep.value}` : "",
+            ui.complemento.value.trim()].filter(Boolean).join(", ");
         const quando = imediato ? "Para agora (simulado)" : `${ui.dia.selectedOptions[0].textContent}, às ${ui.hora.value} (simulado)`;
         exibirComprovante(itens, {nome, entrega, endereco, quando,
             pagamento: {pix: "Pix", cartao: "Cartão", dinheiro: "Dinheiro"}[pagamento]});
