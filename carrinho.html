@@ -72,7 +72,7 @@
                     <div>
                         <span class="checkout-etiqueta">ETAPA FINAL</span>
                         <h2 id="titulo-checkout">Finalizar pedido</h2>
-                        <p>Preencha os dados fictícios para testar a experiência. Nenhum dado será enviado ou armazenado.</p>
+                        <p>Preencha dados fictícios para testar a experiência. Nenhum pedido é enviado à pastelaria e os dados do formulário não são armazenados pelo site. Se utilizar a busca de CEP, o CEP informado será consultado no serviço externo ViaCEP.</p>
                     </div>
                     <span class="checkout-passos" aria-label="Etapa final da simulação">Simulação acadêmica</span>
                 </div>
@@ -102,6 +102,14 @@
                         <div id="checkout-endereco" class="checkout-endereco">
                             <div class="checkout-grid">
                                 <div class="checkout-campo checkout-campo-largo">
+                                    <label for="checkout-cep">CEP (opcional)</label>
+                                    <input id="checkout-cep" name="cep" type="text" inputmode="numeric" maxlength="9"
+                                        placeholder="Ex.: 01001-000" autocomplete="off"
+                                        aria-describedby="checkout-cep-ajuda checkout-cep-status">
+                                    <small id="checkout-cep-ajuda">Digite os 8 números do CEP para preencher o endereço. Confira os dados retornados; você também pode preenchê-los manualmente.</small>
+                                    <small id="checkout-cep-status" role="status" aria-live="polite"></small>
+                                </div>
+                                <div class="checkout-campo checkout-campo-largo">
                                     <label for="checkout-rua">Rua / Avenida <span aria-hidden="true">*</span></label>
                                     <input id="checkout-rua" name="rua" type="text" maxlength="100" placeholder="Ex.: Rua das Flores" autocomplete="off" required>
                                 </div>
@@ -112,6 +120,14 @@
                                 <div class="checkout-campo">
                                     <label for="checkout-bairro">Bairro <span aria-hidden="true">*</span></label>
                                     <input id="checkout-bairro" name="bairro" type="text" maxlength="70" placeholder="Ex.: Centro" autocomplete="off" required>
+                                </div>
+                                <div class="checkout-campo">
+                                    <label for="checkout-cidade">Cidade <span aria-hidden="true">*</span></label>
+                                    <input id="checkout-cidade" name="cidade" type="text" maxlength="80" placeholder="Ex.: Sorocaba" autocomplete="off" required>
+                                </div>
+                                <div class="checkout-campo">
+                                    <label for="checkout-uf">UF <span aria-hidden="true">*</span></label>
+                                    <input id="checkout-uf" name="uf" type="text" maxlength="2" placeholder="Ex.: SP" autocomplete="off" required>
                                 </div>
                                 <div class="checkout-campo checkout-campo-largo">
                                     <label for="checkout-complemento">Complemento (opcional)</label>
