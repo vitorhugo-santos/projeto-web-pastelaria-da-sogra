@@ -1,0 +1,178 @@
+[
+  {
+    "arquivo": "assets/img/galeria/fachada-principal.webp",
+    "miniatura": "assets/img/galeria/miniaturas/fachada-principal.webp",
+    "categoria": "fachada",
+    "alt": "Fachada principal iluminada à noite",
+    "legenda": "Fachada principal da Pastelaria da Sogra iluminada à noite.",
+    "original": "IMG_4030.HEIC",
+    "dimensoesOriginais": "4284x5712",
+    "tamanhoWebpBytes": 283180,
+    "tamanhoMiniaturaBytes": 75648
+  },
+  {
+    "arquivo": "assets/img/galeria/pastel-recheio-generoso.webp",
+    "miniatura": "assets/img/galeria/miniaturas/pastel-recheio-generoso.webp",
+    "categoria": "produtos",
+    "alt": "Pastel aberto com recheio abundante",
+    "legenda": "Detalhe do recheio abundante de um pastel servido na pastelaria.",
+    "original": "IMG_4050.HEIC",
+    "dimensoesOriginais": "3024x4032",
+    "tamanhoWebpBytes": 153868,
+    "tamanhoMiniaturaBytes": 49242
+  },
+  {
+    "arquivo": "assets/img/galeria/salao-visao-geral.webp",
+    "miniatura": "assets/img/galeria/miniaturas/salao-visao-geral.webp",
+    "categoria": "ambiente",
+    "alt": "Visão geral do salão da pastelaria",
+    "legenda": "Visão em profundidade do ambiente interno, com mesas e área de circulação.",
+    "original": "IMG_4058.HEIC",
+    "dimensoesOriginais": "4284x5712",
+    "tamanhoWebpBytes": 283102,
+    "tamanhoMiniaturaBytes": 68092
+  },
+  {
+    "arquivo": "assets/img/galeria/embalagens-personalizadas.webp",
+    "miniatura": "assets/img/galeria/miniaturas/embalagens-personalizadas.webp",
+    "categoria": "detalhes",
+    "alt": "Embalagens personalizadas da Pastelaria da Sogra",
+    "legenda": "Cestinha com embalagens personalizadas da Pastelaria da Sogra.",
+    "original": "IMG_4041.HEIC",
+    "dimensoesOriginais": "4284x5712",
+    "tamanhoWebpBytes": 281378,
+    "tamanhoMiniaturaBytes": 78056
+  },
+  {
+    "arquivo": "assets/img/galeria/pastel-recheio-desfiado.webp",
+    "miniatura": "assets/img/galeria/miniaturas/pastel-recheio-desfiado.webp",
+    "categoria": "produtos",
+    "alt": "Pastel aberto na mão com recheio desfiado",
+    "legenda": "Pastel recheado fotografado de perto sobre uma mesa de madeira.",
+    "original": "IMG_4048.HEIC",
+    "dimensoesOriginais": "3024x4032",
+    "tamanhoWebpBytes": 170878,
+    "tamanhoMiniaturaBytes": 49232
+  },
+  {
+    "arquivo": "assets/img/galeria/fachada-noite-movimento.webp",
+    "miniatura": "assets/img/galeria/miniaturas/fachada-noite-movimento.webp",
+    "categoria": "fachada",
+    "alt": "Fachada iluminada da Pastelaria da Sogra à noite",
+    "legenda": "Vista da fachada da pastelaria à noite, com mesas na área externa.",
+    "original": "IMG_4026.HEIC",
+    "dimensoesOriginais": "3024x4032",
+    "tamanhoWebpBytes": 314634,
+    "tamanhoMiniaturaBytes": 83952
+  },
+  {
+    "arquivo": "assets/img/galeria/salao-mesas-amarelas.webp",
+    "miniatura": "assets/img/galeria/miniaturas/salao-mesas-amarelas.webp",
+    "categoria": "ambiente",
+    "alt": "Mesas amarelas e vermelhas no interior",
+    "legenda": "Mesas amarelas e decoração vermelha no ambiente interno da pastelaria.",
+    "original": "IMG_4034.HEIC",
+    "dimensoesOriginais": "4284x5712",
+    "tamanhoWebpBytes": 250990,
+    "tamanhoMiniaturaBytes": 66678
+  },
+  {
+    "arquivo": "assets/img/galeria/pastel-doce-chocolate.webp",
+    "miniatura": "assets/img/galeria/miniaturas/pastel-doce-chocolate.webp",
+    "categoria": "produtos",
+    "alt": "Pastel doce aberto com recheio de chocolate",
+    "legenda": "Pastel doce partido ao meio, mostrando o recheio de chocolate.",
+    "original": "IMG_4055.HEIC",
+    "dimensoesOriginais": "3024x4032",
+    "tamanhoWebpBytes": 246758,
+    "tamanhoMiniaturaBytes": 68286
+  },
+  {
+    "arquivo": "assets/img/galeria/area-externa-mesas.webp",
+    "miniatura": "assets/img/galeria/miniaturas/area-externa-mesas.webp",
+    "categoria": "fachada",
+    "alt": "Mesas na área externa da pastelaria",
+    "legenda": "Área externa da Pastelaria da Sogra com mesas disponíveis à noite.",
+    "original": "IMG_4063.HEIC",
+    "dimensoesOriginais": "4284x5712",
+    "tamanhoWebpBytes": 368408,
+    "tamanhoMiniaturaBytes": 78630
+  },
+  {
+    "arquivo": "assets/img/galeria/pastel-crocante.webp",
+    "miniatura": "assets/img/galeria/miniaturas/pastel-crocante.webp",
+    "categoria": "produtos",
+    "alt": "Pastel inteiro sobre prato branco",
+    "legenda": "Pastel com massa dourada e crocante servido em prato branco.",
+    "original": "IMG_4053.HEIC",
+    "dimensoesOriginais": "3024x4032",
+    "tamanhoWebpBytes": 249350,
+    "tamanhoMiniaturaBytes": 65368
+  },
+  {
+    "arquivo": "assets/img/galeria/mesa-atendimento-digital.webp",
+    "miniatura": "assets/img/galeria/miniaturas/mesa-atendimento-digital.webp",
+    "categoria": "detalhes",
+    "alt": "Mesa de madeira com dispositivo digital de atendimento",
+    "legenda": "Detalhe de uma mesa da pastelaria com dispositivo digital.",
+    "original": "IMG_4039.HEIC",
+    "dimensoesOriginais": "4284x5712",
+    "tamanhoWebpBytes": 183406,
+    "tamanhoMiniaturaBytes": 52270
+  },
+  {
+    "arquivo": "assets/img/galeria/salao-atendimento.webp",
+    "miniatura": "assets/img/galeria/miniaturas/salao-atendimento.webp",
+    "categoria": "ambiente",
+    "alt": "Salão interno com clientes e atendimento",
+    "legenda": "Salão interno da pastelaria com clientes sentados às mesas.",
+    "original": "IMG_4019.HEIC",
+    "dimensoesOriginais": "4284x5712",
+    "tamanhoWebpBytes": 256300,
+    "tamanhoMiniaturaBytes": 67836
+  },
+  {
+    "arquivo": "assets/img/galeria/pastel-recheio-cremoso.webp",
+    "miniatura": "assets/img/galeria/miniaturas/pastel-recheio-cremoso.webp",
+    "categoria": "produtos",
+    "alt": "Pastel aberto mostrando recheio cremoso",
+    "legenda": "Pastel cortado ao meio, com recheio cremoso em destaque.",
+    "original": "IMG_4046.HEIC",
+    "dimensoesOriginais": "3024x4032",
+    "tamanhoWebpBytes": 126682,
+    "tamanhoMiniaturaBytes": 40586
+  },
+  {
+    "arquivo": "assets/img/galeria/fachada-letreiro.webp",
+    "miniatura": "assets/img/galeria/miniaturas/fachada-letreiro.webp",
+    "categoria": "fachada",
+    "alt": "Letreiro e área externa da pastelaria",
+    "legenda": "Detalhe do letreiro da Pastelaria da Sogra e de suas mesas externas.",
+    "original": "IMG_4027.HEIC",
+    "dimensoesOriginais": "3024x4032",
+    "tamanhoWebpBytes": 268454,
+    "tamanhoMiniaturaBytes": 72982
+  },
+  {
+    "arquivo": "assets/img/galeria/salao-organizado.webp",
+    "miniatura": "assets/img/galeria/miniaturas/salao-organizado.webp",
+    "categoria": "ambiente",
+    "alt": "Salão com mesas e cadeiras organizadas",
+    "legenda": "Visão das mesas e cadeiras da pastelaria no salão interno.",
+    "original": "IMG_4057.HEIC",
+    "dimensoesOriginais": "4284x5712",
+    "tamanhoWebpBytes": 247976,
+    "tamanhoMiniaturaBytes": 62856
+  },
+  {
+    "arquivo": "assets/img/galeria/fachada-balcao.webp",
+    "miniatura": "assets/img/galeria/miniaturas/fachada-balcao.webp",
+    "categoria": "fachada",
+    "alt": "Balcão de atendimento visto da entrada",
+    "legenda": "Entrada da pastelaria com vista do balcão de atendimento.",
+    "original": "IMG_4061.HEIC",
+    "dimensoesOriginais": "4284x5712",
+    "tamanhoWebpBytes": 296650,
+    "tamanhoMiniaturaBytes": 72474
+  }
+]
