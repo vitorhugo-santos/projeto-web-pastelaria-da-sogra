@@ -45,6 +45,10 @@
             <p>Confira seus produtos e experimente como seria finalizar um pedido pela internet.</p>
 
             <div class="carrinho-layout" id="bloco-carrinho">
+                <!-- Atalho para a etapa final; acompanha a visibilidade do carrinho. -->
+                <a href="#checkout-secao" class="botao botao-primario carrinho-ir-checkout">
+                    Continuar para finalização <span aria-hidden="true">↓</span>
+                </a>
                 <div id="lista-carrinho" aria-live="polite">
                     <p>Os produtos do carrinho aparecerão aqui.</p>
                 </div>
@@ -63,7 +67,7 @@
                 <a href="cardapio.html" class="botao botao-primario">Explorar o cardápio</a>
             </section>
 
-            <section class="checkout-secao" id="checkout-secao" aria-labelledby="titulo-checkout" hidden>
+            <section class="checkout-secao" id="checkout-secao" aria-labelledby="titulo-checkout" tabindex="-1" hidden>
                 <div class="checkout-cabecalho">
                     <div>
                         <span class="checkout-etiqueta">ETAPA FINAL</span>
