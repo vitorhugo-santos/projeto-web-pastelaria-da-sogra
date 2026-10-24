@@ -2,22 +2,31 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <!-- Adapta a página à largura do celular -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Descrição que aparece abaixo do título nos resultados do Google (SEO) -->
     <meta name="description" content="Encontre a Pastelaria da Sogra em Sorocaba: endereço, horários de atendimento, telefone, redes sociais e rota no mapa.">
+    <!-- Título da aba do navegador; é diferente em cada página -->
     <title>Contato e Localização | Pastelaria da Sogra</title>
+    <!-- Estilos gerais do site: cabeçalho, rodapé, botões e cores -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Estilos exclusivos da página Contato (classes com prefixo pc-) -->
     <link rel="stylesheet" href="css/contato.css">
 </head>
 <body>
+    <!-- Link de acessibilidade: quem navega pelo teclado pula o menu e vai direto ao conteúdo -->
     <a class="pc-pular-conteudo" href="#conteudo">Ir para o conteúdo principal</a>
+    <!-- CABEÇALHO: logo, menu, carrinho e botão do iFood (igual em todas as páginas) -->
     <header class="cabecalho">
         <div class="container cabecalho-container">
             <a href="index.html" class="logo" aria-label="Ir para a página inicial">
                 <img src="assets/img/logo/logo-pastelaria-da-sogra.jpg" alt="Logo da Pastelaria da Sogra">
             </a>
+            <!-- Botão que abre e fecha o menu no celular (controlado pelo js/script.js) -->
             <button class="botao-menu" id="botao-menu" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-principal">
                 <span></span><span></span><span></span>
             </button>
+            <!-- Menu principal; a página atual recebe class="ativo" e aria-current="page" -->
             <nav class="menu-principal" id="menu-principal" aria-label="Navegação principal">
                 <ul>
                     <li><a href="index.html">Início</a></li>
@@ -28,16 +37,20 @@
                 </ul>
             </nav>
             <div class="cabecalho-acoes">
+                <!-- Link do carrinho com o contador de itens, atualizado pelo JavaScript -->
                 <a href="carrinho.html" class="link-carrinho" aria-label="Abrir carrinho">
                     Carrinho <span class="contador-carrinho" id="contador-carrinho">0</span>
                 </a>
+                <!-- Link externo para o iFood; target="_blank" abre em nova aba e rel="noopener noreferrer" protege a página original -->
                 <a href="https://www.ifood.com.br/delivery/sorocaba-sp/pastelaria-da-sogra-vila-progresso/46e19840-b53e-4f28-bc24-64780df1d78f"
                     class="botao-ifood" target="_blank" rel="noopener noreferrer">Pedir pelo iFood</a>
             </div>
         </div>
     </header>
 
+<!-- CONTEÚDO PRINCIPAL; o id "conteudo" é o destino do link "Ir para o conteúdo principal" -->
 <main class="pc-pagina" id="conteudo">
+    <!-- Seção de abertura: título, botões de ação e foto da fachada -->
     <section class="pc-hero" aria-labelledby="pc-titulo">
         <div class="container pc-hero-grid">
             <div class="pc-hero-texto">
@@ -50,13 +63,14 @@
                 </div>
                 <div class="pc-hero-servico"><span class="pc-ponto" aria-hidden="true"></span><span>Atendimento: terça a domingo, das 18h às 23h</span></div>
             </div>
+            <!-- Foto real da fachada; width e height evitam que o layout "pule" ao carregar e fetchpriority carrega esta imagem primeiro -->
             <figure class="pc-hero-foto">
                 <img src="assets/img/galeria/fachada-principal.webp" alt="Fachada real da Pastelaria da Sogra em Sorocaba, com letreiro iluminado à noite" width="1125" height="1500" fetchpriority="high">
                 <figcaption>Rua Oswaldo Cruz, 408 · Vila Progresso</figcaption>
             </figure>
         </div>
     </section>
-
+    <!-- CANAIS DE CONTATO: telefone, Instagram e iFood -->
     <section class="pc-contatos" aria-labelledby="pc-contatos-titulo">
         <div class="container">
             <div class="pc-secao-topo">
@@ -67,18 +81,21 @@
                 </div>
             </div>
             <div class="pc-contatos-grid">
+                <!-- Cartão 1: telefone (o link tel: abre o discador no celular) -->
                 <article class="pc-canal-card">
                     <span class="pc-canal-icone" aria-hidden="true">01</span>
                     <h3>Por telefone</h3>
                     <p>Dúvidas sobre atendimento e informações da unidade.</p>
                     <a href="tel:+551533264600" aria-label="Ligar para a Pastelaria da Sogra no número 15 3326-4600">(15) 3326-4600 <span aria-hidden="true">↗</span></a>
                 </article>
+                <!-- Cartão 2: Instagram da pastelaria -->
                 <article class="pc-canal-card">
                     <span class="pc-canal-icone" aria-hidden="true">02</span>
                     <h3>Instagram</h3>
                     <p>Fotos, novidades e publicações da pastelaria.</p>
                     <a href="https://www.instagram.com/pastelariadasogra/" target="_blank" rel="noopener noreferrer">@pastelariadasogra <span aria-hidden="true">↗</span></a>
                 </article>
+                <!-- Cartão 3: iFood, o canal oficial para fazer pedidos -->
                 <article class="pc-canal-card">
                     <span class="pc-canal-icone" aria-hidden="true">03</span>
                     <h3>Pedidos pelo iFood</h3>
@@ -89,6 +106,7 @@
         </div>
     </section>
 
+    <!-- LOCALIZAÇÃO: endereço, horários, redes sociais e mapa -->
     <section class="pc-localizacao" id="pc-localizacao" aria-labelledby="pc-localizacao-titulo">
         <div class="container">
             <div class="pc-secao-topo">
