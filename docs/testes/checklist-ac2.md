@@ -30,13 +30,38 @@
 - A consulta automática de CEP foi **retirada por decisão do grupo**, mantendo o endereço manual.
 - O site é exclusivamente acadêmico e não realiza pedidos ou pagamentos reais.
 
+## Resultado Lighthouse — Home — 24/10/2026
+
+**Fonte:** duas capturas de tela do Chrome DevTools/Lighthouse enviadas pela equipe nesta conversa, uma execução mobile e outra desktop, na URL `https://projeto-web-pastelaria-da-sogra.vercel.app/index.html`. Os números abaixo são de auditoria sintética de laboratório, não de usuários reais.
+
+| Categoria | Mobile | Desktop |
+| --- | ---: | ---: |
+| Performance | **76** | **97** |
+| Acessibilidade | **96** | **96** |
+| Boas práticas | **100** | **100** |
+| SEO | **100** | **100** |
+
+**Interpretação:** o desempenho no desktop é muito bom; a performance mobile de 76 merece diagnóstico, mas o resumo não identifica a causa. Não inferir LCP, CLS, TBT, FCP ou oportunidades sem consultar a parte detalhada do relatório.
+
+**Próxima evidência necessária:** detalhamento das métricas e dos principais avisos Lighthouse da Home mobile. Não otimizar todos os recursos por tentativa e erro. Acessibilidade 96 indica itens a examinar no relatório, não acessibilidade integral garantida.
+
+**Limite da avaliação:** esses resultados são apenas da página inicial. Não significam que as demais cinco páginas atingiram as mesmas pontuações. As capturas de tela foram enviadas na conversa e os valores foram transcritos aqui; os PNGs ainda não estão anexados ao repositório.
+
+## Responsividade — confirmação da equipe
+
+- **375 px:** navegação pela Home, Cardápio, Galeria e Carrinho sem problemas relatados.
+- **768 px:** teste complementar pendente, sem resultado registrado.
+
 ## Próximas verificações
 
-- [ ] Responsividade em 375px e 768px: menu, textos, cartões, galeria, formulário e ausência de rolagem horizontal indevida.
+- [x] Responsividade em 375px: páginas e elementos principais, conforme teste da equipe.
+- [ ] Responsividade em 768px: teste complementar.
 - [ ] Fluxos negativos do checkout: campos vazios, telefone incorreto, retirada, agendamento indisponível e troco insuficiente.
 - [ ] Conferir links externos: iFood, Google Maps, avaliação, Instagram e Facebook.
 - [ ] Verificar Console do navegador em páginas principais.
-- [ ] Executar Lighthouse em mobile e desktop, registrando métricas e correções necessárias.
+- [x] Registrar as quatro pontuações de Lighthouse mobile e desktop da Home.
+- [ ] Investigar métricas e diagnósticos da Home mobile e verificar acessibilidade (96/100).
+- [ ] Executar Lighthouse nas demais páginas principais, conforme prioridade de tempo.
 - [ ] Conferir versão publicada na Vercel após última alteração.
 - [ ] Revisar Trello: responsáveis, prioridades, datas, atualizações e histórico.
 - [ ] Registrar tag de versão de apresentação depois da validação final, sem antecipá-la.
