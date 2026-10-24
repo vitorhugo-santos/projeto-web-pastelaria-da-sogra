@@ -1,75 +1,105 @@
-# Estratégia de versionamento semântico — AC2
+# Versionamento semântico e histórico da AC2
 
-**Projeto:** Pastelaria da Sogra (website acadêmico)  
-**Data:** 24/10/2026  
-**Repositório:** https://github.com/vitorhugo-santos/projeto-web-pastelaria-da-sogra
+**Projeto:** Pastelaria da Sogra — Web Design  
+**Data da reconstrução dos marcos:** 24/10/2026  
+**Repositório:** https://github.com/vitorhugo-santos/projeto-web-pastelaria-da-sogra  
+**Origem da evidência:** histórico real de commits da branch `main`, consultado em 24/10/2026.
 
-## Situação verificada
+## Estado verificado
 
-A consulta aos refs Git `refs/tags/` do repositório, em 24/10/2026, **não retornou tags publicadas**. O histórico de **commits existe**, mas commits não substituem tags nomeadas para identificar versões entregues.
+O histórico consultado contém **55 commits**, mas `refs/tags/` estava **vazio** na verificação. Assim, a versão atual **ainda não pode ser apresentada como formalmente etiquetada**.
 
-> Não afirmar que `v1.0.0`, `v1.1.0` ou `v1.1.1` já foram criadas até que apareçam no GitHub. Os exemplos abaixo são uma **política de versionamento proposta**.
+É válido acrescentar tags agora em commits históricos, desde que a apresentação esclareça que os **marcos foram reconstruídos retrospectivamente em 24/10/2026**. Isso não altera os commits, seus autores ou suas datas originais; as tags terão a data efetiva em que forem criadas.
 
-## MAJOR.MINOR.PATCH (SemVer)
+**Importante:** 1 commit = 1 alteração/histórico; **1 tag = marco relevante de versão**. Não é necessário (nem útil) criar uma tag para cada commit.
 
-- **MAJOR**: incremento quando ocorre mudança incompatível com o comportamento/contrato anterior (ex.: `1.4.2` → `2.0.0`). Em projetos com API, mudanças incompatíveis na API são o exemplo clássico.
-- **MINOR**: incremento para funcionalidade nova **compatível** com a versão anterior (ex.: `1.0.0` → `1.1.0`).
-- **PATCH**: incremento para correções **compatíveis** sem adicionar uma funcionalidade maior (ex.: `1.1.0` → `1.1.1`).
+## Significado de MAJOR.MINOR.PATCH
 
-A versão inicial do **website acadêmico** poderá receber `v1.0.0` **somente depois de definida e testada como entrega estável da AC2**. Isso não significa que seja um serviço comercial de pedidos; a versão `v1.0.0` identifica a entrega acadêmica estável.
+| Número | Incremento | Critério |
+| --- | --- | --- |
+| MAJOR | `1.2.3` → `2.0.0` | Mudança incompatível com contrato/comportamento anteriormente estabelecido |
+| MINOR | `1.2.3` → `1.3.0` | Nova funcionalidade compatível |
+| PATCH | `1.2.3` → `1.2.4` | Correção compatível, sem nova funcionalidade |
 
-Os protótipos gráficos V1, V2 e V3 da Home não devem ser confundidos com tags SemVer Git. São **iterações de design** e não automaticamente versões do software completo.
+Para os marcos **anteriores à primeira entrega estável**, adotou-se o prefixo `0.x.y` (fase de desenvolvimento). Assim, a evolução de funcionalidades é expressa por incrementos de **MINOR**. O prefixo `v` faz parte da **nomenclatura da tag**, não dos três números do SemVer.
 
-## Processo de criação da tag após congelar a entrega
+Os **protótipos de interface Home V1, V2 e V3** são iterações visuais de design, não tags Git nem versões completas do software.
 
-**Antes:** coordenar com a equipe, confirmar que os últimos commits estão publicados na `main`, que o site Vercel corresponde à revisão escolhida e que não há falhas críticas conhecidas.
+## Marcos históricos verificados — tags propostas para publicação retrospectiva
 
-### Opção A — pelo Git em terminal (recomendado se o grupo já conhece Git)
+| Tag | Marco efetivamente existente no Git | Commit SHA exato | Justificativa |
+| --- | --- | --- | --- |
+| `v0.1.0` | Criação da estrutura inicial do projeto (23/09, noite de Brasília) | `ae0ab48844eaf533dfc85e25a76c3d8abd1535c3` | Base do repositório e arquivos iniciais |
+| `v0.2.0` | Estrutura HTML da Home (21/10) | `3b63bc8cb76e7ddb6d73f7b7dcd57352f61564b0` | Primeira página principal estruturada |
+| `v0.3.0` | Cardápio com pesquisa e filtros combinados (23/10) | `604baf8c202314ef3d2066b4e26815762d1ff8e2` | Avanço do catálogo interativo e carrinho já existente |
+| `v0.4.0` | Galeria responsiva, filtros e visualização ampliada (23/10, noite de Brasília) | `92e085a8e1489e424ef7525b6f180b7755b13f70` | Nova experiência de galeria e páginas institucionais em desenvolvimento |
+| `v0.4.1` | Correção da metadescrição da Nossa História (23/10, noite de Brasília) | `24eb964ae270f21294534ddf16e545da79d40642` | **PATCH real**, no commit imediatamente seguinte a `v0.4.0` |
+| `v0.5.0` | Página Contato, mapa e canais de atendimento (23/10, noite de Brasília) | `296abb0c818eb831ec7cb5f0a4d7eb7b9fbd1ed3` | Sexta página principal implementada |
+| `v0.6.0` | Checkout demonstrativo com validações e agendamento (24/10) | `cf3c8cbafe02ceb78194e6fd8b74b5ba21dbc2d3` | Nova etapa de experiência, sem pedidos ou pagamentos reais |
 
-Executar na cópia local do repositório:
+**Datas:** os horários brutos do GitHub estão registrados em UTC. Para evitar ambiguidade de virada de dia, as datas locais acima são interpretadas em `America/Sao_Paulo`. Os SHAs identificam os commits sem ambiguidade.
+
+**Estado:** tabela de **tags planejadas**. Converter para **tags efetivamente publicadas** somente após verificar `https://github.com/vitorhugo-santos/projeto-web-pastelaria-da-sogra/tags`.
+
+### Por que não etiquetar todas as mudanças?
+
+Existem commits intermediários de CSS, imagens, README e ajustes, mas não são necessariamente releases. Os marcos escolhidos representam fases funcionais distintas. O `v0.4.1` é especificamente uma correção após `v0.4.0`, demonstrando o uso adequado do número PATCH.
+
+## Como publicar com Git Bash (Windows / Visual Studio Code)
+
+A conexão do assistente com GitHub atualmente permite **ler os commits e editar arquivos**, mas não disponibiliza a operação de **criar tags** diretamente. Foi incluído o script auditável:
+
+[`docs/versionamento/publicar-tags-historicas.sh`](./publicar-tags-historicas.sh)
+
+Na pasta local do projeto (repositório correto), abra o **Git Bash** e rode:
 
 ```bash
 git switch main
 git pull --ff-only origin main
-git status --short
+bash docs/versionamento/publicar-tags-historicas.sh --verificar
 ```
 
-A saída de `git status --short` **deve estar vazia**. Se houver alterações locais ou divergência de `main`, interromper e resolver com a equipe.
-
-Com a versão estável efetivamente aprovada:
+A opção `--verificar` **não cria nem publica tags**. Confere repositório, SHA e ancestralidade de cada marco. Depois de ler o relatório e confirmar com a equipe:
 
 ```bash
-git tag -a v1.0.0 -m "Versão estável da apresentação AC2"
-git push origin v1.0.0
-git show v1.0.0
+bash docs/versionamento/publicar-tags-historicas.sh --publicar
 ```
 
-### Opção B — pela interface do GitHub
+A opção `--publicar` cria **tags anotadas** e envia apenas as referências explicitamente listadas, sem modificar os arquivos ou o histórico de commits. Se houver conflito de nomes, mudanças no remoto ou falha de autenticação, **interromper e investigar; não usar `--force`**.
 
-Acessar o repositório → **Releases** → **Draft a new release** → selecionar **Choose a tag** → escrever `v1.0.0` → criar nova tag na branch `main` correta → título `v1.0.0 — AC2` → descrever funcionalidades acadêmicas e limitações → publicar a release. Se os comandos/menus forem diferentes, conferir antes de prosseguir.
+Depois da publicação, conferir a página de tags no GitHub e abrir cada uma para verificar o commit correspondente. Se o script não for executado, nenhuma tag deve ser considerada criada.
 
-### Verificação obrigatória
+## Primeira versão estável: `v1.0.0` — ainda pendente
 
-1. Conferir se a página de tags/releases do repositório mostra a tag real.
-2. Abrir a tag e confirmar o **commit SHA** da entrega.
-3. Atualizar o slide de versionamento, removendo a etiqueta **TAG Git: pendente de criação** e incluindo uma captura **real** da tag/release.
-4. Atualizar README, Trello e documentação dos testes com o nome da versão.
+**Não publicar `v1.0.0` neste momento.** O projeto está na auditoria final para a apresentação de 27/10. Ainda existe a correção identificada na logomarca do rodapé da Home e há conferências pendentes.
 
-## Como registrar uma futura evolução
+Depois de estabilizar as páginas, registrar aprovação da equipe, revisar o checkout e confirmar que Vercel e `main` representam a mesma entrega, criar a tag **no SHA efetivo da versão estável**:
 
-| Tipo | Exemplo de versão | Exemplo de alteração possível |
-| --- | --- | --- |
-| PATCH | `v1.0.1` | Corrigir uma falha visual ou validação sem mudar funcionalidades esperadas |
-| MINOR | `v1.1.0` | Adicionar funcionalidade compatível e aprovada pela equipe |
-| MAJOR | `v2.0.0` | Mudança incompatível no contrato de funcionamento existente |
+```bash
+git switch main
+git pull --ff-only origin main
+git log -1 --oneline
+git tag -a v1.0.0 -m "Versao estavel academica da AC2"
+git push origin v1.0.0
+git show --no-patch v1.0.0
+```
 
-**Todos os exemplos futuros são hipotéticos.** Não criar tags retroativas somente para aumentar artificialmente a quantidade de versões; caso se documentem marcos antigos, cada tag precisa apontar para um commit realmente correspondente ao estado da época.
+O comando deve ser executado **uma única vez** após a aprovação. Confirmar que `v1.0.0` ainda não existe; se existir, não sobrescrever. Uma eventual `v1.0.1` corresponde a correção compatível após a entrega.
 
-## Evidências de alterações reais no projeto
+## Atualização das evidências após a publicação
 
-- Navegação da galeria: `js/galeria.js`, pré-carregamento das imagens vizinhas.
-- Carrinho e checkout demonstrativo: formulário, validação, mensagens próximas aos campos.
-- Otimizações pontuais da Home: prioridade da imagem principal, carregamento adiado de imagens secundárias.
-- Documentação técnica em `docs/testes/`, `docs/identidade-visual/` e `docs/apresentacao/`.
+- [ ] Página de tags no GitHub exibe `v0.1.0` a `v0.6.0` com o `v0.4.1` intermediário.
+- [ ] Cada tag foi aberta e aponta para o commit exato descrito acima.
+- [ ] Trello: cartão de versionamento recebe URL/captura real; mover a `Done` somente após a verificação.
+- [ ] Slide de GitHub/Versionamento utiliza captura do histórico e das tags **reais**, explicando que os marcos são retrospectivos.
+- [ ] O `README.md` deixa de falar em tags pendentes quando elas estiverem publicadas.
+- [ ] A tag `v1.0.0` será criada apenas depois do congelamento da entrega estável.
 
-**Referência de definição:** as capturas de aula enviadas pela equipe apresentam o padrão `MAJOR.MINOR.PATCH` e os exemplos 1.0.0 → 1.1.0 → 1.1.1 → 2.0.0. Esta página aplica o conceito ao projeto, sem fingir que essas tags foram usadas anteriormente.
+## Referências do próprio projeto
+
+- [Histórico de commits](https://github.com/vitorhugo-santos/projeto-web-pastelaria-da-sogra/commits/main)
+- [Tags](https://github.com/vitorhugo-santos/projeto-web-pastelaria-da-sogra/tags)
+- [Checklist de testes](../testes/checklist-ac2.md)
+- [Roteiro da apresentação](../apresentacao/roteiro-ac2.md)
+
+**Nota de transparência:** este documento foi preparado agora, com base no histórico preservado. Não é uma prova de que a equipe tenha aplicado SemVer durante todo o desenvolvimento; documenta a política adotada e seus marcos retrospectivos.
