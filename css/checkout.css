@@ -71,3 +71,8 @@
 @media (max-width: 768px) { .carrinho-ir-checkout { justify-self: stretch; } }
 /* Respeita a preferência de usuários que reduzem animações. */
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Consulta opcional de CEP no checkout demonstrativo. */
+#checkout-cep-status:empty { display: none; }
+#checkout-cep-status[data-tipo="sucesso"] { color: #206d39; }
+#checkout-cep-status[data-tipo="erro"] { color: #a51f16; }
