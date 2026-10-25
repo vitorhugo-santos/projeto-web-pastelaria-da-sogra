@@ -60,6 +60,12 @@ Commit: https://github.com/vitorhugo-santos/projeto-web-pastelaria-da-sogra/comm
 - CTA **Pedir pelo iFood** e link **Avaliar no Google** foram abertos pelo integrante e direcionaram corretamente.
 - Links restantes (rotas no Google Maps, Instagram, Facebook) ainda não foram validados nessa rodada específica; não tratá-los como aprovados por inferência.
 
+## Teste adicional — navegação por teclado (24/10/2026)
+
+**Aprovado manualmente pela equipe na Vercel:** uso de `Tab` e `Enter` para abrir uma imagem na Galeria; teclas `ArrowRight` e `ArrowLeft` para navegar; `Esc` para fechar; foco retorna ao botão da fotografia aberta. O menu mobile também foi aberto e seus links acessados com `Tab` e `Enter`.
+
+Estes resultados demonstram os cenários **efetivamente testados**; não equivalem a auditoria WCAG completa, verificação de leitor de tela, contraste de todas as páginas ou responsividade em 768 px.
+
 ## Trello — achados organizacionais em 24/10/2026
 
 - Estado consultado: **41 cartões** — 14 Product Backlog, 6 Sprint Backlog, 12 Doing, 9 Done.
