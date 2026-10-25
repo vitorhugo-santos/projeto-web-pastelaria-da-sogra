@@ -57,7 +57,7 @@ projeto-web-pastelaria-da-sogra/
 └── README.md
 ```
 
-A pasta `docs/` reúne protótipos e respectivas versões, referências visuais, curadoria da Galeria e benchmarking.
+A pasta `docs/` reúne protótipos e respectivas versões, referências visuais, curadoria da Galeria, benchmarking, testes e documentação de versionamento. Os wireframes de baixa fidelidade de Cardápio, Carrinho, Galeria e Contato foram registrados **retrospectivamente** a partir das páginas aprovadas, em versões desktop e mobile (PNG e SVG). Consulte os [protótipos](docs/prototipo/) e a [nota metodológica](docs/prototipo/LEIA-ME-WIREFRAMES-AC2.md).
 
 ## Como executar localmente
 
@@ -98,7 +98,18 @@ O acesso ao **iFood** é independente do carrinho demonstrativo; os itens escolh
 - **Trello:** [quadro de desenvolvimento](https://trello.com/b/rBHFUDul/projeto-web-design).
 - **Vercel:** [site publicado](https://projeto-web-pastelaria-da-sogra.vercel.app/index.html), conectado ao repositório GitHub.
 
-**Situação em 24/10/2026:** seis páginas implementadas e site publicado na Vercel. **A equipe aprovou a versão acadêmica da AC2**, após testes manuais de navegação, carrinho/checkout, galeria, teclado, 404 e responsividade a 768 px. As sete tags históricas (`v0.1.0` a `v0.6.0`, incluindo `v0.4.1`) estão publicadas; a etiqueta da entrega estável `v1.0.0` está pendente de publicação. Testes abrangentes de acessibilidade, resultados finais de Lighthouse em todas as páginas e alguns links externos continuam documentados como validações complementares. [Evidências da auditoria](docs/testes/checklist-ac2.md) e [versionamento](docs/versionamento/semver-ac2.md).
+**Situação da AC2 (24/10/2026):** seis páginas implementadas e site publicado na Vercel. **A equipe aprovou a versão acadêmica**, após testes manuais de navegação, carrinho/checkout, galeria, teclado, 404 e responsividade a 768 px. As sete tags históricas (`v0.1.0` a `v0.6.0`, incluindo `v0.4.1`) e a versão estável **[`v1.0.0`](https://github.com/vitorhugo-santos/projeto-web-pastelaria-da-sogra/tree/v1.0.0)** foram publicadas e verificadas. A tag fixa o commit aprovado; atualizações documentais posteriores na `main` não alteram essa versão.
+
+**Lighthouse da Home — capturas registradas:**
+
+| Critério | Mobile | Desktop |
+| --- | ---: | ---: |
+| Performance | **99** | **100** |
+| Acessibilidade | **96** | **96** |
+| Boas práticas | **96** | **96** |
+| SEO | **100** | **100** |
+
+Evidências: [mobile](docs/testes/lighthouse/home-lighthouse-mobile-2026-10-24.jpeg) e [desktop](docs/testes/lighthouse/home-lighthouse-desktop-2026-10-24.jpeg). São medições da **Home**, e as notas podem variar entre execuções; não representam automaticamente as outras páginas. Testes abrangentes de acessibilidade e alguns links externos continuam documentados como verificações complementares. Consulte o [checklist da AC2](docs/testes/checklist-ac2.md) e o [versionamento SemVer](docs/versionamento/semver-ac2.md).
 
 ## Uso acadêmico
 
