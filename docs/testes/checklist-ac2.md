@@ -68,6 +68,15 @@
 - **375 px:** navegação pela Home, Cardápio, Galeria e Carrinho sem problemas relatados.
 - **768 px:** equipe confirmou a navegação pelas seis páginas, sem conteúdo cortado ou rolagem horizontal indevida, além do uso da pesquisa/filtros no Cardápio e dos campos do Carrinho.
 
+## Evidências finais Lighthouse — Home (24/10/2026)
+
+A equipe anexou à branch `main` os dois relatórios visuais em JPEG:
+
+- [Lighthouse mobile — Home](lighthouse/home-lighthouse-mobile-2026-10-24.jpeg): **Performance 99**, **Acessibilidade 96**, **Boas práticas 96**, **SEO 100**.
+- [Lighthouse desktop — Home](lighthouse/home-lighthouse-desktop-2026-10-24.jpeg): **Performance 100**, **Acessibilidade 96**, **Boas práticas 96**, **SEO 100**.
+
+Essas são capturas do `index.html` na Vercel, e **não** medições de todas as páginas. As pontuações podem variar entre execuções. As imagens têm formato JPEG; não é preciso convertê-las.
+
 ## Próximas verificações
 
 - [x] Responsividade em 375px: páginas e elementos principais, conforme teste da equipe.
@@ -85,7 +94,7 @@
 - [ ] Repetir verificação de produção após a publicação da tag `v1.0.0`, preservando evidência do SHA.
 - [x] Inspecionar as 41 checklists do Trello, atualizar itens comprovados e conferir o campo Membros.
 - [ ] Concluir ajustes pendentes de Trello: dois cartões em Done sem integrante associado; protótipos e evidências finais incompletas.
-- [ ] Registrar tag de versão de apresentação depois da validação final, sem antecipá-la.
+- [x] Registrar e verificar a tag estável `v1.0.0` da apresentação no GitHub.
 - [ ] Revisar autorização de publicação de fotos com pessoas reconhecíveis.
 
 ## Critério para considerar a auditoria encerrada
