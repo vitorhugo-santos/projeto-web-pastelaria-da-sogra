@@ -22,6 +22,8 @@
 | Validação | Telefone com menos de 10 dígitos gera destaque, mensagem junto ao campo e rolagem | Aprovado com teste manual, segundo retorno da equipe |
 | Checkout | Retirada no balcão sem exigir endereço | Aprovado com teste manual, conforme retorno da equipe |
 | Pagamento | Dinheiro com troco inferior ao total impede finalização | Aprovado com teste manual, conforme retorno da equipe |
+| Página 404 | Endereço inexistente exibe página personalizada e retorno à Home | Aprovado com teste manual, conforme retorno da equipe |
+| Links externos | CTA do iFood e Avaliar no Google abrem os destinos pretendidos | Aprovado com teste manual, conforme retorno da equipe |
 
 ## Inspeção estática do repositório
 
@@ -70,7 +72,8 @@
 - [ ] Responsividade em 768px: teste complementar.
 - [x] Checkout: telefone incorreto, retirada sem endereço e troco insuficiente, conforme testes manuais.
 - [ ] Checkout: campos vazios, alteração de dia/horário durante uso e demais casos extremos.
-- [ ] Conferir links externos: iFood, Google Maps, avaliação, Instagram e Facebook.
+- [x] Validar manualmente os links de iFood e Avaliar no Google.
+- [ ] Conferir links externos restantes: Google Maps/rota, Instagram e Facebook.
 - [ ] Verificar Console do navegador em páginas principais.
 - [x] Registrar as quatro pontuações de Lighthouse mobile e desktop da Home.
 - [ ] Investigar métricas e diagnósticos da Home mobile e verificar acessibilidade (96/100).
