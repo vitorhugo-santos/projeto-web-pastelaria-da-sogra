@@ -7,7 +7,7 @@
 
 ## Estado verificado
 
-O histórico consultado contém **55 commits**, mas `refs/tags/` estava **vazio** na verificação. Assim, a versão atual **ainda não pode ser apresentada como formalmente etiquetada**.
+O histórico consultado inicialmente continha **55 commits** e nenhuma tag. **Em 24/10/2026, as sete tags históricas anotadas foram publicadas e verificadas diretamente no GitHub**: `v0.1.0`, `v0.2.0`, `v0.3.0`, `v0.4.0`, `v0.4.1`, `v0.5.0` e `v0.6.0`. Os sete objetos de tag foram abertos individualmente e seus commits-alvo coincidiram com os SHAs documentados abaixo. A versão estável `v1.0.0` ainda não foi publicada.
 
 É válido acrescentar tags agora em commits históricos, desde que a apresentação esclareça que os **marcos foram reconstruídos retrospectivamente em 24/10/2026**. Isso não altera os commits, seus autores ou suas datas originais; as tags terão a data efetiva em que forem criadas.
 
@@ -25,7 +25,7 @@ Para os marcos **anteriores à primeira entrega estável**, adotou-se o prefixo 
 
 Os **protótipos de interface Home V1, V2 e V3** são iterações visuais de design, não tags Git nem versões completas do software.
 
-## Marcos históricos verificados — tags propostas para publicação retrospectiva
+## Marcos históricos verificados — tags retrospectivas publicadas
 
 | Tag | Marco efetivamente existente no Git | Commit SHA exato | Justificativa |
 | --- | --- | --- | --- |
@@ -39,13 +39,13 @@ Os **protótipos de interface Home V1, V2 e V3** são iterações visuais de des
 
 **Datas:** os horários brutos do GitHub estão registrados em UTC. Para evitar ambiguidade de virada de dia, as datas locais acima são interpretadas em `America/Sao_Paulo`. Os SHAs identificam os commits sem ambiguidade.
 
-**Estado:** tabela de **tags planejadas**. Converter para **tags efetivamente publicadas** somente após verificar `https://github.com/vitorhugo-santos/projeto-web-pastelaria-da-sogra/tags`.
+**Estado:** tabela de **tags anotadas já publicadas**, verificadas em `https://github.com/vitorhugo-santos/projeto-web-pastelaria-da-sogra/tags` e diretamente pelos objetos Git de tag. Os marcos são retrospectivos, sem alteração de autoria ou datas dos commits.
 
 ### Por que não etiquetar todas as mudanças?
 
 Existem commits intermediários de CSS, imagens, README e ajustes, mas não são necessariamente releases. Os marcos escolhidos representam fases funcionais distintas. O `v0.4.1` é especificamente uma correção após `v0.4.0`, demonstrando o uso adequado do número PATCH.
 
-## Como publicar com Git Bash (Windows / Visual Studio Code)
+## Como foram verificadas e publicadas as tags (registro reprodutível)
 
 A conexão do assistente com GitHub atualmente permite **ler os commits e editar arquivos**, mas não disponibiliza a operação de **criar tags** diretamente. Foi incluído o script auditável:
 
@@ -67,7 +67,7 @@ bash docs/versionamento/publicar-tags-historicas.sh --publicar
 
 A opção `--publicar` cria **tags anotadas** e envia apenas as referências explicitamente listadas, sem modificar os arquivos ou o histórico de commits. Se houver conflito de nomes, mudanças no remoto ou falha de autenticação, **interromper e investigar; não usar `--force`**.
 
-Depois da publicação, conferir a página de tags no GitHub e abrir cada uma para verificar o commit correspondente. Se o script não for executado, nenhuma tag deve ser considerada criada.
+**Publicação concluída:** a equipe confirmou a execução do script, e a conferência independente das referências `refs/tags/` e seus objetos anotados confirmou os sete commits-alvo corretos. Os comandos acima permanecem apenas para reprodução e auditoria, sem necessidade de executá-los novamente.
 
 ## Primeira versão estável: `v1.0.0` — ainda pendente
 
@@ -88,11 +88,11 @@ O comando deve ser executado **uma única vez** após a aprovação. Confirmar q
 
 ## Atualização das evidências após a publicação
 
-- [ ] Página de tags no GitHub exibe `v0.1.0` a `v0.6.0` com o `v0.4.1` intermediário.
-- [ ] Cada tag foi aberta e aponta para o commit exato descrito acima.
-- [ ] Trello: cartão de versionamento recebe URL/captura real; mover a `Done` somente após a verificação.
+- [x] Página de tags no GitHub exibe `v0.1.0` a `v0.6.0` com o `v0.4.1` intermediário.
+- [x] Cada objeto de tag foi conferido e aponta para o commit exato descrito acima.
+- [x] Trello: cartão de versionamento recebe link para as tags e esta documentação. A criação de `v1.0.0` permanece pendente.
 - [ ] Slide de GitHub/Versionamento utiliza captura do histórico e das tags **reais**, explicando que os marcos são retrospectivos.
-- [ ] O `README.md` deixa de falar em tags pendentes quando elas estiverem publicadas.
+- [x] A documentação de versionamento registra as sete tags publicadas. O README pode receber também a referência ao histórico.
 - [ ] A tag `v1.0.0` será criada apenas depois do congelamento da entrega estável.
 
 ## Referências do próprio projeto
