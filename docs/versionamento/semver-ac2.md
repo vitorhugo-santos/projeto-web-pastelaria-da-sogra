@@ -69,11 +69,11 @@ A opção `--publicar` cria **tags anotadas** e envia apenas as referências exp
 
 **Publicação concluída:** a equipe confirmou a execução do script, e a conferência independente das referências `refs/tags/` e seus objetos anotados confirmou os sete commits-alvo corretos. Os comandos acima permanecem apenas para reprodução e auditoria, sem necessidade de executá-los novamente.
 
-## Primeira versão estável: `v1.0.0` — ainda pendente
+## Primeira versão estável: `v1.0.0` — aprovada pelo grupo, publicação pendente
 
-**Não publicar `v1.0.0` neste momento.** O projeto está na auditoria final para a apresentação de 27/10. Ainda existe a correção identificada na logomarca do rodapé da Home e há conferências pendentes.
+**Aprovação recebida em 24/10/2026:** a equipe declarou aprovada a versão acadêmica da AC2, após a correção da logomarca do rodapé e os testes funcionais confirmados. **A tag Git `v1.0.0` ainda não existe no remoto no momento desta atualização**; não confundir aceite do grupo com publicação da tag. A publicação deve apontar para um commit atual da `main` depois de sincronizar a cópia local com o GitHub.
 
-Depois de estabilizar as páginas, registrar aprovação da equipe, revisar o checkout e confirmar que Vercel e `main` representam a mesma entrega, criar a tag **no SHA efetivo da versão estável**:
+Após verificar os commits finais e confirmar que o código aprovado está na `main` e publicado na Vercel, criar a tag **no SHA efetivo dessa versão**, a partir do Git Bash:
 
 ```bash
 git switch main
@@ -84,7 +84,7 @@ git push origin v1.0.0
 git show --no-patch v1.0.0
 ```
 
-O comando deve ser executado **uma única vez** após a aprovação. Confirmar que `v1.0.0` ainda não existe; se existir, não sobrescrever. Uma eventual `v1.0.1` corresponde a correção compatível após a entrega.
+O comando deve ser executado **uma única vez**. Confirmar que `v1.0.0` ainda não existe; se existir, não sobrescrever. Uma eventual `v1.0.1` corresponde a correção compatível após a entrega.
 
 ## Atualização das evidências após a publicação
 
@@ -93,7 +93,8 @@ O comando deve ser executado **uma única vez** após a aprovação. Confirmar q
 - [x] Trello: cartão de versionamento recebe link para as tags e esta documentação. A criação de `v1.0.0` permanece pendente.
 - [ ] Slide de GitHub/Versionamento utiliza captura do histórico e das tags **reais**, explicando que os marcos são retrospectivos.
 - [x] A documentação de versionamento registra as sete tags publicadas. O README pode receber também a referência ao histórico.
-- [ ] A tag `v1.0.0` será criada apenas depois do congelamento da entrega estável.
+- [x] Aprovação do grupo para a entrega estável registrada em 24/10/2026.
+- [ ] Publicar `v1.0.0` no commit correto, abrir a referência no GitHub e marcar a checklist correspondente no Trello.
 
 ## Referências do próprio projeto
 
