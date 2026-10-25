@@ -36,6 +36,16 @@ Commit: https://github.com/vitorhugo-santos/projeto-web-pastelaria-da-sogra/comm
 8. **Lighthouse:** repetir uma medição mobile e desktop da Home após as mudanças; não prometer pontuação fixa ou 100 em todas as páginas.
 9. **Mídia:** confirmar autorização apropriada para fotografias com pessoas identificáveis.
 
+## Testes adicionais no código — continuidade da auditoria
+
+**Agendamento e relógio de Sorocaba:** os cálculos presentes em `js/checkout.js` foram executados isoladamente em seis cenários com datas e horários explícitos: sábado antes de abrir, sábado 18h, sábado 22h35, domingo 22h45, segunda 19h e terça 23h. **6/6 passaram**: expediente terça a domingo das 18h às 23h, segunda fechada, antecedência de 30 min para horários agendáveis do mesmo dia e seleção de próximos dias úteis. Esses testes não substituem um teste integrado do formulário na Vercel.
+
+**Catálogo:** `js/produtos.js` possui 24 itens; IDs e nomes não repetidos, preços finitos e positivos, categorias preenchidas. Os quatro produtos de destaque da Home foram comparados ao catálogo: nomes e preços coincidem.
+
+**Pendência editorial/comercial:** o produto **Brócolis e Tomate** está marcado com `opcaoVegetal: true`, descrito como opção vegana, mas contém a observação `Verificar opção de massa vegana.`. Portanto, não há comprovação de que a versão disponível seja necessariamente vegana. A equipe precisa confirmar se a apresentação como vegana é apropriada antes de afirmar isso no site; nenhuma alteração foi realizada na classificação.
+
+**Próxima validação necessária:** testar no navegador os caminhos completos de carrinho/checkout, especialmente opção entrega/retirada e pagamento em dinheiro com troco menor que o total.
+
 ## Trello — achados organizacionais em 24/10/2026
 
 - Estado consultado: **41 cartões** — 14 Product Backlog, 6 Sprint Backlog, 12 Doing, 9 Done.
