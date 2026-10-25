@@ -20,6 +20,8 @@
 | Usabilidade do carrinho | Botão de acesso direto ao formulário | Aprovado com teste manual |
 | Galeria | Navegação entre fotos após pré-carregamento | Aprovado com teste manual; sem atraso perceptível |
 | Validação | Telefone com menos de 10 dígitos gera destaque, mensagem junto ao campo e rolagem | Aprovado com teste manual, segundo retorno da equipe |
+| Checkout | Retirada no balcão sem exigir endereço | Aprovado com teste manual, conforme retorno da equipe |
+| Pagamento | Dinheiro com troco inferior ao total impede finalização | Aprovado com teste manual, conforme retorno da equipe |
 
 ## Inspeção estática do repositório
 
@@ -66,7 +68,8 @@
 
 - [x] Responsividade em 375px: páginas e elementos principais, conforme teste da equipe.
 - [ ] Responsividade em 768px: teste complementar.
-- [ ] Fluxos negativos do checkout: campos vazios, telefone incorreto, retirada, agendamento indisponível e troco insuficiente.
+- [x] Checkout: telefone incorreto, retirada sem endereço e troco insuficiente, conforme testes manuais.
+- [ ] Checkout: campos vazios, alteração de dia/horário durante uso e demais casos extremos.
 - [ ] Conferir links externos: iFood, Google Maps, avaliação, Instagram e Facebook.
 - [ ] Verificar Console do navegador em páginas principais.
 - [x] Registrar as quatro pontuações de Lighthouse mobile e desktop da Home.
