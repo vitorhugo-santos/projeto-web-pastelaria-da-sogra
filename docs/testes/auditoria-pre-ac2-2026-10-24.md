@@ -54,6 +54,12 @@ Commit: https://github.com/vitorhugo-santos/projeto-web-pastelaria-da-sogra/comm
 - **Vínculos JavaScript/HTML:** todos os IDs referenciados por `js/checkout.js` foram localizados em `carrinho.html`, e todos os IDs exigidos por `js/galeria.js` foram localizados em `galeria.html`. O script compartilhado possui referências opcionais às diversas páginas com verificações de existência no código.
 - **Teste da publicação:** houve tentativa de abrir as páginas da Vercel pelo ambiente de consulta, mas a ferramenta não conseguiu acessá-las. Isso **não demonstra indisponibilidade do site**; a equipe segue validando no navegador. Não declarar 404/links externos como aprovados sem o teste real.
 
+## Testes complementares de navegação confirmados pela equipe
+
+- Página inexistente na Vercel retorna a experiência 404 personalizada e oferece retorno à Home, conforme confirmação manual.
+- CTA **Pedir pelo iFood** e link **Avaliar no Google** foram abertos pelo integrante e direcionaram corretamente.
+- Links restantes (rotas no Google Maps, Instagram, Facebook) ainda não foram validados nessa rodada específica; não tratá-los como aprovados por inferência.
+
 ## Trello — achados organizacionais em 24/10/2026
 
 - Estado consultado: **41 cartões** — 14 Product Backlog, 6 Sprint Backlog, 12 Doing, 9 Done.
