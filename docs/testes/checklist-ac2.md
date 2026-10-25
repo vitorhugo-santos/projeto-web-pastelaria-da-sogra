@@ -66,12 +66,12 @@
 ## Responsividade — confirmação da equipe
 
 - **375 px:** navegação pela Home, Cardápio, Galeria e Carrinho sem problemas relatados.
-- **768 px:** teste complementar pendente, sem resultado registrado.
+- **768 px:** equipe confirmou a navegação pelas seis páginas, sem conteúdo cortado ou rolagem horizontal indevida, além do uso da pesquisa/filtros no Cardápio e dos campos do Carrinho.
 
 ## Próximas verificações
 
 - [x] Responsividade em 375px: páginas e elementos principais, conforme teste da equipe.
-- [ ] Responsividade em 768px: teste complementar.
+- [x] Responsividade em 768px: seis páginas, filtros e checkout, conforme teste da equipe.
 - [x] Checkout: telefone incorreto, retirada sem endereço e troco insuficiente, conforme testes manuais.
 - [ ] Checkout: campos vazios, alteração de dia/horário durante uso e demais casos extremos.
 - [x] Validar manualmente os links de iFood e Avaliar no Google.
@@ -81,8 +81,10 @@
 - [x] Verificar por teclado o modal da Galeria e o menu mobile (Tab, Enter, setas, Esc e retorno do foco).
 - [ ] Investigar métricas e diagnósticos da Home mobile e verificar acessibilidade (96/100).
 - [ ] Executar Lighthouse nas demais páginas principais, conforme prioridade de tempo.
-- [ ] Conferir versão publicada na Vercel após última alteração.
-- [ ] Revisar Trello: responsáveis, prioridades, datas, atualizações e histórico.
+- [x] Confirmar versão pública e os fluxos testados pela equipe após as correções da Home e do carrinho.
+- [ ] Repetir verificação de produção após a publicação da tag `v1.0.0`, preservando evidência do SHA.
+- [x] Inspecionar as 41 checklists do Trello, atualizar itens comprovados e conferir o campo Membros.
+- [ ] Concluir ajustes pendentes de Trello: dois cartões em Done sem integrante associado; protótipos e evidências finais incompletas.
 - [ ] Registrar tag de versão de apresentação depois da validação final, sem antecipá-la.
 - [ ] Revisar autorização de publicação de fotos com pessoas reconhecíveis.
 
