@@ -5,6 +5,9 @@
 **Quadro:** https://trello.com/b/rBHFUDul/projeto-web-design  
 **Coordenador da revisão:** Vitor Hugo Rosario dos Santos
 
+
+> **Atualização de 24/10/2026, após atribuição pelos integrantes:** os responsáveis foram associados diretamente no campo `Membros` de 39 dos 41 cartões. A inspeção retornou **dois cartões em Done sem membro**: `Desenvolver página Nossa História` e `Desenvolver página Galeria`. Os blocos duplicados de responsável que haviam sido acrescentados às descrições foram retirados; os textos específicos dos cartões permaneceram intactos. A tabela abaixo é um registro do plano histórico, não uma confirmação atual da distribuição exata de membros. Não reatribuir automaticamente os cartões já ajustados manualmente.
+
 ## Escopo, fidelidade e limite da atribuição
 
 O grupo autorizou redistribuir **os 32 cartões originalmente sem membro** e priorizar um total ligeiramente maior de responsabilidades para Vitor Hugo. Os 9 cartões que já tinham membros associados no Trello foram **preservados**.
@@ -68,11 +71,10 @@ A integração Trello acessível ao assistente permite atualizar descrições, m
 
 ## Próximas providências para fechar a organização
 
-1. Em cada cartão listado, selecionar o perfil indicado em **Membros** no Trello. O @usuário está explícito para evitar misturar os dois integrantes chamados Gabriel.
-2. Confirmar com o grupo que essa responsabilidade futura corresponde à disponibilidade e ao compromisso de cada integrante.
-3. Conferir visualmente 5–10 cartões como amostra e, depois, os 32 vínculos no campo Membros.
-4. Não mover para Done tarefas que dependem de protótipos formais ausentes, apresentação ainda em edição, Lighthouse final documentado, validação global ou tag `v1.0.0`.
-5. Não alterar o histórico de commits, datas e autores para tentar simular que a distribuição foi feita no início do projeto.
+1. Vincular um integrante do grupo aos dois cartões em Done que ainda aparecem sem membro no Trello; conservar as atribuições manuais dos demais.
+2. Confirmar pelo grupo os responsáveis por tarefas futuras e diferenciar acompanhamento de autoria histórica.
+3. Manter pendentes as etapas de prototipagem sem evidência formal, anexos finais de performance e publicação da tag `v1.0.0`.
+4. Preservar datas e autores originais dos commits; esta distribuição foi organizada retrospectivamente.
 
 ## Conclusões de cartões verificadas em 24/10
 
