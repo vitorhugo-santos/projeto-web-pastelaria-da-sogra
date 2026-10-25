@@ -24,6 +24,8 @@
 | Pagamento | Dinheiro com troco inferior ao total impede finalização | Aprovado com teste manual, conforme retorno da equipe |
 | Página 404 | Endereço inexistente exibe página personalizada e retorno à Home | Aprovado com teste manual, conforme retorno da equipe |
 | Links externos | CTA do iFood e Avaliar no Google abrem os destinos pretendidos | Aprovado com teste manual, conforme retorno da equipe |
+| Acessibilidade da galeria | Tab + Enter abre foto; setas navegam; Esc fecha e devolve foco à foto | Aprovado com teste manual, segundo confirmação da equipe |
+| Menu mobile | Abre e permite navegar pelos links usando Tab e Enter | Aprovado com teste manual, segundo confirmação da equipe |
 
 ## Inspeção estática do repositório
 
@@ -76,6 +78,7 @@
 - [ ] Conferir links externos restantes: Google Maps/rota, Instagram e Facebook.
 - [ ] Verificar Console do navegador em páginas principais.
 - [x] Registrar as quatro pontuações de Lighthouse mobile e desktop da Home.
+- [x] Verificar por teclado o modal da Galeria e o menu mobile (Tab, Enter, setas, Esc e retorno do foco).
 - [ ] Investigar métricas e diagnósticos da Home mobile e verificar acessibilidade (96/100).
 - [ ] Executar Lighthouse nas demais páginas principais, conforme prioridade de tempo.
 - [ ] Conferir versão publicada na Vercel após última alteração.
