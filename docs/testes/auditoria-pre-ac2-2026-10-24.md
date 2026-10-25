@@ -46,6 +46,14 @@ Commit: https://github.com/vitorhugo-santos/projeto-web-pastelaria-da-sogra/comm
 
 **Próxima validação necessária:** testar no navegador os caminhos completos de carrinho/checkout, especialmente opção entrega/retirada e pagamento em dinheiro com troco menor que o total.
 
+## Nova rodada — validação de checkout e scripts
+
+- **Retirada sem endereço:** usuário confirmou que o checkout aceitou modalidade retirada com endereço em branco, mantendo outros campos válidos.
+- **Troco insuficiente:** usuário confirmou que a finalização foi bloqueada e apresentou a validação esperada.
+- **Sintaxe JavaScript:** os cinco arquivos `js/script.js`, `js/checkout.js`, `js/galeria.js`, `js/dados-galeria.js` e `js/produtos.js` foram analisados sintaticamente, sem erros.
+- **Vínculos JavaScript/HTML:** todos os IDs referenciados por `js/checkout.js` foram localizados em `carrinho.html`, e todos os IDs exigidos por `js/galeria.js` foram localizados em `galeria.html`. O script compartilhado possui referências opcionais às diversas páginas com verificações de existência no código.
+- **Teste da publicação:** houve tentativa de abrir as páginas da Vercel pelo ambiente de consulta, mas a ferramenta não conseguiu acessá-las. Isso **não demonstra indisponibilidade do site**; a equipe segue validando no navegador. Não declarar 404/links externos como aprovados sem o teste real.
+
 ## Trello — achados organizacionais em 24/10/2026
 
 - Estado consultado: **41 cartões** — 14 Product Backlog, 6 Sprint Backlog, 12 Doing, 9 Done.
