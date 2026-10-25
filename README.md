@@ -98,7 +98,7 @@ O acesso ao **iFood** é independente do carrinho demonstrativo; os itens escolh
 - **Trello:** [quadro de desenvolvimento](https://trello.com/b/rBHFUDul/projeto-web-design).
 - **Vercel:** [site publicado](https://projeto-web-pastelaria-da-sogra.vercel.app/index.html), conectado ao repositório GitHub.
 
-**Situação em 24/10/2026:** seis páginas implementadas e site publicado na Vercel. A equipe está concluindo a auditoria funcional, correções finais, verificação de desempenho e preparação da AC2. Não declarar a validação final como concluída antes dos testes.
+**Situação em 24/10/2026:** seis páginas implementadas e site publicado na Vercel. **A equipe aprovou a versão acadêmica da AC2**, após testes manuais de navegação, carrinho/checkout, galeria, teclado, 404 e responsividade a 768 px. As sete tags históricas (`v0.1.0` a `v0.6.0`, incluindo `v0.4.1`) estão publicadas; a etiqueta da entrega estável `v1.0.0` está pendente de publicação. Testes abrangentes de acessibilidade, resultados finais de Lighthouse em todas as páginas e alguns links externos continuam documentados como validações complementares. [Evidências da auditoria](docs/testes/checklist-ac2.md) e [versionamento](docs/versionamento/semver-ac2.md).
 
 ## Uso acadêmico
 
