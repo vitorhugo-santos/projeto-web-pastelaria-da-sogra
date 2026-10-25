@@ -5,7 +5,19 @@ const CHAVE_CARRINHO = "pastelariaDaSograCarrinho";
 function obterCarrinho() {
     try {
         const dados = JSON.parse(localStorage.getItem(CHAVE_CARRINHO));
-        return Array.isArray(dados) ? dados : [];
+        if (!Array.isArray(dados)) return [];
+
+        // Ignora registros antigos ou inválidos para não interromper o site.
+        // Mantém o formato original do carrinho para os demais recursos.
+        return dados.filter((item) =>
+            item && typeof item.nome === "string" && item.nome.trim() &&
+            Number.isSafeInteger(Number(item.quantidade)) && Number(item.quantidade) > 0 &&
+            Number.isFinite(Number(item.preco)) && Number(item.preco) > 0
+        ).map((item) => ({
+            nome: item.nome,
+            preco: Number(item.preco),
+            quantidade: Number(item.quantidade)
+        }));
     } catch (erro) {
         return [];
     }
