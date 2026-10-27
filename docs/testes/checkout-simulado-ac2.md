@@ -14,7 +14,7 @@ Este site não recebe pedidos reais, não reserva entregas e não processa pagam
 - JS separado, sem backend, banco, requisições externas, armazenamento persistente de nome, telefone ou endereço.
 - `localStorage` armazena **somente os produtos do carrinho**, como na versão anterior; é limpo após a simulação.
 - Retirada não solicita endereço; entrega exige rua, número e bairro.
-- Formas de pagamento apenas declarativas (Pix, cartão, dinheiro); troco opcional com validação.
+- Formas de pagamento apenas declarativas (Pix, cartão, dinheiro); **dinheiro exige informar o valor para troco**, inclusive pagamento exato. O valor deve ser igual ou superior ao total e a confirmação exibe o valor informado e o troco previsto, sem transação real.
 - Horário consultado em `America/Sao_Paulo`: terça a domingo, 18h–23h; escolha imediata apenas no expediente. Agendamento demonstrativo oferecido no máximo para os próximos 7 dias, em intervalos de 30 minutos até as 22h30.
 - A tela de confirmação informa com destaque que nenhuma compra real foi concluída.
 
@@ -56,3 +56,9 @@ Em navegador Chromium, com o HTML e CSS do checkout e uma substituição control
 Página Carrinho e checkout contribuem para funcionamento, acessibilidade, responsividade e mais de 10 funcionalidades. O projeto também exige: pelo menos 5 páginas, 20 mídias, 30 estilizações CSS, menu interativo, páginas interligadas, README, 30 commits e deploy. Os critérios da AC2 incluem qualidade técnica, justificativas de decisões, gestão do backlog, versionamento e colaboração da equipe (20% cada).
 
 **Este registro não afirma que todos os requisitos já estão concluídos**: o deploy, a contagem de commits e as validações integradas precisam de comprovação final.
+
+## Atualização posterior à versão estável — 26/10/2026
+
+Na branch `main`, os commits `5a8e5e5` e `42f5169` acrescentaram validações de nome, rua, bairro e número do imóvel (somente dígitos positivos), preservando nomes reais de ruas e bairros que contenham números. A confirmação em dinheiro passou a exigir um valor de referência e a mostrar `Troco para` e `Troco previsto`. Não houve integração real de pagamento.
+
+**Verificação pendente:** executar os cenários de aceitação completos na Vercel com dinheiro exato, insuficiente e superior ao total, campos inválidos, retirada sem endereço e demais modalidades, em mobile e desktop. Até então, não declarar homologação ponta a ponta nem criar `v1.0.1`.
