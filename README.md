@@ -72,7 +72,7 @@ Não é necessário executar `npm install`, configurar banco de dados ou executa
 
 Os produtos adicionados ficam salvos no navegador por `localStorage`. É possível aumentar ou diminuir quantidades, remover itens e visualizar o valor total. **Esses dados não são enviados à pastelaria** e não representam uma compra efetivada.
 
-Na própria página `carrinho.html`, o formulário de finalização simula entrega ou retirada, escolha de horário e modalidade de pagamento. Campos são validados antes da confirmação fictícia. Não há recebimento de valores, agendamento ou envio de pedido. Os dados pessoais digitados no formulário não são persistidos pelo código do checkout.
+Na própria página `carrinho.html`, o formulário de finalização simula entrega ou retirada, escolha de horário e modalidade de pagamento. Campos são validados antes da confirmação fictícia. A versão atual da `main` valida nome, rua, número e bairro; quando a opção **Dinheiro** é selecionada, exige informar para quanto precisa de troco e apresenta o cálculo na confirmação demonstrativa. Não há recebimento de valores, agendamento ou envio de pedido. Os dados pessoais digitados no formulário não são persistidos pelo código do checkout.
 
 A opção de busca automática de endereços por CEP foi descartada; os campos de endereço são preenchidos manualmente.
 
@@ -110,6 +110,10 @@ O acesso ao **iFood** é independente do carrinho demonstrativo; os itens escolh
 | SEO | **100** | **100** |
 
 Evidências: [mobile](docs/testes/lighthouse/home-lighthouse-mobile-2026-10-24.jpeg) e [desktop](docs/testes/lighthouse/home-lighthouse-desktop-2026-10-24.jpeg). São medições da **Home**, e as notas podem variar entre execuções; não representam automaticamente as outras páginas. Testes abrangentes de acessibilidade e alguns links externos continuam documentados como verificações complementares. Consulte o [checklist da AC2](docs/testes/checklist-ac2.md) e o [versionamento SemVer](docs/versionamento/semver-ac2.md).
+
+## Evolução após a versão AC2
+
+A tag [\`v1.0.0\`](https://github.com/vitorhugo-santos/projeto-web-pastelaria-da-sogra/tree/v1.0.0) preserva a entrega aprovada. A branch \`main\` recebeu duas correções posteriores no checkout, ainda pendentes de homologação completa em navegador antes de um possível marco \`v1.0.1\`. O roadmap comercial está no [Trello](https://trello.com/b/rBHFUDul/projeto-web-design); as funcionalidades futuras **não** integram a versão acadêmica. A apresentação AC2 aprovada retrata o estado anterior a essas correções.
 
 ## Uso acadêmico
 
