@@ -5,7 +5,7 @@
 **Repositório:** https://github.com/vitorhugo-santos/projeto-web-pastelaria-da-sogra  
 **Origem da evidência:** histórico real de commits e referências verificadas no GitHub. As contagens abaixo distinguem o retrato de 24/10 do estado posterior às correções do checkout.
 
-**Estado atualizado em 26/10/2026:** oito tags publicadas (`v0.1.0` a `v0.6.0`, incluindo `v0.4.1`, e `v1.0.0`). A `v1.0.0` é a versão acadêmica estável aprovada e aponta para o commit `8c18e9a0762d68a421863c330c170b6747e07195`. Dois commits posteriores modificaram somente `carrinho.html` e `js/checkout.js`: `5a8e5e505afa678fe98beb5e022581031303e774` e `42f51695190f665a704884a331a6fe341b19a9d4`. Há **79 commits** na `main` na data desta verificação, antes dos commits documentais desta rodada. Não modificar `v1.0.0`. Uma eventual tag `v1.0.1` deverá ser criada **apenas após homologar o fluxo completo**; ela ainda não existe.
+**Estado atualizado em 26/10/2026:** oito tags publicadas (`v0.1.0` a `v0.6.0`, incluindo `v0.4.1`, e `v1.0.0`). A `v1.0.0` é a versão acadêmica estável aprovada e aponta para o commit `8c18e9a0762d68a421863c330c170b6747e07195`. Dois commits posteriores modificaram somente `carrinho.html` e `js/checkout.js`: `5a8e5e505afa678fe98beb5e022581031303e774` e `42f51695190f665a704884a331a6fe341b19a9d4`. Há **79 commits** na `main` na data desta verificação, antes dos commits documentais desta rodada. Não modificar `v1.0.0`. A tag anotada **`v1.0.1` foi publicada pelo grupo em 26/10/2026 (horário de São Paulo; 27/10/2026 UTC)**, no commit `c63c2353b2995512c517c74a507fda9c1c182c29`, após a aprovação acadêmica do escopo. A tag não substitui evidências de homologação integrada.
 
 
 ## Estado verificado
@@ -103,3 +103,15 @@ A entrega estável da AC2 foi aprovada e publicada no commit `8c18e9a0762d68a421
 - [Roteiro da apresentação](../apresentacao/roteiro-ac2.md)
 
 **Nota de transparência:** este documento foi preparado agora, com base no histórico preservado. Não é uma prova de que a equipe tenha aplicado SemVer durante todo o desenvolvimento; documenta a política adotada e seus marcos retrospectivos.
+
+## Publicação da versão acadêmica final — v1.0.1
+
+A tag anotada `v1.0.1` foi confirmada via API GitHub, objeto de tag `00e8fab05c153b573658cd7d36a632e47e9e61e5`, apontando exatamente para o commit `c63c2353b2995512c517c74a507fda9c1c182c29`. Esse commit inclui o PowerPoint aprovado em `docs/apresentacao/AC2_Pastelaria_da_Sogra_Apresentacao_Final_Revisada.pptx`, as correções no checkout e a documentação/revisão do roadmap futuro.
+
+O marco anterior `v1.0.0` não foi alterado. A equipe aprovou o escopo acadêmico representado pela `v1.0.1`; testes de ponta a ponta não documentados continuam não comprovados e não devem ser descritos como executados.
+
+**Nota histórica:** as instruções e checklists anteriores sobre criação futura da `v1.0.1` permanecem como planejamento da época, superado pelo registro verificado nesta seção. O documento pode registrar esse histórico sem reescrever retroativamente as decisões.
+
+- [x] Tag anotada `v1.0.1` publicada e commit-alvo conferido.
+- [x] PowerPoint aprovado presente no commit da versão final.
+- [ ] Homologação integrada pós-correção no navegador, com evidências completas, ainda não registrada.
