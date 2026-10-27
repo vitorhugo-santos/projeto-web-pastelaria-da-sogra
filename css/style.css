@@ -1011,15 +1011,15 @@ button:focus-visible {
 .botao-historia {
     gap: 8px;
 
-    color: var(--cor-texto);
-    background-color: #f4e9e1;
+    color: var(--cor-branco);
+    background-color: var(--cor-vermelho);
 
     border: 0;
 }
 
 .botao-historia:hover {
-    color: var(--cor-vermelho);
-    background-color: #ead8cd;
+    color: var(--cor-branco);
+    background-color: var(--cor-vermelho-escuro);
 }
 
 
