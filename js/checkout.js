@@ -183,6 +183,7 @@
         const dinheiro = form.elements.pagamento.value === "dinheiro";
         ui.troco.hidden = !dinheiro;
         ui.trocoValor.disabled = !dinheiro;
+        ui.trocoValor.required = dinheiro;
         if (!dinheiro) ui.trocoValor.value = "";
     }
 
@@ -246,6 +247,10 @@
         if (dados.entrega) adicionarCampo(dl, "Endereço demonstrativo", dados.endereco);
         adicionarCampo(dl, "Quando", dados.quando);
         adicionarCampo(dl, "Pagamento escolhido", dados.pagamento + " (simulado)");
+        if (dados.valorRecebidoCentavos !== null) {
+            adicionarCampo(dl, "Troco para", moeda(dados.valorRecebidoCentavos));
+            adicionarCampo(dl, "Troco previsto", moeda(dados.valorRecebidoCentavos - totalCentavos(itens)));
+        }
         ui.resumoFinal.append(dl);
 
         const lista = document.createElement("ul");
@@ -289,19 +294,28 @@
 
         const nome = ui.nome.value.trim();
         if (nome.length < 3) return falha("Informe um nome de pelo menos três caracteres.", ui.nome);
+        if (!/^[\p{L}\p{M}]+(?:[ '\u2019-][\p{L}\p{M}]+)*$/u.test(nome)) {
+            return falha("Use somente letras, espaços, hífens ou apóstrofos no nome.", ui.nome);
+        }
         const telefone = ui.telefone.value.replace(/\D/g, "");
         if (telefone.length !== 10 && telefone.length !== 11) {
             return falha("Informe um telefone com DDD (10 ou 11 dígitos).", ui.telefone);
         }
         const entrega = form.elements.modalidade.value === "entrega";
         if (entrega) {
-            for (const campo of [ui.rua, ui.bairro]) {
-                if (campo.value.trim().length < 2) {
-                    return falha("Preencha este campo com pelo menos dois caracteres.", campo);
-                }
+            const rua = ui.rua.value.trim();
+            const bairro = ui.bairro.value.trim();
+            const numero = ui.numero.value.trim();
+            if (rua.length < 2 || !/\p{L}/u.test(rua) ||
+                !/^[\p{L}\p{M}\d][\p{L}\p{M}\d .'\u2019/-]*$/u.test(rua)) {
+                return falha("Informe uma rua ou avenida válida, com letras e sem símbolos inadequados.", ui.rua);
             }
-            if (!ui.numero.value.trim()) {
-                return falha("Informe o número do imóvel (pode ter um dígito).", ui.numero);
+            if (!/^[1-9]\d*$|^0*[1-9]\d*$/u.test(numero)) {
+                return falha("Informe apenas números para o imóvel, maiores que zero.", ui.numero);
+            }
+            if (bairro.length < 2 || !/\p{L}/u.test(bairro) ||
+                !/^[\p{L}\p{M}\d]+(?:[ '\u2019-][\p{L}\p{M}\d]+)*$/u.test(bairro)) {
+                return falha("Informe um bairro válido, com letras e sem símbolos inadequados.", ui.bairro);
             }
         }
 
@@ -324,11 +338,18 @@
 
         const pagamento = form.elements.pagamento.value;
         if (!["pix", "cartao", "dinheiro"].includes(pagamento)) return falha("Escolha a forma de pagamento demonstrativa.");
-        if (pagamento === "dinheiro" && ui.trocoValor.value !== "") {
+        let valorRecebidoCentavos = null;
+        if (pagamento === "dinheiro") {
+            if (ui.trocoValor.value.trim() === "") {
+                return falha("Informe para quanto precisa de troco, mesmo que seja o valor exato.", ui.trocoValor);
+            }
             const valorTroco = Number(ui.trocoValor.value);
-            if (!Number.isFinite(valorTroco) || ui.trocoValor.validity.badInput ||
-                ui.trocoValor.validity.stepMismatch ||
-                valorTroco < totalCentavos(itens) / 100) {
+            const centavosExatos = valorTroco * 100;
+            valorRecebidoCentavos = Math.round(centavosExatos);
+            if (!Number.isFinite(valorTroco) || !Number.isSafeInteger(valorRecebidoCentavos) ||
+                Math.abs(centavosExatos - valorRecebidoCentavos) > 0.000001 ||
+                ui.trocoValor.validity.badInput || ui.trocoValor.validity.stepMismatch ||
+                valorRecebidoCentavos < totalCentavos(itens)) {
                 return falha("Informe um valor válido para troco, igual ou maior que o total.", ui.trocoValor);
             }
         }
@@ -336,7 +357,7 @@
         const endereco = [ui.rua.value.trim(), ui.numero.value.trim(), ui.bairro.value.trim(), ui.complemento.value.trim()]
             .filter(Boolean).join(", ");
         const quando = imediato ? "Para agora (simulado)" : `${ui.dia.selectedOptions[0].textContent}, às ${ui.hora.value} (simulado)`;
-        exibirComprovante(itens, {nome, entrega, endereco, quando,
+        exibirComprovante(itens, {nome, entrega, endereco, quando, valorRecebidoCentavos,
             pagamento: {pix: "Pix", cartao: "Cartão", dinheiro: "Dinheiro"}[pagamento]});
 
         // Nenhum dado pessoal é persistido. Somente o carrinho anterior é apagado ao concluir.
