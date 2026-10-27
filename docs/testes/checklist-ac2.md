@@ -91,12 +91,22 @@ Essas são capturas do `index.html` na Vercel, e **não** medições de todas as
 - [ ] Investigar métricas e diagnósticos da Home mobile e verificar acessibilidade (96/100).
 - [ ] Executar Lighthouse nas demais páginas principais, conforme prioridade de tempo.
 - [x] Confirmar versão pública e os fluxos testados pela equipe após as correções da Home e do carrinho.
-- [ ] Repetir verificação de produção após a publicação da tag `v1.0.0`, preservando evidência do SHA.
+- [ ] Registrar verificação integrada na produção após as correções adicionais de checkout, distinguindo a tag `v1.0.0` da versão atual da `main`.
 - [x] Inspecionar as 41 checklists do Trello, atualizar itens comprovados e conferir o campo Membros.
-- [ ] Concluir ajustes pendentes de Trello: dois cartões em Done sem integrante associado; protótipos e evidências finais incompletas.
+- [x] Protótipos retrospectivos e evidências Lighthouse publicados; cartões de prototipação atualizados no Trello. Atribuições e registro de responsáveis devem ser consultados no estado atual do quadro, não inferidos da auditoria antiga.
 - [x] Registrar e verificar a tag estável `v1.0.0` da apresentação no GitHub.
 - [ ] Revisar autorização de publicação de fotos com pessoas reconhecíveis.
 
 ## Critério para considerar a auditoria encerrada
 
 Não registrar "site sem erros" ou "100% aprovado" com base exclusivamente em inspeção estática. Validar no navegador, registrar problemas encontrados e retestar após cada correção.
+
+## Conferência complementar após as correções do checkout — 26/10/2026
+
+- [x] Inspeção estática: seis páginas HTML públicas com um H1 e uma área principal; referências locais em atributos `src`/`href` resolvidas na árvore do repositório (nenhuma ausência identificada nessa checagem).
+- [x] Confirmado no código da `main`: nome e endereço com validações específicas, número do imóvel numérico, troco obrigatório em dinheiro e resumo do troco simulado.
+- [ ] Testar integralmente na Vercel em mobile e desktop: nome, bairro, número, rua, entrega/retirada, dinheiro sem valor/exato/insuficiente/superior, Pix e cartão; registrar evidência e resultado de cada cenário.
+- [ ] Conferir todos os links externos e console no navegador. A análise estática não garante ausência de falhas de runtime ou acessibilidade integral.
+- [x] Roadmap futuro ampliado no Product Backlog do Trello e explicitamente marcado como não implementado.
+- [ ] Arquivar no GitHub uma cópia binária do PPTX aprovado para rastreabilidade; não alterar os slides.
+- [ ] Após homologação, decidir sobre publicação da tag de correção `v1.0.1`, sem modificar `v1.0.0`.
