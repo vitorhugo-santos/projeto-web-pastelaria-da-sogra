@@ -3,11 +3,14 @@
 **Projeto:** Pastelaria da Sogra — Web Design  
 **Data da reconstrução dos marcos:** 24/10/2026  
 **Repositório:** https://github.com/vitorhugo-santos/projeto-web-pastelaria-da-sogra  
-**Origem da evidência:** histórico real de commits da branch `main`, consultado em 24/10/2026.
+**Origem da evidência:** histórico real de commits e referências verificadas no GitHub. As contagens abaixo distinguem o retrato de 24/10 do estado posterior às correções do checkout.
+
+**Estado atualizado em 26/10/2026:** oito tags publicadas (`v0.1.0` a `v0.6.0`, incluindo `v0.4.1`, e `v1.0.0`). A `v1.0.0` é a versão acadêmica estável aprovada e aponta para o commit `8c18e9a0762d68a421863c330c170b6747e07195`. Dois commits posteriores modificaram somente `carrinho.html` e `js/checkout.js`: `5a8e5e505afa678fe98beb5e022581031303e774` e `42f51695190f665a704884a331a6fe341b19a9d4`. Há **79 commits** na `main` na data desta verificação, antes dos commits documentais desta rodada. Não modificar `v1.0.0`. Uma eventual tag `v1.0.1` deverá ser criada **apenas após homologar o fluxo completo**; ela ainda não existe.
+
 
 ## Estado verificado
 
-O histórico consultado inicialmente continha **55 commits** e nenhuma tag. **Em 24/10/2026, as sete tags históricas anotadas foram publicadas e verificadas diretamente no GitHub**: `v0.1.0`, `v0.2.0`, `v0.3.0`, `v0.4.0`, `v0.4.1`, `v0.5.0` e `v0.6.0`. Os sete objetos de tag foram abertos individualmente e seus commits-alvo coincidiram com os SHAs documentados abaixo. A versão estável `v1.0.0` ainda não foi publicada.
+O histórico consultado inicialmente continha **55 commits** e nenhuma tag. **Em 24/10/2026, as sete tags históricas anotadas foram publicadas e verificadas diretamente no GitHub**: `v0.1.0`, `v0.2.0`, `v0.3.0`, `v0.4.0`, `v0.4.1`, `v0.5.0` e `v0.6.0`. Os sete objetos de tag foram abertos individualmente e seus commits-alvo coincidiram com os SHAs documentados abaixo. Posteriormente, a versão estável `v1.0.0` foi publicada e verificada no commit aprovado (informações no resumo atualizado acima).
 
 É válido acrescentar tags agora em commits históricos, desde que a apresentação esclareça que os **marcos foram reconstruídos retrospectivamente em 24/10/2026**. Isso não altera os commits, seus autores ou suas datas originais; as tags terão a data efetiva em que forem criadas.
 
@@ -69,32 +72,28 @@ A opção `--publicar` cria **tags anotadas** e envia apenas as referências exp
 
 **Publicação concluída:** a equipe confirmou a execução do script, e a conferência independente das referências `refs/tags/` e seus objetos anotados confirmou os sete commits-alvo corretos. Os comandos acima permanecem apenas para reprodução e auditoria, sem necessidade de executá-los novamente.
 
-## Primeira versão estável: `v1.0.0` — aprovada pelo grupo, publicação pendente
+## Primeira versão estável: `v1.0.0` — publicada
 
-**Aprovação recebida em 24/10/2026:** a equipe declarou aprovada a versão acadêmica da AC2, após a correção da logomarca do rodapé e os testes funcionais confirmados. **A tag Git `v1.0.0` ainda não existe no remoto no momento desta atualização**; não confundir aceite do grupo com publicação da tag. A publicação deve apontar para um commit atual da `main` depois de sincronizar a cópia local com o GitHub.
+A entrega estável da AC2 foi aprovada e publicada no commit `8c18e9a0762d68a421863c330c170b6747e07195`. A referência anotada `v1.0.0` permanece imutável e não inclui as correções posteriores da `main`.
 
-Após verificar os commits finais e confirmar que o código aprovado está na `main` e publicado na Vercel, criar a tag **no SHA efetivo dessa versão**, a partir do Git Bash:
+**Correção compatível pós-AC2 (candidata a `v1.0.1`):**
 
-```bash
-git switch main
-git pull --ff-only origin main
-git log -1 --oneline
-git tag -a v1.0.0 -m "Versao estavel academica da AC2"
-git push origin v1.0.0
-git show --no-patch v1.0.0
-```
-
-O comando deve ser executado **uma única vez**. Confirmar que `v1.0.0` ainda não existe; se existir, não sobrescrever. Uma eventual `v1.0.1` corresponde a correção compatível após a entrega.
+- `5a8e5e5`: teclado numérico para número do imóvel e troco obrigatório quando dinheiro é selecionado.
+- `42f5169`: validação de nome e endereço e apresentação de valor informado/troco previsto na confirmação fictícia.
+- A `main` inclui esses commits; a tag `v1.0.1` ainda **não foi criada**. Criá-la somente após conferir no navegador o checkout publicado com entrega, retirada, Pix, cartão, dinheiro, horário e estados de erro. A etiqueta deverá apontar ao commit específico homologado, não automaticamente a um SHA futuro apenas documental.
+- **Comandos sugeridos quando aprovado:** `git fetch origin --tags && git pull --ff-only origin main`, selecionar o SHA homologado e usar `git tag -a v1.0.1 <SHA_HOMOLOGADO> -m "Correcao das validacoes e do troco no checkout"` seguido de `git push origin v1.0.1`. Conferir a inexistência da tag antes de executar; nunca utilizar `--force`.
 
 ## Atualização das evidências após a publicação
 
 - [x] Página de tags no GitHub exibe `v0.1.0` a `v0.6.0` com o `v0.4.1` intermediário.
 - [x] Cada objeto de tag foi conferido e aponta para o commit exato descrito acima.
-- [x] Trello: cartão de versionamento recebe link para as tags e esta documentação. A criação de `v1.0.0` permanece pendente.
-- [ ] Slide de GitHub/Versionamento utiliza captura do histórico e das tags **reais**, explicando que os marcos são retrospectivos.
+- [x] Trello: cartão de versionamento e histórico apontam para a entrega `v1.0.0` já publicada.
+- [x] Slide de versionamento aprovado representa oito tags e 77 commits na data da revisão; a `main` recebeu dois commits de checkout depois. Os slides são um retrato histórico e não serão reeditados.
 - [x] A documentação de versionamento registra as sete tags publicadas. O README pode receber também a referência ao histórico.
 - [x] Aprovação do grupo para a entrega estável registrada em 24/10/2026.
-- [ ] Publicar `v1.0.0` no commit correto, abrir a referência no GitHub e marcar a checklist correspondente no Trello.
+- [x] `v1.0.0` publicada e conferida no commit aprovado; permanece intacta.
+- [ ] Homologar checkout pós-correção no navegador antes de decidir pela `v1.0.1`.
+- [ ] Criar e conferir `v1.0.1` após aceite explícito dos testes integrados.
 
 ## Referências do próprio projeto
 
